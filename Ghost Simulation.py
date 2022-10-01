@@ -36,34 +36,60 @@ def ghost_simulation():
 		else:
 			maze[x][y] = 200
 			# Ghost present in wall
-		print(maze)
+		# print(maze)
+	print("Initial Maze -> ")
+	print(maze)
 	n_simul = 10
 	while(n_simul > 0):
 		for x, y in ghost_position:
-					# random_direction=int(random.uniform(0,4))
-			random_direction = random.randint(0, 3)
-					# for i in range(4):
-			x_move = x+walk[random_direction][0]
-			y_move = y+walk[random_direction][1]
+			cell_found=False
+			while(not cell_found):
+				random_direction = random.randint(0, 3)
+				x_move = x+walk[random_direction][0]
+				y_move = y+walk[random_direction][1]
 
-			if (0 <= x_move <= n_row-1) and (0 <= y_move <= n_col-1):
-				move=random.random()>=0.5
-    
-				if maze[x_move][y_move] == 1 and move:
-					maze[x_move][y_move] = 200
-     
-				elif maze[x_move][y_move] >= 200 and move:
-					maze[x_move][y_move] += 1
-     
-				elif maze[x_move][y_move]==0 and move:
-					maze[x_move][y_move] = 100
-     
-				elif 100<=maze[x_move][y_move]<200 and move:
-					maze[x_move][y_move] +=1 
-     
+				if (0 <= x_move <= n_row-1) and (0 <= y_move <= n_col-1):
+					cell_found=True
+			move=random.random()>=0.5
+
+			#Empty Space
+			if maze[x_move][y_move]==0:
+				maze[x_move][y_move] = 100
+			
+			#Empty space with ghost
+			elif 100<=maze[x_move][y_move]<200:
+				maze[x_move][y_move] +=1 
+
+			#Wall
+			elif maze[x_move][y_move] == 1 and move:
+				maze[x_move][y_move] = 200
+
+			#Wall with Ghost
+			elif maze[x_move][y_move] >= 200 and move:
+				maze[x_move][y_move] += 1
+
+			reset_prev_cell(maze,x,y)
+
 		n_simul-=1
+		print("Simulation -> ",n_simul)
 		print(maze)
+		# plt.imshow(maze,cmap="Dark2",alpha=0.9)
+		# plt.show()
+		print()
 
+def reset_prev_cell(maze,x,y):
+	if (100<maze[x][y]<200):
+		maze[x][y]-=1
+  
+	elif(maze[x][y]>200):
+		maze[x][y]-=1
+  
+	elif (maze[x][y]==100):
+		maze[x][y]=0
+  
+	elif (maze[x][y]==200):
+		maze[x][y]=1
+	
 ghost_simulation()
 
 #     col = ListedColormap(["green","red","yellow","blue"])

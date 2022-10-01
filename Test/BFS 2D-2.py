@@ -41,14 +41,14 @@ def BFS(grid, vis, row, col):
  
         #q.pop()
  
-        # Go to the adjacent cells
+        # Go to the adjacentd cells
         for i in range(4):
             adjx = x + dRow[i]
             adjy = y + dCol[i]
             if (isValid(vis, adjx, adjy)):
                 q.append((adjx, adjy))
                 vis[adjx][adjy] = True
- 
+#  wd
 # Driver Code
 if __name__ == '__main__':
    
