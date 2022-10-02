@@ -19,8 +19,8 @@ from time import time
 def agent_one():
     print("Started...")
     from datetime import datetime
-    file=open("Results/AgentOne.txt","w")
-    text=" Time ->  "+ datetime.now().strftime("%m/%d/%y %H:%M:%S")
+    file=open("Results/AgentOne.txt","a")
+    text="\n\n\n======  Time  =========->  "+ datetime.now().strftime("%m/%d/%y %H:%M:%S")
     file.write(text)
     # file.close()
     start=time()
@@ -37,7 +37,7 @@ def agent_one():
     # start walking
     # ghost_result=[[]]
     # remember ghosts are present
-    for n_ghost in range(1, 100, 2):
+    for n_ghost in range(1, 200, 5):
         n_maze=100
         n_alive_for_this_ghost = 0
         while (n_maze>0):
@@ -86,11 +86,13 @@ def agent_one():
                 n_alive_for_this_ghost+=1
             # else:
                 # print("Dead at ",node_reached)
-        file.write("\n\nReport for %d Number of Ghosts"%n_ghost)
+        file.write("\nReport for %d Number of Ghosts"%n_ghost)
         file.write("\nPlayer Survivability = %d"%n_alive_for_this_ghost+" %")
+        print(n_ghost," ")
         # print(maze)
     end = time()
-    file.write("\n\n Execution Time = "+str(end-start)+" s")
+    file.write("\n\nExecution Time = "+str(end-start)+" s")
+    print("Execution time : "+str(end-start)+" s")
     file.close()
     print("Done!")
     # n_simul-=1
