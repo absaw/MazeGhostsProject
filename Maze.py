@@ -24,15 +24,25 @@ def generate_maze(n_row,n_col):
                     maze[i][j]=1
                 
         maze[0][0]=maze[n_row-1][n_col-1]=0
-        if check_maze_validity(maze,n_row,n_col,(0,0)):
+        
+        bfs_result=get_bfs_path(maze,n_row,n_col,(0,0))
+        
+        path_possible=bfs_result[0]
+        
+        if path_possible:
             maze_generated=True
-    return maze
+            shortest_path=bfs_result[1]
+        
+        
+        # if check_maze_validity(maze,n_row,n_col,(0,0)[0]):
+        #     maze_generated=True
+    return [maze,shortest_path]
 
 def check_maze_validity(maze,n_row,n_col,start):
     # ismazevalid=get_bfs_path(maze,n_row,n_col,start)
     # print (ismazevalid)
     # return ismazevalid[0]
-    return get_bfs_path(maze,n_row,n_col,start)[0]
+    return get_bfs_path(maze,n_row,n_col,start)
 
 def plot_maze(maze):
     # print(maze)
