@@ -115,7 +115,7 @@ def reset_prev_cell(maze,row,col):
 	elif (maze[row][col]==200):
 		maze[row][col]=1
 	
-ghost_simulation()
+# ghost_simulation()
 
 #     col = ListedColormap(["green","red","yellow","blue"])
 #     col.set_bad("silver")
