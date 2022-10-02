@@ -7,8 +7,9 @@ import collections
 import BFS
 import GhostSimulation
 import Maze
-from BFS import get_bfs_path
+# from BFS import get_bfs_path
 from Maze import generate_maze
+from time import time
 # 0   = Empty Space
 # 1   = Blocked Wall
 # 100 = Empty Space with ghost
@@ -16,63 +17,82 @@ from Maze import generate_maze
 
 
 def agent_one():
-
+    print("Started...")
+    from datetime import datetime
+    file=open("Results/AgentOne.txt","w")
+    text=" Time ->  "+ datetime.now().strftime("%m/%d/%y %H:%M:%S")
+    file.write(text)
+    # file.close()
+    start=time()
     # no of ghosts = 1
-    n_row = 10
-    n_col = 10
-    n_ghost = 1
-    maze = generate_maze(n_row, n_col)
+    n_row = 51
+    n_col = 51
     walk = [[0, 1],
             [0, -1],
             [1, 0],
             [-1, 0]]
     # charter a path for agent 1
 
-    path = get_bfs_path(maze, n_row, n_col, (0, 0))
-
+    # path = get_bfs_path(maze, n_row, n_col,(0,0))
     # start walking
     # ghost_result=[[]]
     # remember ghosts are present
+    for n_ghost in range(1, 100, 2):
+        n_maze=100
+        n_alive_for_this_ghost = 0
+        while (n_maze>0):
+            n_maze-=1
+            maze_generator_result = generate_maze(n_row, n_col)
+            maze = maze_generator_result[0]
+            path = maze_generator_result[1]
+            ghost_position = list()
+            # Spawning Ghosts at random location
+            spawn_ghosts(maze, n_ghost, n_row, n_col)
+            n_alive=0
+            n_death=0
+            # ghosts now present in maze. Now start walking
 
-    for n_ghost in range(1, 10):
-        ghost_position = list()
-        # Spawning Ghosts at random location
-        spawn_ghosts(maze, n_ghost, n_row, n_col)
-        n_alive=0
-        n_death=0
-        # ghosts now present in maze. Now start walking
+            for play_pos_r, play_pos_c in path:
+                # Simulate movement for ghost
+                is_player_alive=True
+                for row, col in ghost_position:
 
-        for play_pos_r, play_pos_c in path:
-            # Simulate movement for ghost
-            for row, col in ghost_position:
+                    cell_found = False
+                    while(not cell_found):
+                        random_direction = random.randint(0, 3)
+                        row_move = row+walk[random_direction][0]
+                        col_move = col+walk[random_direction][1]
 
-                cell_found = False
-                while(not cell_found):
-                    random_direction = random.randint(0, 3)
-                    row_move = row+walk[random_direction][0]
-                    col_move = col+walk[random_direction][1]
+                        if (0 <= row_move < n_row) and (0 <= col_move < n_col):
+                            cell_found = True
 
-                    if (0 <= row_move < n_row) and (0 <= col_move < n_col):
-                        cell_found = True
+                    # print("\n\nGhost -> ", row, col, " - > ", row_move, col_move)
+                    # print(maze, "\n")
 
-                # print("\n\nGhost -> ", row, col, " - > ", row_move, col_move)
-                # print(maze, "\n")
+                    move_to_next_cell(maze, row_move, col_move)
+                    reset_prev_cell(maze, row, col)
 
-                move_to_next_cell(maze, row_move, col_move)
-                reset_prev_cell(maze, row, col)
+                if maze[play_pos_r][play_pos_c] >= 100:
+                    # player dies
+                    is_player_alive=False
+                    # node_reached = (play_pos_r,play_pos_c)
+                    break
+                # if (play_pos_r,play_pos_c) == (n_row,n_col):
+                    # node_reached=(n_row,n_col)
 
-            if maze[play_pos_r][play_pos_c] >= 100:
-                # player dies
-                n_death += 1
-            if (play_pos_r,play_pos_c) == (n_row,n_col):
-                n_alive+=1
-
-        print("Simulation for %d ghosts done",(n_ghost))
-        print("Alive :- ",n_alive)
-        print("Dead :- ",n_death)
-
+            # print("Simulation for %d ghosts done"%(n_ghost))
+            if is_player_alive:
+                # print("Alive")
+                n_alive_for_this_ghost+=1
+            # else:
+                # print("Dead at ",node_reached)
+        file.write("\n\nReport for %d Number of Ghosts"%n_ghost)
+        file.write("\nPlayer Survivability = %d"%n_alive_for_this_ghost+" %")
         # print(maze)
-
+    end = time()
+    file.write("\n\n Execution Time = "+str(end-start)+" s")
+    file.close()
+    print("Done!")
     # n_simul-=1
     # print("Simulation -> ",n_simul)
     # print(ghost_maze)

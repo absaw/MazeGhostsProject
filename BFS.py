@@ -70,7 +70,7 @@ def get_bfs_path(maze,n_row,n_col,start):
 #     [0,1,1,1,0],
 #     [1,1,1,1,0],
 #     [0,0,0,0,0]]
-# result=bfs(a,5,5,(2,0))
+# result=get_bfs_path(a,5,5,(2,0))
 # print(result)
         
 
