@@ -1,33 +1,43 @@
 # -*- coding: utf-8 -*-
 
 from multiprocessing import current_process
+from collections import deque
+
 import numpy as np
 import random
 import matplotlib.pyplot as plt
-from collections import deque
-n_row=5
-n_col=5
-maze = np.zeros((n_row,n_col))
+from BFS import get_bfs_path
 
 # 0 = Unblocked
 # 1 = Blocked
-# 10 = Ghost in Unblocked Cell
-# 11 = Ghost in Blocked cell
+# 100 = Ghost in Unblocked Cell
+# 200 = Ghost in Blocked cell
 
-for i in range(n_row):
-    for j in range(n_col):
-        # random.seed(j)
-        if random.uniform(0,1)<0.28:
-            maze[i][j]=1
-            # if random.uniform(0,1)>0.5:
-            #     maze[i][j]=10
-        # else:
-        #     if random.uniform(0,1)>0.5:
-        #         maze[i][j]=
-maze[0][0]=maze[n_row-1][n_col-1]=0
+def generate_maze(n_row,n_col):
+    maze_generated=False
+    while(not maze_generated):
+        maze = np.zeros((n_row,n_col))
 
-print(maze)
-plt.imshow(maze,"Dark2")
-plt.show()
+        for i in range(n_row):
+            for j in range(n_col):
+                if random.uniform(0,1)<0.28:
+                    maze[i][j]=1
+                
+        maze[0][0]=maze[n_row-1][n_col-1]=0
+        if check_maze_validity(maze,n_row,n_col,(0,0)):
+            maze_generated=True
+    return maze
+
+def check_maze_validity(maze,n_row,n_col,start):
+    # ismazevalid=get_bfs_path(maze,n_row,n_col,start)
+    # print (ismazevalid)
+    # return ismazevalid[0]
+    return get_bfs_path(maze,n_row,n_col,start)[0]
+
+def plot_maze(maze):
+    # print(maze)
+    plt.imshow(maze,"Dark2")
+    plt.show()
 
 
+# plot_maze(generate_maze(5,5))

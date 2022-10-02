@@ -58,8 +58,6 @@ def ghost_simulation():
 		for row, col in ghost_position:
 			
 			cell_found=False
-			print("Ghost -> ")
-			print(maze)
 			while(not cell_found):
 				random_direction = random.randint(0, 3)
 				row_move = row+walk[random_direction][0]
@@ -68,6 +66,9 @@ def ghost_simulation():
 				if (0 <= row_move < n_row) and (0 <= col_move < n_col):
 					cell_found=True
      
+			print("Ghost -> ",row,col," - > ",row_move,col_move)
+			print(maze)
+			print()
 			move=random.random()>=0.5
 
 			#Empty Space--0->100
@@ -90,7 +91,8 @@ def ghost_simulation():
 
 		n_simul-=1
 		print("Simulation -> ",n_simul)
-		print(maze,ghost_maze)
+		print(ghost_maze)
+		print(maze)
 		# plt.imshow(maze,cmap="Dark2",alpha=0.9)
 		# plt.show()
 		print()
