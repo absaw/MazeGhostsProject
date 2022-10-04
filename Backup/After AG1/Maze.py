@@ -13,7 +13,7 @@ from BFS import get_bfs_path
 # 100 = Ghost in Unblocked Cell
 # 200 = Ghost in Blocked cell
 
-def generate_maze(n_row,n_col,ghost_present):
+def generate_maze(n_row,n_col):
     maze_generated=False
     while(not maze_generated):
         maze = np.zeros((n_row,n_col))
@@ -25,7 +25,7 @@ def generate_maze(n_row,n_col,ghost_present):
                 
         maze[0][0]=maze[n_row-1][n_col-1]=0
         
-        bfs_result=get_bfs_path(maze,n_row,n_col,(0,0),ghost_present)
+        bfs_result=get_bfs_path(maze,n_row,n_col,(0,0))
         
         path_possible=bfs_result[0]
         
@@ -50,4 +50,4 @@ def plot_maze(maze):
     plt.show()
 
 
-# plot_maze(generate_maze(5,5),True)
+# plot_maze(generate_maze(5,5))

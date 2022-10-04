@@ -7,7 +7,7 @@ import collections
 import BFS
 import GhostSimulation
 import Maze
-# from BFS import get_bfs_path
+from BFS import get_bfs_path
 from Maze import generate_maze
 from time import time
 # 0   = Empty Space
@@ -20,7 +20,7 @@ def agent_two():
     print("Started...")
     from datetime import datetime
     file=open("Results/AgentTwo.txt","a")
-    text="\n\n\n======  Time  =========->  "+ datetime.now().strftime("%m/%d/%y %H:%M:%S")
+    text="\n\n\n======  Start Time  =========->  "+ datetime.now().strftime("%m/%d/%y %H:%M:%S")
     file.write(text)
     # file.close()
     start=time()
@@ -37,24 +37,28 @@ def agent_two():
     # start walking
     # ghost_result=[[]]
     # remember ghosts are present
-    for n_ghost in range(1, 10):
-        n_maze=10
+    for n_ghost in range(1, 2):
+        n_maze=1
         n_alive_for_this_ghost = 0
         while (n_maze>0):
             n_maze-=1
-            maze_generator_result = generate_maze(n_row, n_col)
+            maze_generator_result = generate_maze(n_row, n_col,True)
             maze = maze_generator_result[0]
-            path = maze_generator_result[1]
+            initial_path = maze_generator_result[1]
             ghost_position = list()
             # Spawning Ghosts at random location
             spawn_ghosts(maze, n_ghost, n_row, n_col)
-            n_alive=0
-            n_death=0
+            # n_alive=0
+            # n_death=0
             # ghosts now present in maze. Now start walking
-
+            path_set=set(initial_path)
+            path=initial_path.pop()
+            current_planned_path=initial_path.copy()
+            n_recalc=0
             for play_pos_r, play_pos_c in path:
-                # Simulate movement for ghost
                 is_player_alive=True
+                # Simulate movement for ghost
+                # =========================================================================
                 for row, col in ghost_position:
 
                     cell_found = False
@@ -71,14 +75,27 @@ def agent_two():
 
                     move_to_next_cell(maze, row_move, col_move)
                     reset_prev_cell(maze, row, col)
+                # ===========================================================================
+                #Now all ghosts are in their next position. So if player is on the same cell, they die
 
                 if maze[play_pos_r][play_pos_c] >= 100:
                     # player dies
                     is_player_alive=False
-                    # node_reached = (play_pos_r,play_pos_c)
                     break
-                # if (play_pos_r,play_pos_c) == (n_row,n_col):
-                    # node_reached=(n_row,n_col)
+                if (play_pos_r,play_pos_c) == (n_row,n_col):
+                    # player survives
+                    break
+                # ===================================================================================================
+                # Now this code will execute only if player hasn't yet died. so player will have to replan the path
+                #First checking if we can stick to current path
+                ghost_set=set(ghost_position)
+                # path_set=set(latest_path)
+                if(len(ghost_set&path_set)!=0):
+                    latest_path=get_bfs_path(maze,n_col,n_row,(play_pos_r,play_pos_c),True)
+                    n_recalc+=1
+                else:
+                    path.append(latest_path.pop())
+
 
             # print("Simulation for %d ghosts done"%(n_ghost))
             if is_player_alive:
@@ -161,4 +178,4 @@ def reset_prev_cell(maze, row, col):
     elif (maze[row][col] == 200):
         maze[row][col] = 1
 
-agent_one()
+agent_two()

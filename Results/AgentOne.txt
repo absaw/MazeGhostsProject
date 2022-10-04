@@ -126,3 +126,408 @@ Report for 196 Number of Ghosts
 Player Survivability = 0 %
 
 Execution Time = 30.842050075531006 s
+
+
+======  Start Time  =========->  10/03/22 21:19:27
+
+
+======  Start Time  =========->  10/03/22 21:20:00
+No. of Ghosts = 10
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 10 %
+Report for 2 Number of Ghosts
+Player Survivability = 9 %
+Report for 3 Number of Ghosts
+Player Survivability = 9 %
+Report for 4 Number of Ghosts
+Player Survivability = 9 %
+Report for 5 Number of Ghosts
+Player Survivability = 10 %
+Report for 6 Number of Ghosts
+Player Survivability = 9 %
+Report for 7 Number of Ghosts
+Player Survivability = 10 %
+Report for 8 Number of Ghosts
+Player Survivability = 5 %
+Report for 9 Number of Ghosts
+Player Survivability = 8 %
+Report for 10 Number of Ghosts
+Player Survivability = 5 %
+
+Execution Time = 0.9216570854187012 s
+
+
+======  Start Time  =========->  10/03/22 21:21:21
+No. of Ghosts = 10
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 10 %
+Report for 2 Number of Ghosts
+Player Survivability = 10 %
+Report for 3 Number of Ghosts
+Player Survivability = 10 %
+Report for 4 Number of Ghosts
+Player Survivability = 9 %
+Report for 5 Number of Ghosts
+Player Survivability = 7 %
+Report for 6 Number of Ghosts
+Player Survivability = 8 %
+Report for 7 Number of Ghosts
+Player Survivability = 9 %
+Report for 8 Number of Ghosts
+Player Survivability = 7 %
+Report for 9 Number of Ghosts
+Player Survivability = 6 %
+Report for 10 Number of Ghosts
+Player Survivability = 7 %
+
+Execution Time = 1.0745558738708496 s
+
+
+======  Start Time  =========->  10/03/22 21:22:30
+No. of Ghosts = 10
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 9 %
+Report for 2 Number of Ghosts
+Player Survivability = 10 %
+Report for 3 Number of Ghosts
+Player Survivability = 8 %
+Report for 4 Number of Ghosts
+Player Survivability = 8 %
+Report for 5 Number of Ghosts
+Player Survivability = 6 %
+Report for 6 Number of Ghosts
+Player Survivability = 9 %
+Report for 7 Number of Ghosts
+Player Survivability = 10 %
+Report for 8 Number of Ghosts
+Player Survivability = 7 %
+Report for 9 Number of Ghosts
+Player Survivability = 9 %
+Report for 10 Number of Ghosts
+Player Survivability = 6 %
+
+Execution Time = 1.079524040222168 s
+
+
+======  Start Time  =========->  10/03/22 21:23:13
+No. of Ghosts = 10
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 96 %
+Report for 2 Number of Ghosts
+Player Survivability = 93 %
+Report for 3 Number of Ghosts
+Player Survivability = 90 %
+Report for 4 Number of Ghosts
+Player Survivability = 89 %
+Report for 5 Number of Ghosts
+Player Survivability = 83 %
+Report for 6 Number of Ghosts
+Player Survivability = 80 %
+Report for 7 Number of Ghosts
+Player Survivability = 81 %
+Report for 8 Number of Ghosts
+Player Survivability = 79 %
+Report for 9 Number of Ghosts
+Player Survivability = 77 %
+Report for 10 Number of Ghosts
+Player Survivability = 77 %
+
+Execution Time = 9.861659049987793 s
+
+
+======  Start Time  =========->  10/03/22 21:23:47
+No. of Ghosts = 100
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 96 %
+Report for 2 Number of Ghosts
+Player Survivability = 91 %
+Report for 3 Number of Ghosts
+Player Survivability = 92 %
+Report for 4 Number of Ghosts
+Player Survivability = 92 %
+Report for 5 Number of Ghosts
+Player Survivability = 86 %
+Report for 6 Number of Ghosts
+Player Survivability = 88 %
+Report for 7 Number of Ghosts
+Player Survivability = 84 %
+Report for 8 Number of Ghosts
+Player Survivability = 78 %
+Report for 9 Number of Ghosts
+Player Survivability = 83 %
+Report for 10 Number of Ghosts
+Player Survivability = 76 %
+Report for 11 Number of Ghosts
+Player Survivability = 74 %
+Report for 12 Number of Ghosts
+Player Survivability = 67 %
+Report for 13 Number of Ghosts
+Player Survivability = 66 %
+Report for 14 Number of Ghosts
+Player Survivability = 65 %
+Report for 15 Number of Ghosts
+Player Survivability = 66 %
+Report for 16 Number of Ghosts
+Player Survivability = 66 %
+Report for 17 Number of Ghosts
+Player Survivability = 66 %
+Report for 18 Number of Ghosts
+Player Survivability = 59 %
+Report for 19 Number of Ghosts
+Player Survivability = 59 %
+Report for 20 Number of Ghosts
+Player Survivability = 59 %
+Report for 21 Number of Ghosts
+Player Survivability = 50 %
+Report for 22 Number of Ghosts
+Player Survivability = 58 %
+Report for 23 Number of Ghosts
+Player Survivability = 51 %
+Report for 24 Number of Ghosts
+Player Survivability = 47 %
+Report for 25 Number of Ghosts
+Player Survivability = 46 %
+Report for 26 Number of Ghosts
+Player Survivability = 47 %
+Report for 27 Number of Ghosts
+Player Survivability = 41 %
+Report for 28 Number of Ghosts
+Player Survivability = 46 %
+Report for 29 Number of Ghosts
+Player Survivability = 39 %
+Report for 30 Number of Ghosts
+Player Survivability = 46 %
+Report for 31 Number of Ghosts
+Player Survivability = 41 %
+Report for 32 Number of Ghosts
+Player Survivability = 51 %
+Report for 33 Number of Ghosts
+Player Survivability = 43 %
+Report for 34 Number of Ghosts
+Player Survivability = 43 %
+Report for 35 Number of Ghosts
+Player Survivability = 35 %
+Report for 36 Number of Ghosts
+Player Survivability = 26 %
+Report for 37 Number of Ghosts
+Player Survivability = 33 %
+Report for 38 Number of Ghosts
+Player Survivability = 32 %
+Report for 39 Number of Ghosts
+Player Survivability = 27 %
+Report for 40 Number of Ghosts
+Player Survivability = 37 %
+Report for 41 Number of Ghosts
+Player Survivability = 26 %
+Report for 42 Number of Ghosts
+Player Survivability = 28 %
+Report for 43 Number of Ghosts
+Player Survivability = 34 %
+Report for 44 Number of Ghosts
+Player Survivability = 26 %
+Report for 45 Number of Ghosts
+Player Survivability = 27 %
+Report for 46 Number of Ghosts
+Player Survivability = 28 %
+Report for 47 Number of Ghosts
+Player Survivability = 22 %
+Report for 48 Number of Ghosts
+Player Survivability = 30 %
+Report for 49 Number of Ghosts
+Player Survivability = 21 %
+Report for 50 Number of Ghosts
+Player Survivability = 30 %
+Report for 51 Number of Ghosts
+Player Survivability = 20 %
+Report for 52 Number of Ghosts
+Player Survivability = 19 %
+Report for 53 Number of Ghosts
+Player Survivability = 14 %
+Report for 54 Number of Ghosts
+Player Survivability = 19 %
+Report for 55 Number of Ghosts
+Player Survivability = 24 %
+Report for 56 Number of Ghosts
+Player Survivability = 14 %
+Report for 57 Number of Ghosts
+Player Survivability = 21 %
+Report for 58 Number of Ghosts
+Player Survivability = 20 %
+Report for 59 Number of Ghosts
+Player Survivability = 19 %
+Report for 60 Number of Ghosts
+Player Survivability = 23 %
+Report for 61 Number of Ghosts
+Player Survivability = 18 %
+Report for 62 Number of Ghosts
+Player Survivability = 16 %
+Report for 63 Number of Ghosts
+Player Survivability = 18 %
+Report for 64 Number of Ghosts
+Player Survivability = 19 %
+Report for 65 Number of Ghosts
+Player Survivability = 8 %
+Report for 66 Number of Ghosts
+Player Survivability = 14 %
+Report for 67 Number of Ghosts
+Player Survivability = 16 %
+Report for 68 Number of Ghosts
+Player Survivability = 14 %
+Report for 69 Number of Ghosts
+Player Survivability = 14 %
+Report for 70 Number of Ghosts
+Player Survivability = 9 %
+Report for 71 Number of Ghosts
+Player Survivability = 15 %
+Report for 72 Number of Ghosts
+Player Survivability = 12 %
+Report for 73 Number of Ghosts
+Player Survivability = 11 %
+Report for 74 Number of Ghosts
+Player Survivability = 15 %
+Report for 75 Number of Ghosts
+Player Survivability = 15 %
+Report for 76 Number of Ghosts
+Player Survivability = 15 %
+Report for 77 Number of Ghosts
+Player Survivability = 12 %
+Report for 78 Number of Ghosts
+Player Survivability = 8 %
+Report for 79 Number of Ghosts
+Player Survivability = 7 %
+Report for 80 Number of Ghosts
+Player Survivability = 17 %
+Report for 81 Number of Ghosts
+Player Survivability = 12 %
+Report for 82 Number of Ghosts
+Player Survivability = 10 %
+Report for 83 Number of Ghosts
+Player Survivability = 8 %
+Report for 84 Number of Ghosts
+Player Survivability = 10 %
+Report for 85 Number of Ghosts
+Player Survivability = 16 %
+Report for 86 Number of Ghosts
+Player Survivability = 8 %
+Report for 87 Number of Ghosts
+Player Survivability = 3 %
+Report for 88 Number of Ghosts
+Player Survivability = 10 %
+Report for 89 Number of Ghosts
+Player Survivability = 6 %
+Report for 90 Number of Ghosts
+Player Survivability = 8 %
+Report for 91 Number of Ghosts
+Player Survivability = 9 %
+Report for 92 Number of Ghosts
+Player Survivability = 7 %
+Report for 93 Number of Ghosts
+Player Survivability = 6 %
+Report for 94 Number of Ghosts
+Player Survivability = 13 %
+Report for 95 Number of Ghosts
+Player Survivability = 5 %
+Report for 96 Number of Ghosts
+Player Survivability = 3 %
+Report for 97 Number of Ghosts
+Player Survivability = 8 %
+Report for 98 Number of Ghosts
+Player Survivability = 8 %
+Report for 99 Number of Ghosts
+Player Survivability = 6 %
+Report for 100 Number of Ghosts
+Player Survivability = 6 %
+
+Execution Time = 162.14466786384583 s
+
+
+======  Start Time  =========->  10/03/22 21:27:43
+No. of Ghosts = 200
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 97 %
+Report for 6 Number of Ghosts
+Player Survivability = 83 %
+Report for 11 Number of Ghosts
+Player Survivability = 74 %
+Report for 16 Number of Ghosts
+Player Survivability = 61 %
+Report for 21 Number of Ghosts
+Player Survivability = 57 %
+Report for 26 Number of Ghosts
+Player Survivability = 50 %
+Report for 31 Number of Ghosts
+Player Survivability = 40 %
+Report for 36 Number of Ghosts
+Player Survivability = 37 %
+Report for 41 Number of Ghosts
+Player Survivability = 31 %
+Report for 46 Number of Ghosts
+Player Survivability = 30 %
+Report for 51 Number of Ghosts
+Player Survivability = 21 %
+Report for 56 Number of Ghosts
+Player Survivability = 14 %
+Report for 61 Number of Ghosts
+Player Survivability = 24 %
+Report for 66 Number of Ghosts
+Player Survivability = 17 %
+Report for 71 Number of Ghosts
+Player Survivability = 20 %
+Report for 76 Number of Ghosts
+Player Survivability = 12 %
+Report for 81 Number of Ghosts
+Player Survivability = 10 %
+Report for 86 Number of Ghosts
+Player Survivability = 10 %
+Report for 91 Number of Ghosts
+Player Survivability = 9 %
+Report for 96 Number of Ghosts
+Player Survivability = 4 %
+Report for 101 Number of Ghosts
+Player Survivability = 5 %
+Report for 106 Number of Ghosts
+Player Survivability = 6 %
+Report for 111 Number of Ghosts
+Player Survivability = 2 %
+Report for 116 Number of Ghosts
+Player Survivability = 4 %
+Report for 121 Number of Ghosts
+Player Survivability = 1 %
+Report for 126 Number of Ghosts
+Player Survivability = 2 %
+Report for 131 Number of Ghosts
+Player Survivability = 9 %
+Report for 136 Number of Ghosts
+Player Survivability = 2 %
+Report for 141 Number of Ghosts
+Player Survivability = 1 %
+Report for 146 Number of Ghosts
+Player Survivability = 1 %
+Report for 151 Number of Ghosts
+Player Survivability = 3 %
+Report for 156 Number of Ghosts
+Player Survivability = 0 %
+Report for 161 Number of Ghosts
+Player Survivability = 2 %
+Report for 166 Number of Ghosts
+Player Survivability = 1 %
+Report for 171 Number of Ghosts
+Player Survivability = 2 %
+Report for 176 Number of Ghosts
+Player Survivability = 1 %
+Report for 181 Number of Ghosts
+Player Survivability = 0 %
+Report for 186 Number of Ghosts
+Player Survivability = 0 %
+Report for 191 Number of Ghosts
+Player Survivability = 0 %
+Report for 196 Number of Ghosts
+Player Survivability = 0 %
+
+Execution Time = 73.7834050655365 s

@@ -5,51 +5,43 @@ import matplotlib.pyplot as plt
 import collections
 # from collections import deque
 
-def get_bfs_path(maze,n_row,n_col,start):
-    # maze=[  [0,0,1,0,0],
-    #         [0,0,1,0,0],
-    #         [0,0,1,0,0],
-    #         [1,0,1,1,0],
-    #         [0,0,0,0,0]]
-    # n_row=5
-    # n_col=5
+# 0 = Unblocked
+# 1 = Blocked
+# 100 = Ghost in Unblocked Cell
+# 200 = Ghost in Blocked cell
+
+def get_bfs_path(maze,n_row,n_col,start,ghost_present):
+   
     walk = [[0, 1],
             [0,-1],
             [1, 0],
             [-1,0]]
-    # maze_visited=np.zeros((n_row,n_col))
 
-    # visited_set=set([(0,0)])
     visited_set=set([start])
     
-    # visited_set.add((0,0))
     fringe_q=collections.deque([[start]])
-    # fringe_q=collections.deque([[(0,0)]])
-    # fringe_q.append([(0,0)])
-    # path=[]
     path_found=False
     while(len(fringe_q)>0):
         path=fringe_q.popleft()
-        # print("Type path ->",type(path))
-        curr_x,curr_y=path[-1]
-        # maze_visited[curr[0]][curr[1]]=1
-        # maze[curr[0]][curr[1]]=-1
-        if ((curr_x,curr_y)==(n_row-1,n_col-1)):
-            # print("Path found")
+        curr_row,curr_col=path[-1]
+        if ((curr_row,curr_col)==(n_row-1,n_col-1)):
+            # Path found
             path_found=True
             break
 
         for i in range(4):
-            # x=curr[0]+walk[i][0]  #traversing x column
-            # y=curr[1]+walk[i][1]  #traversing y column
-            x=curr_x+walk[i][0]
-            y=curr_y+walk[i][1]
-            if (x>=0 and x<n_row) and (y>=0 and y<n_col) and (maze[x][y]!=1) and (x,y) not in visited_set:
-                # if (x>=0 and x<n_row) and (y>=0 and y<n_col) and (maze_visited[x,y]!=1):
-                fringe_q.append(path+[(x,y)])
-                # fringe_q.append((x,y))
-                visited_set.add((x,y))
-                # path.append((x,y))
+            
+            row=curr_row+walk[i][0]#traversing row column
+            col=curr_col+walk[i][1]#traversing col column
+
+            if (row>=0 and row<n_row) and (col>=0 and col<n_col) and (maze[row][col]!=1) and (row,col) not in visited_set:
+                if not ghost_present:#for agent 1; when path without ghosts is calculated
+                    fringe_q.append(path+[(row,col)])
+                    visited_set.add((row,col))
+                elif maze[row][col]<100:#ghost present and we need to avoid ghosts
+                    fringe_q.append(path+[(row,col)])
+                    visited_set.add((row,col))
+                    
 
         # print("Fringe - >",fringe_q)
 
@@ -70,7 +62,14 @@ def get_bfs_path(maze,n_row,n_col,start):
 #     [0,1,1,1,0],
 #     [1,1,1,1,0],
 #     [0,0,0,0,0]]
-# result=get_bfs_path(a,5,5,(2,0))
+
+# a2=[[0,0,1,0,0],
+#     [102,0,200,0,0],
+#     [0,0,1,0,0],
+#     [100,100,1,1,0],
+#     [0,0,0,0,0]]
+
+# result=get_bfs_path(a2,5,5,(0,0),True)
 # print(result)
         
 
