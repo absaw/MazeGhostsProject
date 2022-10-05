@@ -47,6 +47,12 @@ def get_bfs_path(maze,n_row,n_col,start,ghost_present):
 
     # print("Exited the While loop")
 
+    # zero_maze=np.zeros((n_row,n_col))
+    # for i,j in visited_set:
+    #     zero_maze[i][j]=1
+    
+    # print(zero_maze)
+
     if path_found:
         # print("Path found")
         # print("\n Path ->",path)
@@ -57,11 +63,11 @@ def get_bfs_path(maze,n_row,n_col,start,ghost_present):
 
     # plt.imshow(maze,"Dark2")
     # plt.show()
-# a=[ [0,0,1,0,0],
-#     [0,0,0,0,0],
-#     [0,1,1,1,0],
-#     [1,1,1,1,0],
-#     [0,0,0,0,0]]
+a=[ [0,0,1,1,0],
+    [0,0,0,0,0],
+    [0,1,1,1,0],
+    [1,1,1,1,0],
+    [0,0,0,0,0]]
 
 # a2=[[0,0,1,0,0],
 #     [102,0,200,0,0],
@@ -69,8 +75,8 @@ def get_bfs_path(maze,n_row,n_col,start,ghost_present):
 #     [100,100,1,1,0],
 #     [0,0,0,0,0]]
 
-# result=get_bfs_path(a2,5,5,(0,0),True)
-# print(result)
+result=get_bfs_path(a,5,5,(0,0),True)
+print(result)
         
 
 

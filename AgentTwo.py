@@ -57,6 +57,8 @@ def agent_two():
             n_recalc=0
             for play_pos_r, play_pos_c in path:
                 is_player_alive=True
+                next_ghost_position=list()
+
                 # Simulate movement for ghost
                 # =========================================================================
                 for row, col in ghost_position:
@@ -72,7 +74,7 @@ def agent_two():
 
                     # print("\n\nGhost -> ", row, col, " - > ", row_move, col_move)
                     # print(maze, "\n")
-
+                    next_ghost_position.append((row_move,col_move))
                     move_to_next_cell(maze, row_move, col_move)
                     reset_prev_cell(maze, row, col)
                 # ===========================================================================
@@ -87,14 +89,21 @@ def agent_two():
                     break
                 # ===================================================================================================
                 # Now this code will execute only if player hasn't yet died. so player will have to replan the path
+                latest_path=get_bfs_path(maze,n_col,n_row,(play_pos_r,play_pos_c),True)
+                if latest_path[0]:
+                    path.append(latest_path[1].pop())
+
+
+                # ===================================================================================================
                 #First checking if we can stick to current path
-                ghost_set=set(ghost_position)
-                # path_set=set(latest_path)
-                if(len(ghost_set&path_set)!=0):
-                    latest_path=get_bfs_path(maze,n_col,n_row,(play_pos_r,play_pos_c),True)
-                    n_recalc+=1
-                else:
-                    path.append(latest_path.pop())
+                # ghost_set=set(ghost_position)
+                # # path_set=set(latest_path)
+                
+                # if(len(ghost_set&path_set)!=0):
+                #     latest_path=get_bfs_path(maze,n_col,n_row,(play_pos_r,play_pos_c),True)
+                #     n_recalc+=1
+                # else:
+                #     path.append(latest_path.pop())
 
 
             # print("Simulation for %d ghosts done"%(n_ghost))
@@ -121,8 +130,10 @@ def agent_two():
     # print()
 
 
-def spawn_ghosts(maze, n_ghost, n_row, n_col):
-    ghost_position = list()
+
+
+def spawn_ghosts(maze, n_ghost, n_row, n_col,ghost_position):
+    # ghost_position = list()
     # Spawning Ghosts at random location
     for i in range(n_ghost):
         row = random.randint(1, n_row-1)
