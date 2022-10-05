@@ -1,0 +1,6 @@
+-Ghosts walled off scenario
+-Agent 2 - run scenario
+-A* Search
+Agent 3
+-Agent 4
+-

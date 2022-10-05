@@ -17,13 +17,17 @@ from time import time
 
 
 def agent_two():
+    start=time()
     print("Started...")
     from datetime import datetime
-    file=open("Results/AgentTwo.txt","a")
+    n_ghost=1
+
+    #file=open("Results/AgentTwo.txt","a")
     text="\n\n\n======  Start Time  =========->  "+ datetime.now().strftime("%m/%d/%y %H:%M:%S")
-    file.write(text)
+    #file.write(text)
+    #file.write("\nNo. of Ghosts = %d"%n_ghost)
+    #file.write("\nNo. of mazes for each ghost = 100")
     # file.close()
-    start=time()
     # no of ghosts = 1
     n_row = 10
     n_col = 10
@@ -37,7 +41,7 @@ def agent_two():
     # start walking
     # ghost_result=[[]]
     # remember ghosts are present
-    for n_ghost in range(1, 2):
+    for i_ghost in range(1, n_ghost+1):
         n_maze=1
         n_alive_for_this_ghost = 0
         while (n_maze>0):
@@ -47,12 +51,13 @@ def agent_two():
             initial_path = maze_generator_result[1]
             ghost_position = list()
             # Spawning Ghosts at random location
-            spawn_ghosts(maze, n_ghost, n_row, n_col)
+            spawn_ghosts(maze, i_ghost, n_row, n_col,ghost_position)
             # n_alive=0
             # n_death=0
             # ghosts now present in maze. Now start walking
             path_set=set(initial_path)
-            path=initial_path.pop()
+            path=list()
+            path.append(initial_path.pop(1))
             current_planned_path=initial_path.copy()
             n_recalc=0
             for play_pos_r, play_pos_c in path:
@@ -90,9 +95,15 @@ def agent_two():
                 # ===================================================================================================
                 # Now this code will execute only if player hasn't yet died. so player will have to replan the path
                 latest_path=get_bfs_path(maze,n_col,n_row,(play_pos_r,play_pos_c),True)
-                if latest_path[0]:
-                    path.append(latest_path[1].pop())
-
+                print(latest_path)
+                if latest_path[0]:#if there exists a path from player to goal, without ghosts
+                    path.append(latest_path[1].pop(1))#append the next cell in the path
+                    print("Moving : Current path ",path) 
+                else:
+                    #Path is blocked by ghost. Run away..
+                    #Currently staying in same position
+                    path.append((play_pos_r,play_pos_c))
+                    print("Stay",play_pos_r,play_pos_c)
 
                 # ===================================================================================================
                 #First checking if we can stick to current path
@@ -103,23 +114,23 @@ def agent_two():
                 #     latest_path=get_bfs_path(maze,n_col,n_row,(play_pos_r,play_pos_c),True)
                 #     n_recalc+=1
                 # else:
-                #     path.append(latest_path.pop())
+                #     path.append(latest_path.pop(0))
 
 
-            # print("Simulation for %d ghosts done"%(n_ghost))
+            # print("Simulation for %d ghosts done"%(i_ghost))
             if is_player_alive:
                 # print("Alive")
                 n_alive_for_this_ghost+=1
             # else:
                 # print("Dead at ",node_reached)
-        file.write("\nReport for %d Number of Ghosts"%n_ghost)
-        file.write("\nPlayer Survivability = %d"%n_alive_for_this_ghost+" %")
-        print(n_ghost," ")
+        #file.write("\nReport for %d Number of Ghosts"%i_ghost)
+        #file.write("\nPlayer Survivability = %d"%n_alive_for_this_ghost+" %")
+        print(i_ghost," ")
         # print(maze)
     end = time()
-    file.write("\n\nExecution Time = "+str(end-start)+" s")
+    #file.write("\n\nExecution Time = "+str(end-start)+" s")
     print("Execution time : "+str(end-start)+" s")
-    file.close()
+    #file.close()
     print("Done!")
     # n_simul-=1
     # print("Simulation -> ",n_simul)
@@ -128,8 +139,6 @@ def agent_two():
     # plt.imshow(maze,cmap="Dark2",alpha=0.9)
     # plt.show()
     # print()
-
-
 
 
 def spawn_ghosts(maze, n_ghost, n_row, n_col,ghost_position):

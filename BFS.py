@@ -28,7 +28,7 @@ def get_bfs_path(maze,n_row,n_col,start,ghost_present):
             # Path found
             path_found=True
             break
-
+        # print(type(path))
         for i in range(4):
             
             row=curr_row+walk[i][0]#traversing row column
@@ -63,11 +63,11 @@ def get_bfs_path(maze,n_row,n_col,start,ghost_present):
 
     # plt.imshow(maze,"Dark2")
     # plt.show()
-a=[ [0,0,1,1,0],
-    [0,0,0,0,0],
-    [0,1,1,1,0],
-    [1,1,1,1,0],
-    [0,0,0,0,0]]
+# a=[ [0,0,1,1,0],
+#     [0,0,0,0,0],
+#     [0,1,1,1,0],
+#     [1,1,1,1,0],
+#     [0,0,0,0,0]]
 
 # a2=[[0,0,1,0,0],
 #     [102,0,200,0,0],
@@ -75,8 +75,8 @@ a=[ [0,0,1,1,0],
 #     [100,100,1,1,0],
 #     [0,0,0,0,0]]
 
-result=get_bfs_path(a,5,5,(0,0),True)
-print(result)
+# result=get_bfs_path(a,5,5,(0,0),True)
+# print(result)
         
 
 

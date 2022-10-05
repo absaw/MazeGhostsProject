@@ -1,0 +1,36 @@
+
+
+
+======  Start Time  =========->  10/05/22 12:59:15
+No. of Ghosts = 10
+No. of mazes for each ghost = 100
+
+
+======  Start Time  =========->  10/05/22 13:01:13
+No. of Ghosts = 10
+No. of mazes for each ghost = 100
+
+
+======  Start Time  =========->  10/05/22 13:43:18
+No. of Ghosts = 10
+No. of mazes for each ghost = 100
+
+
+======  Start Time  =========->  10/05/22 13:56:58
+No. of Ghosts = 1
+No. of mazes for each ghost = 100
+
+
+======  Start Time  =========->  10/05/22 14:04:35
+No. of Ghosts = 1
+No. of mazes for each ghost = 100
+
+
+======  Start Time  =========->  10/05/22 14:05:07
+No. of Ghosts = 1
+No. of mazes for each ghost = 100
+
+
+======  Start Time  =========->  10/05/22 14:07:19
+No. of Ghosts = 1
+No. of mazes for each ghost = 100
