@@ -10,6 +10,7 @@ import Maze
 # from BFS import get_bfs_path
 from Maze import generate_maze
 from time import time
+from datetime import datetime
 # 0   = Empty Space
 # 1   = Blocked Wall
 # 100 = Empty Space with ghost
@@ -17,11 +18,9 @@ from time import time
 
 
 def agent_one():
-    print("Started...")
-    from datetime import datetime
-    # file.close()
     start=time()
-    # no of ghosts = 1
+    print("Started...")
+    
     n_ghost=200
     n_row = 51
     n_col = 51
@@ -36,9 +35,7 @@ def agent_one():
     file.write("\nNo. of mazes for each ghost = 100")
     # charter a path for agent 1
 
-    # path = get_bfs_path(maze, n_row, n_col,(0,0))
     # start walking
-    # ghost_result=[[]]
     # remember ghosts are present
     for i_ghost in range(1, n_ghost+1,5):
         n_maze=100
@@ -51,8 +48,8 @@ def agent_one():
             ghost_position = list()
             # Spawning Ghosts at random location
             spawn_ghosts(maze, i_ghost, n_row, n_col,ghost_position)
-            n_alive=0
-            n_death=0
+            # n_alive=0
+            # n_death=0
             # ghosts now present in maze. Now start walking
 
             for play_pos_r, play_pos_c in path:

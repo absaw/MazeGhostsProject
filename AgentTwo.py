@@ -10,6 +10,7 @@ import Maze
 from BFS import get_bfs_path
 from Maze import generate_maze
 from time import time
+from datetime import datetime
 # 0   = Empty Space
 # 1   = Blocked Wall
 # 100 = Empty Space with ghost
@@ -19,27 +20,24 @@ from time import time
 def agent_two():
     start=time()
     print("Started...")
-    from datetime import datetime
     n_ghost=1
-
-    #file=open("Results/AgentTwo.txt","a")
-    text="\n\n\n======  Start Time  =========->  "+ datetime.now().strftime("%m/%d/%y %H:%M:%S")
-    #file.write(text)
-    #file.write("\nNo. of Ghosts = %d"%n_ghost)
-    #file.write("\nNo. of mazes for each ghost = 100")
-    # file.close()
-    # no of ghosts = 1
     n_row = 10
     n_col = 10
     walk = [[0, 1],
             [0, -1],
             [1, 0],
             [-1, 0]]
-    # charter a path for agent 1
 
-    # path = get_bfs_path(maze, n_row, n_col,(0,0))
+    #file=open("Results/AgentTwo.txt","a")
+    # text="\n\n\n======  Start Time  =========->  "+ datetime.now().strftime("%m/%d/%y %H:%M:%S")
+    #file.write(text)
+    #file.write("\nNo. of Ghosts = %d"%n_ghost)
+    #file.write("\nNo. of mazes for each ghost = 100")
+    # file.close()
+    # no of ghosts = 1
+    # charter a path for agent 2
+
     # start walking
-    # ghost_result=[[]]
     # remember ghosts are present
     for i_ghost in range(1, n_ghost+1):
         n_maze=1
@@ -55,11 +53,11 @@ def agent_two():
             # n_alive=0
             # n_death=0
             # ghosts now present in maze. Now start walking
-            path_set=set(initial_path)
+            # path_set=set(initial_path)
             path=list()
             path.append(initial_path.pop(1))
-            current_planned_path=initial_path.copy()
-            n_recalc=0
+            # current_planned_path=initial_path.copy()
+            # n_recalc=0
             for play_pos_r, play_pos_c in path:
                 is_player_alive=True
                 next_ghost_position=list()
@@ -82,28 +80,53 @@ def agent_two():
                     next_ghost_position.append((row_move,col_move))
                     move_to_next_cell(maze, row_move, col_move)
                     reset_prev_cell(maze, row, col)
+                ghost_position=next_ghost_position
                 # ===========================================================================
                 #Now all ghosts are in their next position. So if player is on the same cell, they die
-
                 if maze[play_pos_r][play_pos_c] >= 100:
                     # player dies
                     is_player_alive=False
                     break
-                if (play_pos_r,play_pos_c) == (n_row,n_col):
+                if (play_pos_r,play_pos_c) == (n_row-1,n_col-1):
                     # player survives
                     break
                 # ===================================================================================================
+                
                 # Now this code will execute only if player hasn't yet died. so player will have to replan the path
                 latest_path=get_bfs_path(maze,n_col,n_row,(play_pos_r,play_pos_c),True)
-                print(latest_path)
-                if latest_path[0]:#if there exists a path from player to goal, without ghosts
+                print("Latest Path->",latest_path)
+                
+                if latest_path[0]:#contains True/False : if there exists a path from player to goal, without ghosts
+                    # if (len(latest_path[1])==1):
+                    #     path.append(latest_path[1].pop(0))
+                    # else:
                     path.append(latest_path[1].pop(1))#append the next cell in the path
-                    print("Moving : Current path ",path) 
+                    print("Moving : Current path ",path)
+                    print("Current Position : ",play_pos_r,play_pos_c)
+                # ===================================================================================================
+                
+                
                 else:
+                    
                     #Path is blocked by ghost. Run away..
-                    #Currently staying in same position
-                    path.append((play_pos_r,play_pos_c))
-                    print("Stay",play_pos_r,play_pos_c)
+                    #We find the nearest ghost to current player position. 
+                    nearest_ghost=find_nearest_ghost(play_pos_r,play_pos_c,ghost_position)[1]
+                    # Then select the next direction which is the farthest from this particular ghost
+                    max=-1 #some low value
+                    for i in range(0,4):
+                        next_pos_r=play_pos_r+walk[i][0] #next possible row
+                        next_pos_c=play_pos_c+walk[i][1] #next possible column
+                        if 0<=next_pos_r<n_row and 0<=next_pos_c<n_col and maze[next_pos_r][next_pos_c]!=1: #must be inside grid
+                            dist_frm_ghost=euclidean_distance(next_pos_r,next_pos_c,nearest_ghost[0],nearest_ghost[1])
+                            if dist_frm_ghost<max:
+                                min=dist_frm_ghost
+                                play_next_r=next_pos_r #player's next row
+                                play_next_c=next_pos_c #player's next column
+
+                    
+                    path.append((play_next_r,play_next_c))
+                    print("Running Away : ",path)
+                    print("Current Position : ",play_pos_r,play_pos_c)
 
                 # ===================================================================================================
                 #First checking if we can stick to current path
@@ -140,6 +163,28 @@ def agent_two():
     # plt.show()
     # print()
 
+def find_nearest_ghost(play_pos_r,play_pos_c,ghost_position):
+    min_dist = 1000 #Some initial high value
+    # play_pos_r=play_pos_c=0
+    # ghost_position=[(3,4),(2,3),(6,8),(1,1)]
+    min_gh_r=ghost_position[0][0]
+    min_gh_c=ghost_position[0][1]
+    for gh_r, gh_c in ghost_position:
+        curr_dist = euclidean_distance(play_pos_r,play_pos_c,gh_r,gh_c)
+        # curr_dist = np.sqrt((gh_r-play_pos_r)**2+(gh_c-play_pos_c)**2)
+        if curr_dist < min_dist:
+            min_dist = curr_dist
+            min_gh_r = gh_r
+            min_gh_c = gh_c
+    # print("Min Dist = ",min_dist)
+    # print("Co-Ordinates = ",min_gh_r,", ", min_gh_c)
+    return min_dist,(min_gh_r,min_gh_c)
+
+def euclidean_distance(x1,y1,x2,y2):
+    return np.sqrt((x1-x2)**2+(y1-y2)**2)
+
+def manhattan_distance(x1,y1,x2,y2):
+    return abs(x1-x2)+abs(y2-y1)
 
 def spawn_ghosts(maze, n_ghost, n_row, n_col,ghost_position):
     # ghost_position = list()
