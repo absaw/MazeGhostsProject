@@ -20,27 +20,26 @@ from datetime import datetime
 def agent_two():
     start=time()
     print("Started...")
-    n_ghost=1
-    n_row = 10
-    n_col = 10
+    n_ghost=20
+    n_row = 51
+    n_col = 51
     walk = [[0, 1],
             [0, -1],
             [1, 0],
             [-1, 0]]
 
-    #file=open("Results/AgentTwo.txt","a")
-    # text="\n\n\n======  Start Time  =========->  "+ datetime.now().strftime("%m/%d/%y %H:%M:%S")
-    #file.write(text)
-    #file.write("\nNo. of Ghosts = %d"%n_ghost)
-    #file.write("\nNo. of mazes for each ghost = 100")
-    # file.close()
+    file=open("Results/AgentTwo.txt","a")
+    text="\n\n\n======  Start Time  =========->  "+ datetime.now().strftime("%m/%d/%y %H:%M:%S")
+    file.write(text)
+    file.write("\nNo. of Ghosts = %d"%n_ghost)
+    file.write("\nNo. of mazes for each ghost = 100")
     # no of ghosts = 1
     # charter a path for agent 2
 
     # start walking
     # remember ghosts are present
-    for i_ghost in range(1, n_ghost+1):
-        n_maze=1
+    for i_ghost in range(1, n_ghost+1,5):
+        n_maze=100
         n_alive_for_this_ghost = 0
         while (n_maze>0):
             n_maze-=1
@@ -85,6 +84,12 @@ def agent_two():
                 #Now all ghosts are in their next position. So if player is on the same cell, they die
                 if maze[play_pos_r][play_pos_c] >= 100:
                     # player dies
+                    # print("\n\nPlayer died at ->",play_pos_r,",",play_pos_c)
+                    # print("Value Perceived -> ",maze[play_pos_r][play_pos_c])
+                    # print("Current maze - > \n",maze)
+                    # print("Player Position >",play_pos_r,",",play_pos_c)
+                    # print("Path - > ",path)
+                    
                     is_player_alive=False
                     break
                 if (play_pos_r,play_pos_c) == (n_row-1,n_col-1):
@@ -94,15 +99,16 @@ def agent_two():
                 
                 # Now this code will execute only if player hasn't yet died. so player will have to replan the path
                 latest_path=get_bfs_path(maze,n_col,n_row,(play_pos_r,play_pos_c),True)
-                print("Latest Path->",latest_path)
+                # print("Latest Path->",latest_path)
                 
-                if latest_path[0]:#contains True/False : if there exists a path from player to goal, without ghosts
+                if latest_path[0]:#contains True/False : if there exists a path from player to goal, 
                     # if (len(latest_path[1])==1):
                     #     path.append(latest_path[1].pop(0))
                     # else:
                     path.append(latest_path[1].pop(1))#append the next cell in the path
-                    print("Moving : Current path ",path)
-                    print("Current Position : ",play_pos_r,play_pos_c)
+                    # print("\nMoving")
+                    # print("\nMoving : Current path ",path)
+                    # print("Current Position : ",play_pos_r,play_pos_c)
                 # ===================================================================================================
                 
                 
@@ -118,16 +124,22 @@ def agent_two():
                         next_pos_c=play_pos_c+walk[i][1] #next possible column
                         if 0<=next_pos_r<n_row and 0<=next_pos_c<n_col and maze[next_pos_r][next_pos_c]!=1: #must be inside grid
                             dist_frm_ghost=euclidean_distance(next_pos_r,next_pos_c,nearest_ghost[0],nearest_ghost[1])
-                            if dist_frm_ghost<max:
-                                min=dist_frm_ghost
+                            if dist_frm_ghost>max:
+                                max=dist_frm_ghost
                                 play_next_r=next_pos_r #player's next row
                                 play_next_c=next_pos_c #player's next column
 
-                    
                     path.append((play_next_r,play_next_c))
-                    print("Running Away : ",path)
-                    print("Current Position : ",play_pos_r,play_pos_c)
-
+                    # print("\n\nRunning Away : ")
+                    # print("Player Position >",play_pos_r,",",play_pos_c)
+                    # print("Nearest Ghost -> ",nearest_ghost)
+                    # print("Next Position -> ",play_next_r,",",play_next_c)
+                    # print("Max Distance ->",max)
+                    # print("Ghost Position List ->",ghost_position)
+                    # print("Current Position : ",play_pos_r,play_pos_c)
+                # print("\nCurrent maze - > \n",maze)
+                # print("Player Position >",play_pos_r,",",play_pos_c)
+                # print("Path - > ",path)
                 # ===================================================================================================
                 #First checking if we can stick to current path
                 # ghost_set=set(ghost_position)
@@ -142,18 +154,18 @@ def agent_two():
 
             # print("Simulation for %d ghosts done"%(i_ghost))
             if is_player_alive:
-                # print("Alive")
+                print("Alive")
                 n_alive_for_this_ghost+=1
             # else:
                 # print("Dead at ",node_reached)
-        #file.write("\nReport for %d Number of Ghosts"%i_ghost)
-        #file.write("\nPlayer Survivability = %d"%n_alive_for_this_ghost+" %")
-        print(i_ghost," ")
+        file.write("\nReport for %d Number of Ghosts"%i_ghost)
+        file.write("\nPlayer Survivability = %d"%n_alive_for_this_ghost+" %")
+        print(i_ghost,"th Ghost")
         # print(maze)
     end = time()
-    #file.write("\n\nExecution Time = "+str(end-start)+" s")
+    file.write("\n\nExecution Time = "+str(end-start)+" s")
     print("Execution time : "+str(end-start)+" s")
-    #file.close()
+    file.close()
     print("Done!")
     # n_simul-=1
     # print("Simulation -> ",n_simul)

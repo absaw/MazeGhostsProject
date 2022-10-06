@@ -50,4 +50,4 @@ def plot_maze(maze):
     plt.show()
 
 
-# plot_maze(generate_maze(5,5),True)
+# plot_maze(generate_maze(5,5,True)[0])
