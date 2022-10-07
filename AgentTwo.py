@@ -20,15 +20,15 @@ from datetime import datetime
 def agent_two():
     start=time()
     print("Started...")
-    n_ghost=20
-    n_row = 51
-    n_col = 51
+    n_ghost=2
+    n_row = 5
+    n_col = 5
     walk = [[0, 1],
             [0, -1],
             [1, 0],
             [-1, 0]]
 
-    file=open("Results/AgentTwo.txt","a")
+    file=open("/Users/abhishek.sawalkar/Library/Mobile Documents/com~apple~CloudDocs/AI Project/MazeGhostsProject/Results/AgentTwo.txt","a")
     text="\n\n\n======  Start Time  =========->  "+ datetime.now().strftime("%m/%d/%y %H:%M:%S")
     file.write(text)
     file.write("\nNo. of Ghosts = %d"%n_ghost)
@@ -38,9 +38,12 @@ def agent_two():
 
     # start walking
     # remember ghosts are present
-    for i_ghost in range(1, n_ghost+1,5):
-        n_maze=100
+    for i_ghost in range(2, n_ghost+1):
+        n_maze=10
         n_alive_for_this_ghost = 0
+        n_dead_for_this_ghost=0
+        node_reached=[]
+        print("Ghost Number ",i_ghost," Started")
         while (n_maze>0):
             n_maze-=1
             maze_generator_result = generate_maze(n_row, n_col,True)
@@ -60,7 +63,6 @@ def agent_two():
             for play_pos_r, play_pos_c in path:
                 is_player_alive=True
                 next_ghost_position=list()
-
                 # Simulate movement for ghost
                 # =========================================================================
                 for row, col in ghost_position:
@@ -91,6 +93,7 @@ def agent_two():
                     # print("Path - > ",path)
                     
                     is_player_alive=False
+                    node_reached.append((play_pos_r,play_pos_c))
                     break
                 if (play_pos_r,play_pos_c) == (n_row-1,n_col-1):
                     # player survives
@@ -98,7 +101,7 @@ def agent_two():
                 # ===================================================================================================
                 
                 # Now this code will execute only if player hasn't yet died. so player will have to replan the path
-                latest_path=get_bfs_path(maze,n_col,n_row,(play_pos_r,play_pos_c),True)
+                latest_path=get_bfs_path(maze,n_row,n_col,(play_pos_r,play_pos_c),True)
                 # print("Latest Path->",latest_path)
                 
                 if latest_path[0]:#contains True/False : if there exists a path from player to goal, 
@@ -112,24 +115,30 @@ def agent_two():
                 # ===================================================================================================
                 
                 
-                else:
+                elif latest_path[0] == False:
                     
                     #Path is blocked by ghost. Run away..
                     #We find the nearest ghost to current player position. 
+                    
                     nearest_ghost=find_nearest_ghost(play_pos_r,play_pos_c,ghost_position)[1]
                     # Then select the next direction which is the farthest from this particular ghost
-                    max=-1 #some low value
+                    max=1 #some low value
+                    play_next_r=-1
+                    play_next_c=-1
                     for i in range(0,4):
                         next_pos_r=play_pos_r+walk[i][0] #next possible row
                         next_pos_c=play_pos_c+walk[i][1] #next possible column
-                        if 0<=next_pos_r<n_row and 0<=next_pos_c<n_col and maze[next_pos_r][next_pos_c]!=1: #must be inside grid
+                        if 0<=next_pos_r<n_row and 0<=next_pos_c<n_col and maze[next_pos_r][next_pos_c]!=1 and maze[next_pos_r][next_pos_c]<100: #must be inside grid
                             dist_frm_ghost=euclidean_distance(next_pos_r,next_pos_c,nearest_ghost[0],nearest_ghost[1])
-                            if dist_frm_ghost>max:
+                            if dist_frm_ghost>=max:
                                 max=dist_frm_ghost
                                 play_next_r=next_pos_r #player's next row
                                 play_next_c=next_pos_c #player's next column
-
-                    path.append((play_next_r,play_next_c))
+                    if (play_next_r,play_next_c)==(-1,-1):
+                        path.append((play_pos_r,play_pos_c))
+                    else:
+                        path.append((play_next_r,play_next_c))
+                    
                     # print("\n\nRunning Away : ")
                     # print("Player Position >",play_pos_r,",",play_pos_c)
                     # print("Nearest Ghost -> ",nearest_ghost)
@@ -137,9 +146,11 @@ def agent_two():
                     # print("Max Distance ->",max)
                     # print("Ghost Position List ->",ghost_position)
                     # print("Current Position : ",play_pos_r,play_pos_c)
-                # print("\nCurrent maze - > \n",maze)
-                # print("Player Position >",play_pos_r,",",play_pos_c)
-                # print("Path - > ",path)
+                print("\nCurrent maze - > \n",maze)
+                print("Player Position >",play_pos_r,",",play_pos_c)
+                print("Path - > ",path)
+                plt.imshow(maze,"Dark2")
+                # plt.plot()
                 # ===================================================================================================
                 #First checking if we can stick to current path
                 # ghost_set=set(ghost_position)
@@ -156,11 +167,21 @@ def agent_two():
             if is_player_alive:
                 print("Alive")
                 n_alive_for_this_ghost+=1
-            # else:
-                # print("Dead at ",node_reached)
+            else:
+                print("Maze number ",n_maze)
+                n_dead_for_this_ghost+=1
+                print("Dead = ",n_dead_for_this_ghost)
+                print("Dead at ",node_reached)
+
         file.write("\nReport for %d Number of Ghosts"%i_ghost)
         file.write("\nPlayer Survivability = %d"%n_alive_for_this_ghost+" %")
-        print(i_ghost,"th Ghost")
+        file.write("Dead Number-> %d"%n_dead_for_this_ghost)
+        # print("Node Reached -> %d"%node_reached)
+
+        print("Dead = ",n_dead_for_this_ghost)
+        print("Dead at ",node_reached)
+        
+        print("Ghost Number ",i_ghost," Done")
         # print(maze)
     end = time()
     file.write("\n\nExecution Time = "+str(end-start)+" s")

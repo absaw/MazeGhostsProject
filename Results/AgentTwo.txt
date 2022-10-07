@@ -34,3 +34,241 @@ No. of mazes for each ghost = 100
 ======  Start Time  =========->  10/05/22 14:07:19
 No. of Ghosts = 1
 No. of mazes for each ghost = 100
+
+
+======  Start Time  =========->  10/06/22 18:07:40
+No. of Ghosts = 20
+No. of mazes for each ghost = 100
+
+
+======  Start Time  =========->  10/06/22 18:08:36
+No. of Ghosts = 20
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 98 %
+Report for 6 Number of Ghosts
+Player Survivability = 84 %
+Report for 11 Number of Ghosts
+Player Survivability = 81 %
+Report for 16 Number of Ghosts
+Player Survivability = 66 %
+
+Execution Time = 152.3771209716797 s
+
+
+======  Start Time  =========->  10/06/22 18:13:48
+No. of Ghosts = 100
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 97 %
+Report for 11 Number of Ghosts
+Player Survivability = 77 %
+Report for 21 Number of Ghosts
+Player Survivability = 63 %
+Report for 31 Number of Ghosts
+Player Survivability = 52 %
+Report for 41 Number of Ghosts
+Player Survivability = 34 %
+Report for 51 Number of Ghosts
+Player Survivability = 33 %
+Report for 61 Number of Ghosts
+Player Survivability = 19 %
+Report for 71 Number of Ghosts
+Player Survivability = 11 %
+Report for 81 Number of Ghosts
+Player Survivability = 15 %
+Report for 91 Number of Ghosts
+Player Survivability = 12 %
+
+Execution Time = 326.60917234420776 s
+
+
+======  Start Time  =========->  10/06/22 18:40:49
+No. of Ghosts = 20
+No. of mazes for each ghost = 100
+Report for 20 Number of Ghosts
+Player Survivability = 59 %
+
+
+======  Start Time  =========->  10/06/22 18:52:18
+No. of Ghosts = 20
+No. of mazes for each ghost = 100
+Report for 20 Number of Ghosts
+Player Survivability = 64 %Dead Number-> 36
+
+
+======  Start Time  =========->  10/06/22 19:30:41
+No. of Ghosts = 20
+No. of mazes for each ghost = 100
+Report for 20 Number of Ghosts
+Player Survivability = 61 %Dead Number-> 39
+
+Execution Time = 36.20508694648743 s
+
+
+======  Start Time  =========->  10/06/22 20:30:44
+No. of Ghosts = 20
+No. of mazes for each ghost = 100
+Report for 20 Number of Ghosts
+Player Survivability = 62 %Dead Number-> 38
+
+Execution Time = 36.85320711135864 s
+
+
+======  Start Time  =========->  10/06/22 20:32:31
+No. of Ghosts = 20
+No. of mazes for each ghost = 100
+Report for 20 Number of Ghosts
+Player Survivability = 5 %Dead Number-> 5
+
+Execution Time = 3.781507730484009 s
+
+
+======  Start Time  =========->  10/06/22 20:34:13
+No. of Ghosts = 20
+No. of mazes for each ghost = 100
+Report for 20 Number of Ghosts
+Player Survivability = 7 %Dead Number-> 3
+
+Execution Time = 4.157053232192993 s
+
+
+======  Start Time  =========->  10/06/22 20:35:43
+No. of Ghosts = 2
+No. of mazes for each ghost = 100
+
+Execution Time = 0.0001399517059326172 s
+
+
+======  Start Time  =========->  10/06/22 20:56:52
+No. of Ghosts = 2
+No. of mazes for each ghost = 100
+
+Execution Time = 9.989738464355469e-05 s
+
+
+======  Start Time  =========->  10/06/22 20:58:01
+No. of Ghosts = 20
+No. of mazes for each ghost = 100
+Report for 20 Number of Ghosts
+Player Survivability = 66 %Dead Number-> 34
+
+Execution Time = 37.77568793296814 s
+
+
+======  Start Time  =========->  10/06/22 21:11:33
+No. of Ghosts = 20
+No. of mazes for each ghost = 100
+
+
+======  Start Time  =========->  10/06/22 21:13:38
+No. of Ghosts = 20
+No. of mazes for each ghost = 100
+Report for 20 Number of Ghosts
+Player Survivability = 1 %Dead Number-> 0
+
+Execution Time = 0.0788118839263916 s
+
+
+======  Start Time  =========->  10/06/22 21:21:03
+No. of Ghosts = 2
+No. of mazes for each ghost = 100
+
+Execution Time = 0.00010323524475097656 s
+
+
+======  Start Time  =========->  10/06/22 21:21:22
+No. of Ghosts = 2
+No. of mazes for each ghost = 100
+Report for 2 Number of Ghosts
+Player Survivability = 0 %Dead Number-> 1
+
+Execution Time = 0.12700796127319336 s
+
+
+======  Start Time  =========->  10/06/22 21:21:55
+No. of Ghosts = 2
+No. of mazes for each ghost = 100
+Report for 2 Number of Ghosts
+Player Survivability = 1 %Dead Number-> 0
+
+Execution Time = 0.08753490447998047 s
+
+
+======  Start Time  =========->  10/06/22 21:23:39
+No. of Ghosts = 1
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 1 %Dead Number-> 0
+
+Execution Time = 0.10507082939147949 s
+
+
+======  Start Time  =========->  10/06/22 21:23:48
+No. of Ghosts = 1
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 1 %Dead Number-> 0
+
+Execution Time = 0.0927581787109375 s
+
+
+======  Start Time  =========->  10/06/22 21:23:50
+No. of Ghosts = 1
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 1 %Dead Number-> 0
+
+Execution Time = 0.0926358699798584 s
+
+
+======  Start Time  =========->  10/06/22 21:23:52
+No. of Ghosts = 1
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 1 %Dead Number-> 0
+
+Execution Time = 0.0935673713684082 s
+
+
+======  Start Time  =========->  10/06/22 21:24:00
+No. of Ghosts = 1
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 10 %Dead Number-> 0
+
+Execution Time = 0.3006782531738281 s
+
+
+======  Start Time  =========->  10/06/22 21:24:36
+No. of Ghosts = 5
+No. of mazes for each ghost = 100
+Report for 5 Number of Ghosts
+Player Survivability = 3 %Dead Number-> 7
+
+Execution Time = 0.39650726318359375 s
+
+
+======  Start Time  =========->  10/06/22 21:28:27
+No. of Ghosts = 2
+No. of mazes for each ghost = 100
+
+Execution Time = 0.00011682510375976562 s
+
+
+======  Start Time  =========->  10/06/22 21:28:47
+No. of Ghosts = 2
+No. of mazes for each ghost = 100
+Report for 2 Number of Ghosts
+Player Survivability = 6 %Dead Number-> 4
+
+Execution Time = 0.1558530330657959 s
+
+
+======  Start Time  =========->  10/06/22 21:31:04
+No. of Ghosts = 2
+No. of mazes for each ghost = 100
+Report for 2 Number of Ghosts
+Player Survivability = 7 %Dead Number-> 3
+
+Execution Time = 1159.9064302444458 s

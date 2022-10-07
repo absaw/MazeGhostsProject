@@ -23,4 +23,14 @@ def min_dist():
     print("Min Dist = ",min_dist)
     print("Co-Ordinates = ",min_gh_r,", ", min_gh_c)
 
-min_dist()
+# min_dist()
+
+def brkTwo():
+
+    for i in range(0,5):
+        for j in range(0,5):
+            print(i,j)
+            if j==2:
+               break
+         
+brkTwo()

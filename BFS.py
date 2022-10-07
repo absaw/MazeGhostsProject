@@ -38,7 +38,7 @@ def get_bfs_path(maze,n_row,n_col,start,ghost_present):
                 if not ghost_present:#for agent 1; when path without ghosts is calculated
                     fringe_q.append(path+[(row,col)])
                     visited_set.add((row,col))
-                elif maze[row][col]<100:#ghost present and we need to avoid ghosts
+                elif ghost_present and maze[row][col]<100:#ghost present and we need to avoid ghosts
                     fringe_q.append(path+[(row,col)])
                     visited_set.add((row,col))
                     
@@ -63,11 +63,11 @@ def get_bfs_path(maze,n_row,n_col,start,ghost_present):
 
     # plt.imshow(maze,"Dark2")
     # plt.show()
-# a=[ [0,0,1,1,0],
-#     [0,0,0,0,0],
-#     [0,1,1,1,0],
-#     [1,1,1,1,0],
-#     [0,0,0,0,0]]
+# a=[ [0,100,100,100,100],
+#     [0,100,1,100,100],
+#     [0,0,0,0,100],
+#     [0,0,100,0,0],
+#     [100,0,100,0,0]]
 
 # a2=[[0,0,1,0,0],
 #     [102,0,200,0,0],
