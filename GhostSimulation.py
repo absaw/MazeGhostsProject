@@ -125,3 +125,20 @@ def count_ghosts(maze,n_row,n_col):
                 print("\n Ghost value--",maze[i][j])
     print("                             No. of ghosts currently = ",k)
     return k
+
+def run_away_from_ghost(walk,ghost_position,n_row,n_col,maze,play_pos_r,play_pos_c):
+    nearest_ghost=find_nearest_ghost(0,0,ghost_position)[1]
+    max=0 #some low value
+    # play_next_r=-1
+    # play_next_c=-1
+    for i in range(0,4):
+        next_pos_r=play_pos_r+walk[i][0] #next possible row
+        next_pos_c=play_pos_c+walk[i][1] #next possible column
+        if 0<=next_pos_r<n_row and 0<=next_pos_c<n_col and maze[next_pos_r][next_pos_c]!=1: #must be inside grid
+            dist_frm_ghost=euclidean_distance(next_pos_r,next_pos_c,nearest_ghost[0],nearest_ghost[1])
+            if dist_frm_ghost>=max:
+                max=dist_frm_ghost
+                play_next_r=next_pos_r #player's next row
+                play_next_c=next_pos_c #player's next column
+    
+    return ghost_position,maze,play_next_r,play_next_c,nearest_ghost
