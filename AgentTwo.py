@@ -32,36 +32,59 @@ def agent_two():
     text="\n\n\n======  Start Time  =========->  "+ datetime.now().strftime("%m/%d/%y %H:%M:%S")
     file.write(text)
     file.write("\nNo. of Ghosts = %d"%n_ghost)
-    file.write("\nNo. of mazes for each ghost = 100")
+    file.write("\nNo. of mazes for each ghost = 1")
     # no of ghosts = 1
     # charter a path for agent 2
 
     # start walking
     # remember ghosts are present
     for i_ghost in range(2, n_ghost+1):
-        n_maze=10
+        n_maze=1
         n_alive_for_this_ghost = 0
         n_dead_for_this_ghost=0
         node_reached=[]
         print("Ghost Number ",i_ghost," Started")
         while (n_maze>0):
             n_maze-=1
-            maze_generator_result = generate_maze(n_row, n_col,True)
-            maze = maze_generator_result[0]
-            initial_path = maze_generator_result[1]
+            maze = generate_maze(n_row, n_col,True)[0]
             ghost_position = list()
             # Spawning Ghosts at random location
             spawn_ghosts(maze, i_ghost, n_row, n_col,ghost_position)
+            run_away=False
+            get_init_path=get_bfs_path(maze,n_row,n_col,(0,0),True)
+            is_init_path_valid=get_init_path[0]
+            path=list()
+            if is_init_path_valid:
+                init_path=get_init_path[1]
+                path.append(init_path.pop(1))
+            else:
+                run_away=True
+                nearest_ghost=find_nearest_ghost(play_pos_r,play_pos_c,ghost_position)[1]
+                max=1 #some low value
+                play_next_r=-1
+                play_next_c=-1
+                for i in range(0,4):
+                    next_pos_r=play_pos_r+walk[i][0] #next possible row
+                    next_pos_c=play_pos_c+walk[i][1] #next possible column
+                    if 0<=next_pos_r<n_row and 0<=next_pos_c<n_col and maze[next_pos_r][next_pos_c]!=1 and maze[next_pos_r][next_pos_c]<100: #must be inside grid
+                        dist_frm_ghost=euclidean_distance(next_pos_r,next_pos_c,nearest_ghost[0],nearest_ghost[1])
+                        if dist_frm_ghost>=max:
+                            max=dist_frm_ghost
+                            play_next_r=next_pos_r #player's next row
+                            play_next_c=next_pos_c #player's next column
+                path.append((play_next_r,play_next_c))
             # n_alive=0
             # n_death=0
             # ghosts now present in maze. Now start walking
-            # path_set=set(initial_path)
-            path=list()
-            path.append(initial_path.pop(1))
-            # current_planned_path=initial_path.copy()
+            # path_set=set(init_path)
+            # current_planned_path=init_path.copy()
             # n_recalc=0
             for play_pos_r, play_pos_c in path:
                 is_player_alive=True
+                if maze[play_pos_r][play_pos_c]>=100:
+                    is_player_alive=False
+                    break
+                
                 next_ghost_position=list()
                 # Simulate movement for ghost
                 # =========================================================================
@@ -120,24 +143,24 @@ def agent_two():
                     #Path is blocked by ghost. Run away..
                     #We find the nearest ghost to current player position. 
                     
-                    nearest_ghost=find_nearest_ghost(play_pos_r,play_pos_c,ghost_position)[1]
-                    # Then select the next direction which is the farthest from this particular ghost
-                    max=1 #some low value
-                    play_next_r=-1
-                    play_next_c=-1
-                    for i in range(0,4):
-                        next_pos_r=play_pos_r+walk[i][0] #next possible row
-                        next_pos_c=play_pos_c+walk[i][1] #next possible column
-                        if 0<=next_pos_r<n_row and 0<=next_pos_c<n_col and maze[next_pos_r][next_pos_c]!=1 and maze[next_pos_r][next_pos_c]<100: #must be inside grid
-                            dist_frm_ghost=euclidean_distance(next_pos_r,next_pos_c,nearest_ghost[0],nearest_ghost[1])
-                            if dist_frm_ghost>=max:
-                                max=dist_frm_ghost
-                                play_next_r=next_pos_r #player's next row
-                                play_next_c=next_pos_c #player's next column
-                    if (play_next_r,play_next_c)==(-1,-1):
-                        path.append((play_pos_r,play_pos_c))
-                    else:
-                        path.append((play_next_r,play_next_c))
+                    # nearest_ghost=find_nearest_ghost(play_pos_r,play_pos_c,ghost_position)[1]
+                    # # Then select the next direction which is the farthest from this particular ghost
+                    # max=1 #some low value
+                    # play_next_r=-1
+                    # play_next_c=-1
+                    # for i in range(0,4):
+                    #     next_pos_r=play_pos_r+walk[i][0] #next possible row
+                    #     next_pos_c=play_pos_c+walk[i][1] #next possible column
+                    #     if 0<=next_pos_r<n_row and 0<=next_pos_c<n_col and maze[next_pos_r][next_pos_c]!=1 and maze[next_pos_r][next_pos_c]<100: #must be inside grid
+                    #         dist_frm_ghost=euclidean_distance(next_pos_r,next_pos_c,nearest_ghost[0],nearest_ghost[1])
+                    #         if dist_frm_ghost>=max:
+                    #             max=dist_frm_ghost
+                    #             play_next_r=next_pos_r #player's next row
+                    #             play_next_c=next_pos_c #player's next column
+                    # if (play_next_r,play_next_c)==(-1,-1):
+                    path.append((play_pos_r,play_pos_c))
+                    # else:
+                    #     path.append((play_next_r,play_next_c))
                     
                     # print("\n\nRunning Away : ")
                     # print("Player Position >",play_pos_r,",",play_pos_c)
@@ -146,10 +169,10 @@ def agent_two():
                     # print("Max Distance ->",max)
                     # print("Ghost Position List ->",ghost_position)
                     # print("Current Position : ",play_pos_r,play_pos_c)
-                print("\nCurrent maze - > \n",maze)
-                print("Player Position >",play_pos_r,",",play_pos_c)
-                print("Path - > ",path)
-                plt.imshow(maze,"Dark2")
+                # print("\nCurrent maze - > \n",maze)
+                # print("Player Position >",play_pos_r,",",play_pos_c)
+                # print("Path - > ",path)
+                # plt.imshow(maze,"Dark2")
                 # plt.plot()
                 # ===================================================================================================
                 #First checking if we can stick to current path
@@ -164,24 +187,24 @@ def agent_two():
 
 
             # print("Simulation for %d ghosts done"%(i_ghost))
+            print("\nMaze number ",n_maze)
             if is_player_alive:
                 print("Alive")
                 n_alive_for_this_ghost+=1
             else:
-                print("Maze number ",n_maze)
                 n_dead_for_this_ghost+=1
                 print("Dead = ",n_dead_for_this_ghost)
                 print("Dead at ",node_reached)
 
         file.write("\nReport for %d Number of Ghosts"%i_ghost)
         file.write("\nPlayer Survivability = %d"%n_alive_for_this_ghost+" %")
-        file.write("Dead Number-> %d"%n_dead_for_this_ghost)
+        file.write("\nDead Number-> %d"%n_dead_for_this_ghost)
         # print("Node Reached -> %d"%node_reached)
 
-        print("Dead = ",n_dead_for_this_ghost)
-        print("Dead at ",node_reached)
+        # print("Dead = ",n_dead_for_this_ghost)
+        # print("Dead at ",node_reached)
         
-        print("Ghost Number ",i_ghost," Done")
+        print("Ghost Number ",i_ghost," Done\n")
         # print(maze)
     end = time()
     file.write("\n\nExecution Time = "+str(end-start)+" s")

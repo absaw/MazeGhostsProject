@@ -55,6 +55,11 @@ def agent_one():
             for play_pos_r, play_pos_c in path:
                 # Simulate movement for ghost
                 is_player_alive=True
+                if maze[play_pos_r][play_pos_c] >= 100:
+                    # player dies
+                    is_player_alive=False
+                    break
+
                 next_ghost_position=list()
                 for row, col in ghost_position:
 

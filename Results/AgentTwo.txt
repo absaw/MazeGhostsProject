@@ -272,3 +272,27 @@ Report for 2 Number of Ghosts
 Player Survivability = 7 %Dead Number-> 3
 
 Execution Time = 1159.9064302444458 s
+
+
+======  Start Time  =========->  10/07/22 20:14:59
+No. of Ghosts = 2
+No. of mazes for each ghost = 100
+Report for 2 Number of Ghosts
+Player Survivability = 8 %Dead Number-> 2
+
+Execution Time = 0.03426694869995117 s
+
+
+======  Start Time  =========->  10/07/22 20:17:02
+No. of Ghosts = 20
+No. of mazes for each ghost = 100
+Report for 20 Number of Ghosts
+Player Survivability = 64 %
+Dead Number-> 36
+
+Execution Time = 36.369174003601074 s
+
+
+======  Start Time  =========->  10/07/22 20:39:19
+No. of Ghosts = 2
+No. of mazes for each ghost = 1
