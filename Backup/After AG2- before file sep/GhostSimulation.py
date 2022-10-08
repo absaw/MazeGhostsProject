@@ -1,10 +1,5 @@
 import random
-import numpy as np
-
-def ghost_simulation(walk,ghost_position,n_row,n_col,maze):
-    
-    next_ghost_position=list()
-    
+def ghost_simulation():
     for row, col in ghost_position:
         
         cell_found = False
@@ -26,12 +21,6 @@ def ghost_simulation(walk,ghost_position,n_row,n_col,maze):
             next_ghost_position.append((row_move,col_move))
         else:
             next_ghost_position.append((row,col))
-    
-    ghost_position=next_ghost_position.copy()
-    return maze,ghost_position
-
-    
-
 
 def spawn_ghosts(maze, n_ghost, n_row, n_col,ghost_position):
     # ghost_position = list()
@@ -92,36 +81,3 @@ def reset_prev_cell(maze, row, col):
 
     elif (maze[row][col] == 200):
         maze[row][col] = 1
-
-def find_nearest_ghost(play_pos_r,play_pos_c,ghost_position):
-    min_dist = 1000 #Some initial high value
-    # play_pos_r=play_pos_c=0
-    # ghost_position=[(3,4),(2,3),(6,8),(1,1)]
-    min_gh_r=ghost_position[0][0]
-    min_gh_c=ghost_position[0][1]
-    for gh_r, gh_c in ghost_position:
-        curr_dist = euclidean_distance(play_pos_r,play_pos_c,gh_r,gh_c)
-        # curr_dist = np.sqrt((gh_r-play_pos_r)**2+(gh_c-play_pos_c)**2)
-        if curr_dist < min_dist:
-            min_dist = curr_dist
-            min_gh_r = gh_r
-            min_gh_c = gh_c
-    # print("Min Dist = ",min_dist)
-    # print("Co-Ordinates = ",min_gh_r,", ", min_gh_c)
-    return min_dist,(min_gh_r,min_gh_c)
-
-def euclidean_distance(x1,y1,x2,y2):
-    return np.sqrt((x1-x2)**2+(y1-y2)**2)
-
-def manhattan_distance(x1,y1,x2,y2):
-    return abs(x1-x2)+abs(y2-y1)
-
-def count_ghosts(maze,n_row,n_col):
-    k=0
-    for i in range(0,n_row):
-        for j in range(0,n_col):
-            if maze[i][j]>=100:
-                k+=1
-                print("\n Ghost value--",maze[i][j])
-    print("                             No. of ghosts currently = ",k)
-    return k

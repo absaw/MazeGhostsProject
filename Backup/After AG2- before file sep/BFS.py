@@ -113,11 +113,11 @@ def get_bfs_path_reverse(maze,n_row,n_col,start,ghost_present):
         return [path_found,None]
     # plt.imshow(maze,"Dark2")
     # plt.show()
-# a=[ [0,100,100,100,100],
-#     [0,100,1,100,100],
-#     [0,0,0,0,100],
-#     [0,0,100,0,0],
-#     [100,0,100,0,0]]
+a=[ [0,100,100,100,100],
+    [0,100,1,100,100],
+    [0,0,0,0,100],
+    [0,0,100,0,0],
+    [100,0,100,0,0]]
 
 # a2=[[0,0,1,0,0],
 #     [102,0,200,0,0],
@@ -125,8 +125,8 @@ def get_bfs_path_reverse(maze,n_row,n_col,start,ghost_present):
 #     [100,100,1,1,0],
 #     [0,0,0,0,0]]
 
-# result=get_bfs_path_reverse(a,5,5,(4,4),True)
-# print(result)
+result=get_bfs_path_reverse(a,5,5,(4,4),True)
+print(result)
         
 
 
