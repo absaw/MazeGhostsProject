@@ -20,9 +20,9 @@ from datetime import datetime
 def agent_two():
     start=time()
     print("Started...")
-    n_ghost=2
-    n_row = 5
-    n_col = 5
+    n_ghost=20
+    n_row = 51
+    n_col = 51
     walk = [[0, 1],
             [0, -1],
             [1, 0],
@@ -38,8 +38,8 @@ def agent_two():
 
     # start walking
     # remember ghosts are present
-    for i_ghost in range(2, n_ghost+1):
-        n_maze=1
+    for i_ghost in range(20, n_ghost+1):
+        n_maze=100
         n_alive_for_this_ghost = 0
         n_dead_for_this_ghost=0
         node_reached=[]
@@ -55,24 +55,27 @@ def agent_two():
             is_init_path_valid=get_init_path[0]
             path=list()
             if is_init_path_valid:
-                init_path=get_init_path[1]
-                path.append(init_path.pop(1))
+                # init_path=get_init_path[1]
+                path.append(get_init_path[1].pop(1))
             else:
                 run_away=True
-                nearest_ghost=find_nearest_ghost(play_pos_r,play_pos_c,ghost_position)[1]
-                max=1 #some low value
+                nearest_ghost=find_nearest_ghost(0,0,ghost_position)[1]
+                max=0 #some low value
                 play_next_r=-1
                 play_next_c=-1
                 for i in range(0,4):
-                    next_pos_r=play_pos_r+walk[i][0] #next possible row
-                    next_pos_c=play_pos_c+walk[i][1] #next possible column
+                    next_pos_r=walk[i][0] #next possible row
+                    next_pos_c=walk[i][1] #next possible column
                     if 0<=next_pos_r<n_row and 0<=next_pos_c<n_col and maze[next_pos_r][next_pos_c]!=1 and maze[next_pos_r][next_pos_c]<100: #must be inside grid
                         dist_frm_ghost=euclidean_distance(next_pos_r,next_pos_c,nearest_ghost[0],nearest_ghost[1])
                         if dist_frm_ghost>=max:
                             max=dist_frm_ghost
                             play_next_r=next_pos_r #player's next row
                             play_next_c=next_pos_c #player's next column
-                path.append((play_next_r,play_next_c))
+                if (play_next_r,play_next_c)==(-1,-1):
+                    path.append((play_pos_r,play_pos_c))
+                else:
+                    path.append((0,0))
             # n_alive=0
             # n_death=0
             # ghosts now present in maze. Now start walking
@@ -81,8 +84,11 @@ def agent_two():
             # n_recalc=0
             for play_pos_r, play_pos_c in path:
                 is_player_alive=True
+                
                 if maze[play_pos_r][play_pos_c]>=100:
                     is_player_alive=False
+                    break
+                if (play_pos_r,play_pos_c)==(n_row-1,n_col-1):
                     break
                 
                 next_ghost_position=list()
@@ -104,7 +110,7 @@ def agent_two():
                     next_ghost_position.append((row_move,col_move))
                     move_to_next_cell(maze, row_move, col_move)
                     reset_prev_cell(maze, row, col)
-                ghost_position=next_ghost_position
+                ghost_position=next_ghost_position.copy()
                 # ===========================================================================
                 #Now all ghosts are in their next position. So if player is on the same cell, they die
                 if maze[play_pos_r][play_pos_c] >= 100:

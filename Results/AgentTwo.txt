@@ -296,3 +296,38 @@ Execution Time = 36.369174003601074 s
 ======  Start Time  =========->  10/07/22 20:39:19
 No. of Ghosts = 2
 No. of mazes for each ghost = 1
+
+
+======  Start Time  =========->  10/07/22 22:30:11
+No. of Ghosts = 2
+No. of mazes for each ghost = 1
+Report for 2 Number of Ghosts
+Player Survivability = 4 %
+Dead Number-> 6
+
+Execution Time = 0.0043027400970458984 s
+
+
+======  Start Time  =========->  10/08/22 00:06:41
+No. of Ghosts = 2
+No. of mazes for each ghost = 1
+
+
+======  Start Time  =========->  10/08/22 00:08:58
+No. of Ghosts = 2
+No. of mazes for each ghost = 1
+Report for 2 Number of Ghosts
+Player Survivability = 6 %
+Dead Number-> 4
+
+Execution Time = 0.005026102066040039 s
+
+
+======  Start Time  =========->  10/08/22 00:10:07
+No. of Ghosts = 20
+No. of mazes for each ghost = 1
+Report for 20 Number of Ghosts
+Player Survivability = 61 %
+Dead Number-> 39
+
+Execution Time = 36.46969413757324 s
