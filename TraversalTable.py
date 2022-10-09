@@ -47,7 +47,7 @@ def get_traversal_table(maze,n_row,n_col,start,ghost_present):
     # for i,j in visited_set:
     #     zero_maze[i][j]=1
     
-    print(visited_maze)
+    # print(visited_maze)
 
     if path_found:
         return [path_found,visited_maze]
