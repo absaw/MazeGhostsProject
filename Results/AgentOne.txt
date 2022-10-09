@@ -926,3 +926,177 @@ Report for 196 Number of Ghosts
 Player Survivability = 0 %
 
 Execution Time = 57.907127141952515 s
+
+
+======  Start Time  =========->  10/09/22 08:06:31
+No. of Ghosts = 200
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 94 %
+Report for 6 Number of Ghosts
+Player Survivability = 67 %
+Report for 11 Number of Ghosts
+Player Survivability = 47 %
+Report for 16 Number of Ghosts
+Player Survivability = 33 %
+Report for 21 Number of Ghosts
+Player Survivability = 37 %
+Report for 26 Number of Ghosts
+Player Survivability = 19 %
+Report for 31 Number of Ghosts
+Player Survivability = 17 %
+Report for 36 Number of Ghosts
+Player Survivability = 14 %
+Report for 41 Number of Ghosts
+Player Survivability = 5 %
+Report for 46 Number of Ghosts
+Player Survivability = 8 %
+Report for 51 Number of Ghosts
+Player Survivability = 1 %
+Report for 56 Number of Ghosts
+Player Survivability = 4 %
+Report for 61 Number of Ghosts
+Player Survivability = 3 %
+Report for 66 Number of Ghosts
+Player Survivability = 3 %
+Report for 71 Number of Ghosts
+Player Survivability = 1 %
+Report for 76 Number of Ghosts
+Player Survivability = 0 %
+Report for 81 Number of Ghosts
+Player Survivability = 0 %
+Report for 86 Number of Ghosts
+Player Survivability = 0 %
+Report for 91 Number of Ghosts
+Player Survivability = 1 %
+Report for 96 Number of Ghosts
+Player Survivability = 0 %
+Report for 101 Number of Ghosts
+Player Survivability = 0 %
+Report for 106 Number of Ghosts
+Player Survivability = 1 %
+Report for 111 Number of Ghosts
+Player Survivability = 0 %
+Report for 116 Number of Ghosts
+Player Survivability = 0 %
+Report for 121 Number of Ghosts
+Player Survivability = 0 %
+Report for 126 Number of Ghosts
+Player Survivability = 0 %
+Report for 131 Number of Ghosts
+Player Survivability = 0 %
+Report for 136 Number of Ghosts
+Player Survivability = 0 %
+Report for 141 Number of Ghosts
+Player Survivability = 0 %
+Report for 146 Number of Ghosts
+Player Survivability = 0 %
+Report for 151 Number of Ghosts
+Player Survivability = 0 %
+Report for 156 Number of Ghosts
+Player Survivability = 0 %
+Report for 161 Number of Ghosts
+Player Survivability = 0 %
+Report for 166 Number of Ghosts
+Player Survivability = 0 %
+Report for 171 Number of Ghosts
+Player Survivability = 0 %
+Report for 176 Number of Ghosts
+Player Survivability = 0 %
+Report for 181 Number of Ghosts
+Player Survivability = 0 %
+Report for 186 Number of Ghosts
+Player Survivability = 0 %
+Report for 191 Number of Ghosts
+Player Survivability = 0 %
+Report for 196 Number of Ghosts
+Player Survivability = 0 %
+
+Execution Time = 53.07536506652832 s
+
+
+======  Start Time  =========->  10/09/22 08:41:47
+No. of Ghosts = 200
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 97 %
+Report for 6 Number of Ghosts
+Player Survivability = 72 %
+Report for 11 Number of Ghosts
+Player Survivability = 56 %
+Report for 16 Number of Ghosts
+Player Survivability = 33 %
+Report for 21 Number of Ghosts
+Player Survivability = 36 %
+Report for 26 Number of Ghosts
+Player Survivability = 16 %
+Report for 31 Number of Ghosts
+Player Survivability = 15 %
+Report for 36 Number of Ghosts
+Player Survivability = 11 %
+Report for 41 Number of Ghosts
+Player Survivability = 9 %
+Report for 46 Number of Ghosts
+Player Survivability = 3 %
+Report for 51 Number of Ghosts
+Player Survivability = 5 %
+Report for 56 Number of Ghosts
+Player Survivability = 6 %
+Report for 61 Number of Ghosts
+Player Survivability = 3 %
+Report for 66 Number of Ghosts
+Player Survivability = 2 %
+Report for 71 Number of Ghosts
+Player Survivability = 1 %
+Report for 76 Number of Ghosts
+Player Survivability = 1 %
+Report for 81 Number of Ghosts
+Player Survivability = 0 %
+Report for 86 Number of Ghosts
+Player Survivability = 1 %
+Report for 91 Number of Ghosts
+Player Survivability = 0 %
+Report for 96 Number of Ghosts
+Player Survivability = 1 %
+Report for 101 Number of Ghosts
+Player Survivability = 0 %
+Report for 106 Number of Ghosts
+Player Survivability = 0 %
+Report for 111 Number of Ghosts
+Player Survivability = 0 %
+Report for 116 Number of Ghosts
+Player Survivability = 0 %
+Report for 121 Number of Ghosts
+Player Survivability = 0 %
+Report for 126 Number of Ghosts
+Player Survivability = 0 %
+Report for 131 Number of Ghosts
+Player Survivability = 0 %
+Report for 136 Number of Ghosts
+Player Survivability = 0 %
+Report for 141 Number of Ghosts
+Player Survivability = 0 %
+Report for 146 Number of Ghosts
+Player Survivability = 0 %
+Report for 151 Number of Ghosts
+Player Survivability = 0 %
+Report for 156 Number of Ghosts
+Player Survivability = 0 %
+Report for 161 Number of Ghosts
+Player Survivability = 0 %
+Report for 166 Number of Ghosts
+Player Survivability = 1 %
+Report for 171 Number of Ghosts
+Player Survivability = 0 %
+Report for 176 Number of Ghosts
+Player Survivability = 0 %
+Report for 181 Number of Ghosts
+Player Survivability = 0 %
+Report for 186 Number of Ghosts
+Player Survivability = 0 %
+Report for 191 Number of Ghosts
+Player Survivability = 0 %
+Report for 196 Number of Ghosts
+Player Survivability = 0 %
+
+Execution Time = 84.28302788734436 s
