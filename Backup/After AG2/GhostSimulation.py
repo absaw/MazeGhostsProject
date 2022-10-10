@@ -141,7 +141,7 @@ def count_ghosts(maze, n_row, n_col):
 
 
 def run_away_from_ghost(walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c):
-    nearest_ghost = find_nearest_ghost(play_pos_r, play_pos_c, ghost_position)[1]
+    nearest_ghost = find_nearest_ghost(0, 0, ghost_position)[1]
     max = 0  # some low value
     # play_next_r=-1
     # play_next_c=-1

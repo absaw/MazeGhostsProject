@@ -33,4 +33,20 @@ def brkTwo():
             if j==2:
                break
          
-brkTwo()
+# brkTwo()
+
+def dictionaries():
+
+    a={}
+    a[(0,0)]=2
+    a[(0,1)]=30
+    a[(1,0)]=50
+    a[(1,1)]=50
+    a[(2,0)]=50
+    print(a)
+    m=max(a.values())
+    print(m)
+
+    m_l = [i for i in a if a[i] == m]
+    print(m_l)
+dictionaries()

@@ -62,7 +62,7 @@ def flood_fill(maze, n_row, n_col, x, y):
         for i in range(4):
             next_r = x+walk[i][0]
             next_c = y+walk[i][1]
-            if 0 <= next_r < n_row and 0 <= next_c < n_col and maze[next_r][next_c]==0 and maze[next_r][next_c] != 1 and maze[next_r][next_c] != 55:
+            if 0 <= next_r < n_row and 0 <= next_c < n_col and maze[next_r][next_c] != 1 and maze[next_r][next_c] != 55:
                 flood_fill(maze, n_row, n_col, next_r, next_c)
     return maze
 # plot_maze(generate_maze(5,5,True)[0])

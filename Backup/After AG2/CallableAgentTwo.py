@@ -15,7 +15,7 @@ from datetime import datetime
 
 
 def callable_agent_two(maze,n_row,n_col,n_ghost,ghost_position,play_pos):
-    # start=time()
+    start=time()
     walk = [[0, 1],
             [0, -1],
             [1, 0],
@@ -26,7 +26,7 @@ def callable_agent_two(maze,n_row,n_col,n_ghost,ghost_position,play_pos):
     n_simulations=30
     for i_sim in range(1, n_simulations+1):
 
-        # print("Sim Number ", i_sim, " Started")
+        print("Sim Number ", i_sim, " Started")
         
         get_init_path = get_bfs_path(maze, n_row, n_col, play_pos, True)
         is_init_path_valid = get_init_path[0]
@@ -78,30 +78,19 @@ def callable_agent_two(maze,n_row,n_col,n_ghost,ghost_position,play_pos):
                 ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost(
                     walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c)
                 path.append((play_next_r, play_next_c))
-            # print("\n\nPlayer Position >",play_pos_r,",",play_pos_c)
-            # print("Ghost Position ->",ghost_position)
-            # print("Curent maze  \n",maze)
-            # print("Path - > ",path)
-            # print("Latest Path ->",latest_path)
+
         if is_player_alive:
             n_alive_simulation += 1
         # else:
         #     n_dead_simulation += 1
 
-        # print("Alive = ",n_alive_simulation)
-        # print("Sim Number ", i_sim, " Done\n")
+        print("Sim Number ", i_sim, " Done\n")
+    
     survivability=n_alive_simulation/30 * 100
-    # print("Survivability = ",survivability)
-    # end = time()
-    # print("Execution time : "+str(end-start)+" s")
-    # print("Done!")
-    return survivability
-# a=np.array([[0,1,0,1,1],
-#             [0,0,100,0,1],
-#             [0,0,0,0,0],
-#             [1,0,1,0,0],
-#             [0,100,0,0,0]])
+    print("Survivability = ",survivability)
+    end = time()
+    print("Execution time : "+str(end-start)+" s")
+    print("Done!")
 
-# ghost_position=[(1,2),(4,1)]
 
-# # print(callable_agent_two(a,5,5,2,ghost_position,(0,0)))
+# callable_agent_two()

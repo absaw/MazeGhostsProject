@@ -39,7 +39,6 @@ def agent_two():
         n_dead_for_this_ghost = 0
         node_reached = []
         print("Ghost Number ", i_ghost, " Started")
-        gh_time=time()
         while (n_maze > 0):
             n_maze -= 1
             maze = generate_maze(n_row, n_col, True)[0]
@@ -127,16 +126,13 @@ def agent_two():
                 # print("Player Position >",play_pos_r,",",play_pos_c)
                 # print("Death maze  \n",maze)
 
-        now=time()
         file.write("\nReport for %d Number of Ghosts" % i_ghost)
-        file.write("\nPlayer Survivability =           %d" % n_alive_for_this_ghost+" %")
-        file.write("\nTime taken for this ghost : "+str(now-gh_time)+" s")
+        file.write("\nPlayer Survivability = %d" % n_alive_for_this_ghost+" %")
         # file.write("\nDead Number-> %d"%n_dead_for_this_ghost)
         # print("Node Reached -> %d"%node_reached)
         # print("Dead = ",n_dead_for_this_ghost)
         # print("Dead at ",node_reached)
-        print("Time taken for this ghost : "+str(now-gh_time)+" s")
-        print("Total Time till now: "+str(now-start)+" s")
+
         print("Ghost Number ", i_ghost, " Done\n")
     end = time()
     file.write("\n\nExecution Time = "+str(end-start)+" s")

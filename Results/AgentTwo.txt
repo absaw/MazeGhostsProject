@@ -819,3 +819,260 @@ Report for 301 Number of Ghosts
 Player Survivability = 0 %
 
 Execution Time = 1759.1828978061676 s
+
+
+======  Start Time  =========->  10/09/22 19:33:49
+No. of Ghosts = 5
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 99 %
+Report for 6 Number of Ghosts
+Player Survivability = 88 %
+
+Execution Time = 77.7601420879364 s
+
+
+======  Start Time  =========->  10/09/22 19:35:28
+No. of Ghosts = 300
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability = 99 %
+Report for 6 Number of Ghosts
+Player Survivability = 83 %
+Report for 11 Number of Ghosts
+Player Survivability = 80 %
+Report for 16 Number of Ghosts
+Player Survivability = 73 %
+Report for 21 Number of Ghosts
+Player Survivability = 63 %
+Report for 26 Number of Ghosts
+Player Survivability = 57 %
+Report for 31 Number of Ghosts
+Player Survivability = 49 %
+Report for 36 Number of Ghosts
+Player Survivability = 40 %
+Report for 41 Number of Ghosts
+Player Survivability = 33 %
+Report for 46 Number of Ghosts
+Player Survivability = 33 %
+Report for 51 Number of Ghosts
+Player Survivability = 28 %
+Report for 56 Number of Ghosts
+Player Survivability = 32 %
+Report for 61 Number of Ghosts
+Player Survivability = 26 %
+Report for 66 Number of Ghosts
+Player Survivability = 15 %
+Report for 71 Number of Ghosts
+Player Survivability = 21 %
+Report for 76 Number of Ghosts
+Player Survivability = 23 %
+Report for 81 Number of Ghosts
+Player Survivability = 11 %
+
+
+======  Start Time  =========->  10/09/22 21:04:02
+No. of Ghosts = 300
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability =           98 %
+Time taken for this ghost : 38.78458380699158 s
+Report for 6 Number of Ghosts
+Player Survivability =           88 %
+Time taken for this ghost : 39.023703813552856 s
+Report for 11 Number of Ghosts
+Player Survivability =           73 %
+Time taken for this ghost : 37.10037398338318 s
+Report for 16 Number of Ghosts
+Player Survivability =           72 %
+Time taken for this ghost : 37.67732000350952 s
+Report for 21 Number of Ghosts
+Player Survivability =           68 %
+Time taken for this ghost : 37.38844013214111 s
+Report for 26 Number of Ghosts
+Player Survivability =           56 %
+Time taken for this ghost : 38.543879985809326 s
+Report for 31 Number of Ghosts
+Player Survivability =           46 %
+Time taken for this ghost : 36.77018594741821 s
+Report for 36 Number of Ghosts
+Player Survivability =           39 %
+Time taken for this ghost : 35.16439390182495 s
+Report for 41 Number of Ghosts
+Player Survivability =           42 %
+Time taken for this ghost : 35.105565786361694 s
+Report for 46 Number of Ghosts
+Player Survivability =           30 %
+Time taken for this ghost : 32.7511260509491 s
+Report for 51 Number of Ghosts
+Player Survivability =           24 %
+Time taken for this ghost : 32.542600870132446 s
+Report for 56 Number of Ghosts
+Player Survivability =           23 %
+Time taken for this ghost : 34.67584204673767 s
+
+
+======  Start Time  =========->  10/10/22 00:51:46
+No. of Ghosts = 300
+No. of mazes for each ghost = 100
+
+
+======  Start Time  =========->  10/10/22 00:55:24
+No. of Ghosts = 300
+No. of mazes for each ghost = 100
+Report for 1 Number of Ghosts
+Player Survivability =           99 %
+Time taken for this ghost : 40.8049042224884 s
+Report for 6 Number of Ghosts
+Player Survivability =           89 %
+Time taken for this ghost : 39.472885847091675 s
+Report for 11 Number of Ghosts
+Player Survivability =           79 %
+Time taken for this ghost : 39.285478830337524 s
+Report for 16 Number of Ghosts
+Player Survivability =           66 %
+Time taken for this ghost : 36.43743109703064 s
+Report for 21 Number of Ghosts
+Player Survivability =           72 %
+Time taken for this ghost : 39.002350091934204 s
+Report for 26 Number of Ghosts
+Player Survivability =           56 %
+Time taken for this ghost : 34.95095777511597 s
+Report for 31 Number of Ghosts
+Player Survivability =           43 %
+Time taken for this ghost : 37.89691209793091 s
+Report for 36 Number of Ghosts
+Player Survivability =           44 %
+Time taken for this ghost : 33.08662295341492 s
+Report for 41 Number of Ghosts
+Player Survivability =           30 %
+Time taken for this ghost : 36.543055057525635 s
+Report for 46 Number of Ghosts
+Player Survivability =           31 %
+Time taken for this ghost : 33.9177143573761 s
+Report for 51 Number of Ghosts
+Player Survivability =           29 %
+Time taken for this ghost : 34.7941997051239 s
+Report for 56 Number of Ghosts
+Player Survivability =           24 %
+Time taken for this ghost : 37.7596709728241 s
+Report for 61 Number of Ghosts
+Player Survivability =           24 %
+Time taken for this ghost : 38.2559597492218 s
+Report for 66 Number of Ghosts
+Player Survivability =           17 %
+Time taken for this ghost : 32.73280310630798 s
+Report for 71 Number of Ghosts
+Player Survivability =           15 %
+Time taken for this ghost : 32.06032586097717 s
+Report for 76 Number of Ghosts
+Player Survivability =           10 %
+Time taken for this ghost : 31.1958749294281 s
+Report for 81 Number of Ghosts
+Player Survivability =           12 %
+Time taken for this ghost : 32.14260911941528 s
+Report for 86 Number of Ghosts
+Player Survivability =           4 %
+Time taken for this ghost : 29.08054780960083 s
+Report for 91 Number of Ghosts
+Player Survivability =           9 %
+Time taken for this ghost : 32.62129878997803 s
+Report for 96 Number of Ghosts
+Player Survivability =           8 %
+Time taken for this ghost : 33.19133520126343 s
+Report for 101 Number of Ghosts
+Player Survivability =           2 %
+Time taken for this ghost : 30.94896411895752 s
+Report for 106 Number of Ghosts
+Player Survivability =           4 %
+Time taken for this ghost : 34.90623712539673 s
+Report for 111 Number of Ghosts
+Player Survivability =           4 %
+Time taken for this ghost : 34.985941886901855 s
+Report for 116 Number of Ghosts
+Player Survivability =           3 %
+Time taken for this ghost : 30.470131158828735 s
+Report for 121 Number of Ghosts
+Player Survivability =           5 %
+Time taken for this ghost : 37.34153199195862 s
+Report for 126 Number of Ghosts
+Player Survivability =           4 %
+Time taken for this ghost : 36.178569078445435 s
+Report for 131 Number of Ghosts
+Player Survivability =           2 %
+Time taken for this ghost : 37.168530225753784 s
+Report for 136 Number of Ghosts
+Player Survivability =           3 %
+Time taken for this ghost : 31.0448579788208 s
+Report for 141 Number of Ghosts
+Player Survivability =           2 %
+Time taken for this ghost : 29.581248998641968 s
+Report for 146 Number of Ghosts
+Player Survivability =           1 %
+Time taken for this ghost : 31.488605976104736 s
+Report for 151 Number of Ghosts
+Player Survivability =           1 %
+Time taken for this ghost : 26.030590295791626 s
+Report for 156 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 30.307810068130493 s
+Report for 161 Number of Ghosts
+Player Survivability =           2 %
+Time taken for this ghost : 30.572876930236816 s
+Report for 166 Number of Ghosts
+Player Survivability =           1 %
+Time taken for this ghost : 38.90010070800781 s
+Report for 171 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 28.8840069770813 s
+Report for 176 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 26.61390209197998 s
+Report for 181 Number of Ghosts
+Player Survivability =           1 %
+Time taken for this ghost : 28.945908069610596 s
+Report for 186 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 28.7114999294281 s
+Report for 191 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 28.64923596382141 s
+Report for 196 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 28.468971014022827 s
+Report for 201 Number of Ghosts
+Player Survivability =           1 %
+Time taken for this ghost : 28.84523296356201 s
+Report for 206 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 31.668419122695923 s
+Report for 211 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 30.169348001480103 s
+Report for 216 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 28.894755840301514 s
+Report for 221 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 26.54503583908081 s
+Report for 226 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 34.879788875579834 s
+Report for 231 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 30.08886408805847 s
+Report for 236 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 25.2757887840271 s
+Report for 241 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 23.804046154022217 s
+Report for 246 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 29.700622081756592 s
+Report for 251 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 24.642988204956055 s
+Report for 256 Number of Ghosts
+Player Survivability =           0 %
+Time taken for this ghost : 28.36449885368347 s
