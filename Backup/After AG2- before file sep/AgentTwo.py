@@ -28,7 +28,7 @@ def agent_two():
             [1, 0],
             [-1, 0]]
 
-    file=open("/Users/abhishek.sawalkar/Library/Mobile Documents/com~apple~CloudDocs/AI Project/MazeGhostsProject/Results/AgentTwo.txt","a")
+    file=open("Results/AgentTwo.txt","a")
     text="\n\n\n======  Start Time  =========->  "+ datetime.now().strftime("%m/%d/%y %H:%M:%S")
     file.write(text)
     file.write("\nNo. of Ghosts = %d"%n_ghost)
