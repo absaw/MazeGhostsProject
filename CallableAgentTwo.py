@@ -1,4 +1,5 @@
 from lib2to3.pgen2.tokenize import generate_tokens
+from pickle import GLOBAL
 import numpy as np
 import matplotlib as plt
 import random
@@ -33,11 +34,21 @@ def callable_agent_two(maze,n_row,n_col,n_ghost,ghost_position,play_pos):
         
         get_init_path = get_bfs_path(maze, n_row, n_col, play_pos, True)
         is_init_path_valid = get_init_path[0]
+        goal_reached=False
+        is_player_alive = True
+
         path = list()
-        if is_init_path_valid and len(get_init_path[1])>1:
+        if is_init_path_valid and len(get_init_path[1])>2:
             path.append(get_init_path[1].pop(1))
+        if is_init_path_valid and len(get_init_path[1])==2:
+            path.append(get_init_path[1].pop(1))
+            sum_path_length+=1
+            #case when on 2nd last cell from goal. So we increase path length by 1 for later calculation
         elif is_init_path_valid and len(get_init_path[1])==1:
             path.append(get_init_path[1].pop(0))
+            if path[0][0]==(n_row-1,n_col-1):
+                goal_reached=True
+
         else:
             ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost(
                 walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c)
@@ -46,54 +57,56 @@ def callable_agent_two(maze,n_row,n_col,n_ghost,ghost_position,play_pos):
         # ========================================================================================================================================
         # ===============================Player Starts Moving=====================================================================================
         # ========================================================================================================================================
-        for play_pos_r, play_pos_c in path:
-            is_player_alive = True
+        if not goal_reached:
+            for play_pos_r, play_pos_c in path:
+                is_player_alive = True
 
-            if maze[play_pos_r][play_pos_c] >= 100:
-                is_player_alive = False
-                break
-            if (play_pos_r, play_pos_c) == (n_row-1, n_col-1):
-                break
-            # ===============================Ghost Simulation=====================================================================================
-            maze, ghost_position = ghost_simulation(walk, ghost_position, n_row, n_col, maze)
-            # ====================================================================================================================================
+                if maze[play_pos_r][play_pos_c] >= 100:
+                    is_player_alive = False
+                    break
+                if (play_pos_r, play_pos_c) == (n_row-1, n_col-1):
+                    break
+                # ===============================Ghost Simulation=====================================================================================
+                maze, ghost_position = ghost_simulation(walk, ghost_position, n_row, n_col, maze)
+                # ====================================================================================================================================
 
-            # Now all ghosts are in their next position. So if player is on the same cell, they die
-            if maze[play_pos_r][play_pos_c] >= 100:
-                # player dies
-                is_player_alive = False
-                break
+                # Now all ghosts are in their next position. So if player is on the same cell, they die
+                if maze[play_pos_r][play_pos_c] >= 100:
+                    # player dies
+                    is_player_alive = False
+                    break
 
-            if (play_pos_r, play_pos_c) == (n_row-1, n_col-1):
-                # player survives
-                break
+                if (play_pos_r, play_pos_c) == (n_row-1, n_col-1):
+                    # player survives
+                    break
 
-            # ===================================================================================================
-            # Now this code will execute only if player hasn't yet died. so player will have to replan the path
-            # ===================================================================================================
-            latest_path = get_bfs_path(
-                maze, n_row, n_col, (play_pos_r, play_pos_c), True)
-            # contains True/False : if there exists a path from player to goal,
-            if latest_path[0]:
-                # append the next cell in the path
-                path.append(latest_path[1].pop(1))
-            elif latest_path[0] == False:
-                # Path is blocked by ghost. Run away..We find the nearest ghost to current player position.
-                # Then select the next direction which is the farthest from this particular ghost
-                ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost(
-                    walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c)
-                path.append((play_next_r, play_next_c))
-            # print("\n\nPlayer Position >",play_pos_r,",",play_pos_c)
-            # print("Ghost Position ->",ghost_position)
-            # print("Curent maze  \n",maze)
-            # print("Path - > ",path)
-            # print("Latest Path ->",latest_path)
+                # ===================================================================================================
+                # Now this code will execute only if player hasn't yet died. so player will have to replan the path
+                # ===================================================================================================
+                latest_path = get_bfs_path(
+                    maze, n_row, n_col, (play_pos_r, play_pos_c), True)
+                # contains True/False : if there exists a path from player to goal,
+                if latest_path[0]:
+                    # append the next cell in the path
+                    path.append(latest_path[1].pop(1))
+                elif latest_path[0] == False:
+                    # Path is blocked by ghost. Run away..We find the nearest ghost to current player position.
+                    # Then select the next direction which is the farthest from this particular ghost
+                    ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost(
+                        walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c)
+                    path.append((play_next_r, play_next_c))
+                # print("\n\nPlayer Position >",play_pos_r,",",play_pos_c)
+                # print("Ghost Position ->",ghost_position)
+                # print("Curent maze  \n",maze)
+                # print("Path - > ",path)
+                # print("Latest Path ->",latest_path)
         if is_player_alive:
             n_alive_simulation += 1
             # if len(path)==1:
             #     sum_path_length=0
             if len(path)>=2:
-                sum_path_length+=len(path)-1
+                sum_path_length+=len(path) 
+                # sum_path_length+=len(path)-1 #works
             # print("Alive -- path Length = ",sum_path_length)
             
         # else:
