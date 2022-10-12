@@ -9,32 +9,27 @@ import csv
 def agent_three():
     start = time()
     print("Started...")
-    n_ghost = 50
+    n_ghost = 10
     n_row = 51
     n_col = 51
-    no_of_mazes=50
     walk = [[0, 1],
             [0, -1],
             [1, 0],
             [-1, 0],
             [0, 0]]
-    filename_txt="Results/AgentThree.txt"
-    filename_csv="Results/AgentThree.csv"
-    file=open(filename_txt,"a")
-    csvfile = open(filename_csv, "a")
+    filename="Results/AgentThree.txt"
+    csvfile = open(filename, "a")
     csv_writer=csv.writer(csvfile)
 
-    time_now=datetime.now().strftime("%m/%d/%y %H:%M:%S")
-    text = "\n\n\n======  Start Time  =========->  " +time_now
-    # csv_writer.writerow(["\n\n\n"])
-    csv_writer.writerow(["Execution Started"])
+    text = "\n\n\n======  Start Time  =========->  " + \
+        datetime.now().strftime("%m/%d/%y %H:%M:%S")
     file.write(text)
     file.write("\nNo. of Ghosts = %d" % n_ghost)
     file.write("\nNo. of mazes for each ghost = 5")
     file.write("\nNo. of simulations of agent 2 at each step = 5")
 
-    for i_ghost in range(1, n_ghost,5):
-        n_maze = no_of_mazes
+    for i_ghost in range(1, n_ghost+2,2):
+        n_maze = 5
         n_alive_for_this_ghost = 0
         n_dead_for_this_ghost = 0
         n_hanged_for_this_ghost = 0
@@ -152,7 +147,6 @@ def agent_three():
                         next_pos = max_surv_list[0]
                         
                     path.append(next_pos)
-                    print("Next Player Pos ->", next_pos)
                     
                 # Defaulting to Agent 2's behaviour when there is no path from current position to goal
                 elif latest_path[0] == False:
@@ -161,8 +155,8 @@ def agent_three():
                     ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost(
                         walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c)
                     path.append((play_next_r, play_next_c))
-                    print("Next Player Pos ->", (play_next_r, play_next_c))
 
+                print("Next Player Pos ->", next_pos)
                 print("Path -> ", path)
 
 
@@ -206,10 +200,6 @@ def agent_three():
         print("\nPlayer Survivability = %d" % n_alive_for_this_ghost+" ")
         print("\nPlayer Hanged = %d" % n_hanged_for_this_ghost+" ")
         print("\nPlayer Dead = %d" % n_dead_for_this_ghost+" ")
-    
-     # fields=['Date Time','Ghost Number','Maze Number','Time Taken','Survived','Hanged','Died','Comments']
-        time_now=datetime.now().strftime("%m/%d/%y %H:%M:%S")
-        csv_writer.writerow([time_now,i_ghost,50,str(gh_end_time-gh_st_time),str(n_alive_for_this_ghost),str(n_hanged_for_this_ghost),str(n_dead_for_this_ghost)])
         # file.write("\nDead Number-> %d"%n_dead_for_this_ghost)
         # print("Node Reached -> %d"%node_reached)
         # print("Dead = ",n_dead_for_this_ghost)

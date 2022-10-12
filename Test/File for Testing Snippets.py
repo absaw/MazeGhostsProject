@@ -1,6 +1,19 @@
 from datetime import datetime
 import numpy as np
-imppr
+import csv
+
+def csvtest():
+    fields=['Date Time','Ghost Number','Maze Number','Time Taken','Survived','Hanged','Died','Comments']
+    filename="./Results/AgentThree.csv"
+    
+    csvfile=open(filename,'w')
+    csv_writer=csv.writer(csvfile)
+    # csv_writer.writerow(['\n'])
+    csv_writer.writerow(fields)
+    # csv_writer.writerow(['10/12','5','1','33s','90%'])
+
+csvtest()
+
 def file():
     file = open("../test.csv", "a")
     file.write
@@ -50,4 +63,4 @@ def dictionaries():
 
     m_l = [i for i in a if a[i] == m]
     print(m_l)
-dictionaries()
+# dictionaries()
