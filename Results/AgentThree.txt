@@ -1,8 +1,6 @@
 
 
 
-======  Start Time  =========->  10/10/22 01:40:17
-No. of Ghosts = 1
 No. of mazes for each ghost = 100
 
 Execution Time = 0.00015687942504882812 s
@@ -809,3 +807,9 @@ Player Dead = 1
 Ghost 2 Execution Time = 0.48358702659606934 s
 
 Execution Time = 0.4837923049926758 s
+
+
+======  Start Time  =========->  10/12/22 14:00:04
+No. of Ghosts = 50
+No. of mazes for each ghost = 5
+No. of simulations of agent 2 at each step = 5
