@@ -194,3 +194,113 @@ Player Hanged = 1
 Player Dead = 0 
 
 Execution Time = 0.22225308418273926 s
+
+
+======  Start Time  =========->  10/12/22 02:25:39
+No. of Ghosts = 1
+No. of mazes for each ghost = 1
+Report for 1 Number of Ghosts
+Player Survivability = 0 
+Player Hanged = 0 
+Player Dead = 1 
+
+Execution Time = 0.029246091842651367 s
+
+
+======  Start Time  =========->  10/12/22 02:26:08
+No. of Ghosts = 1
+No. of mazes for each ghost = 1
+Report for 1 Number of Ghosts
+Player Survivability = 0 
+Player Hanged = 1 
+Player Dead = 0 
+
+Execution Time = 0.15433907508850098 s
+
+
+======  Start Time  =========->  10/12/22 02:27:16
+No. of Ghosts = 1
+No. of mazes for each ghost = 1
+Report for 1 Number of Ghosts
+Player Survivability = 0 
+Player Hanged = 0 
+Player Dead = 1 
+
+Execution Time = 0.0350339412689209 s
+
+
+======  Start Time  =========->  10/12/22 02:27:25
+No. of Ghosts = 1
+No. of mazes for each ghost = 1
+Report for 1 Number of Ghosts
+Player Survivability = 0 
+Player Hanged = 1 
+Player Dead = 0 
+
+Execution Time = 0.038388967514038086 s
+
+
+======  Start Time  =========->  10/12/22 02:28:22
+No. of Ghosts = 1
+No. of mazes for each ghost = 1
+Report for 1 Number of Ghosts
+Player Survivability = 0 
+Player Hanged = 1 
+Player Dead = 0 
+
+Execution Time = 1009.0010380744934 s
+
+
+======  Start Time  =========->  10/12/22 03:09:51
+No. of Ghosts = 1
+No. of mazes for each ghost = 1
+Report for 1 Number of Ghosts
+Player Survivability = 0 
+Player Hanged = 1 
+Player Dead = 0 
+
+Execution Time = 0.19678092002868652 s
+
+
+======  Start Time  =========->  10/12/22 03:11:01
+No. of Ghosts = 1
+No. of mazes for each ghost = 1
+Report for 1 Number of Ghosts
+Player Survivability = 0 
+Player Hanged = 0 
+Player Dead = 1 
+
+Execution Time = 0.6715559959411621 s
+
+
+======  Start Time  =========->  10/12/22 03:16:35
+No. of Ghosts = 1
+No. of mazes for each ghost = 1
+Report for 1 Number of Ghosts
+Player Survivability = 0 
+Player Hanged = 1 
+Player Dead = 0 
+
+Execution Time = 34.766496896743774 s
+
+
+======  Start Time  =========->  10/12/22 03:48:00
+No. of Ghosts = 1
+No. of mazes for each ghost = 1
+Report for 1 Number of Ghosts
+Player Survivability = 0 
+Player Hanged = 1 
+Player Dead = 0 
+
+Execution Time = 0.1460862159729004 s
+
+
+======  Start Time  =========->  10/12/22 03:48:11
+No. of Ghosts = 1
+No. of mazes for each ghost = 1
+Report for 1 Number of Ghosts
+Player Survivability = 0 
+Player Hanged = 1 
+Player Dead = 0 
+
+Execution Time = 0.20472121238708496 s

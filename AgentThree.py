@@ -63,6 +63,7 @@ def agent_three():
                 is_player_alive = True
                 is_player_hanged=False
                 curr_pos_count=path.count((play_pos_r,play_pos_c))
+                print("Current player count -> ",curr_pos_count)
                 if maze[play_pos_r][play_pos_c] >= 100:
                     is_player_alive = False
                     break
@@ -96,12 +97,13 @@ def agent_three():
                 if latest_path[0]:      # contains True/False : if there exists a path from player to goal,
                     # append the next cell in the path
                     for i in range(5):
-
+                        maze_duplicate=maze.copy()
                         poss_r = play_pos_r+walk[i][0]  # possible rows
                         poss_c = play_pos_c+walk[i][1]  # possible columns
                         if 0 <= poss_r < n_row and 0 <= poss_c < n_col and maze[poss_r][poss_c] != 1 and maze[poss_r][poss_c]<100:
+                            # if (poss_r,poss_c) == (n_row-1,n_col-1):
                             agent_two_result=callable_agent_two(
-                                maze, n_row, n_col, i_ghost, ghost_position, (poss_r, poss_c))
+                                maze_duplicate, n_row, n_col, i_ghost, ghost_position, (poss_r, poss_c))
 
                             surv_dict[(poss_r, poss_c)] = agent_two_result[0]
                             path_length_dict[(poss_r, poss_c)]=agent_two_result[1]
@@ -157,10 +159,10 @@ def agent_three():
             if is_player_alive and not is_player_hanged:
                 n_alive_for_this_ghost += 1
                 print("Alive")
-            elif is_player_hanged:
+            if is_player_alive and is_player_hanged:
                 n_hanged_for_this_ghost+=1
                 print("Hanged")
-            elif not is_player_alive:
+            if not is_player_alive:
                 n_dead_for_this_ghost += 1
                 print("Dead = ", n_dead_for_this_ghost)
                 # print("Dead at ",node_reached)

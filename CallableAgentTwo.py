@@ -90,7 +90,10 @@ def callable_agent_two(maze,n_row,n_col,n_ghost,ghost_position,play_pos):
             # print("Latest Path ->",latest_path)
         if is_player_alive:
             n_alive_simulation += 1
-            sum_path_length+=len(path)
+            # if len(path)==1:
+            #     sum_path_length=0
+            if len(path)>=2:
+                sum_path_length+=len(path)-1
             # print("Alive -- path Length = ",sum_path_length)
             
         # else:
