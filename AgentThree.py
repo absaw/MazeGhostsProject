@@ -33,7 +33,7 @@ def agent_three():
     file.write("\nNo. of mazes for each ghost = 5")
     file.write("\nNo. of simulations of agent 2 at each step = 5")
 
-    for i_ghost in range(1, n_ghost,5):
+    for i_ghost in range(1, n_ghost,10):
         n_maze = no_of_mazes
         n_alive_for_this_ghost = 0
         n_dead_for_this_ghost = 0
@@ -152,7 +152,7 @@ def agent_three():
                         next_pos = max_surv_list[0]
                         
                     path.append(next_pos)
-                    print("Next Player Pos ->", next_pos)
+                    # print("Next Player Pos ->", next_pos)
                     
                 # Defaulting to Agent 2's behaviour when there is no path from current position to goal
                 elif latest_path[0] == False:
@@ -163,7 +163,7 @@ def agent_three():
                     path.append((play_next_r, play_next_c))
                     print("Next Player Pos ->", (play_next_r, play_next_c))
 
-                print("Path -> ", path)
+                # print("Path -> ", path)
 
 
                 # print("\n\nRunning Away : ")
@@ -181,10 +181,10 @@ def agent_three():
             if is_player_alive and not is_player_hanged:
                 n_alive_for_this_ghost += 1
                 
-                print("Alive")
+                print("Alive=",n_alive_for_this_ghost)
             if is_player_alive and is_player_hanged:
                 n_hanged_for_this_ghost+=1
-                print("Hanged")
+                print("Hanged=", n_hanged_for_this_ghost)
             if not is_player_alive:
                 n_dead_for_this_ghost += 1
                 print("Dead = ", n_dead_for_this_ghost)
