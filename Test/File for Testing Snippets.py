@@ -1,8 +1,9 @@
 from datetime import datetime
 import numpy as np
+imppr
 def file():
-    file = open("../Results/AgentOne.txt", "a")
-
+    file = open("../test.csv", "a")
+    file.write
     file.write("\nHello at  "+datetime.now().strftime("%m/%d/%y %H:%M:%S"))
     file.write("hello %d at dfd" % 4)
     file.close()

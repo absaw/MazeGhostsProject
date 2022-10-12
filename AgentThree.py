@@ -9,7 +9,7 @@ from datetime import datetime
 def agent_three():
     start = time()
     print("Started...")
-    n_ghost = 5
+    n_ghost = 10
     n_row = 51
     n_col = 51
     walk = [[0, 1],
@@ -18,15 +18,16 @@ def agent_three():
             [-1, 0],
             [0, 0]]
 
-    file = open("/Users/abhishek.sawalkar/Library/Mobile Documents/com~apple~CloudDocs/AI Project/MazeGhostsProject/Results/AgentThree.txt", "a")
+    file = open("Results/AgentThree.txt", "a")
     text = "\n\n\n======  Start Time  =========->  " + \
         datetime.now().strftime("%m/%d/%y %H:%M:%S")
     file.write(text)
     file.write("\nNo. of Ghosts = %d" % n_ghost)
-    file.write("\nNo. of mazes for each ghost = 10")
+    file.write("\nNo. of mazes for each ghost = 5")
+    file.write("\nNo. of simulations of agent 2 at each step = 5")
 
-    for i_ghost in range(5, n_ghost+1):
-        n_maze = 10
+    for i_ghost in range(1, n_ghost+2,2):
+        n_maze = 5
         n_alive_for_this_ghost = 0
         n_dead_for_this_ghost = 0
         n_hanged_for_this_ghost = 0
@@ -71,7 +72,7 @@ def agent_three():
                     goal_reached=True
                     break
                 curr_pos_count=path.count((play_pos_r,play_pos_c))
-                print("Current player count -> ",curr_pos_count)
+                # print("Current player count -> ",curr_pos_count)
                 if curr_pos_count>10:
                     is_player_hanged=True
                     break
@@ -120,17 +121,17 @@ def agent_three():
                         print("goal reached. Path -> ",path)
                         print("Length = ", len(path)-1)
                         continue
-                    print("\n\nSurv Dict->", surv_dict)
-                    print("Player Position ->",play_pos_r,", ",play_pos_c)
-                    print("Path Length Dict ->",path_length_dict)
+                    # print("\n\nSurv Dict->", surv_dict)
+                    # print("Player Position ->",play_pos_r,", ",play_pos_c)
+                    # print("Path Length Dict ->",path_length_dict)
                     max_surv = max(surv_dict)
-                    print("Max Surv key->", max_surv)
-                    print("Max Surv value->", surv_dict[max_surv])
+                    # print("Max Surv key->", max_surv)
+                    # print("Max Surv value->", surv_dict[max_surv])
                     
                     # all positions with survivability = max survivability are inserted in this list
                     max_surv_list = [       
                         m for m in surv_dict if surv_dict[m] == surv_dict[max_surv]]    #making list of keys with max survivability
-                    print("Max surv list ->", max_surv_list)
+                    # print("Max surv list ->", max_surv_list)
 
                     if len(max_surv_list) > 0:
                         # tie
@@ -144,9 +145,6 @@ def agent_three():
                         next_pos = max_surv_list[0]
                         
                     path.append(next_pos)
-                    print("Next Player Pos ->", next_pos)
-                    print("Path -> ", path)
-    
                     
                 # Defaulting to Agent 2's behaviour when there is no path from current position to goal
                 elif latest_path[0] == False:
@@ -155,6 +153,9 @@ def agent_three():
                     ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost(
                         walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c)
                     path.append((play_next_r, play_next_c))
+
+                print("Next Player Pos ->", next_pos)
+                print("Path -> ", path)
 
 
                 # print("\n\nRunning Away : ")
@@ -181,7 +182,7 @@ def agent_three():
                 print("Dead = ", n_dead_for_this_ghost)
             maze_end_time=time()
             file.write("\n\nMaze "+str(n_maze+1)+" Execution Time = "+str(maze_end_time-maze_st_time)+" s")
-            print("Maze "+str(n_maze+1)+" Execution Time = "+str(maze_end_time-maze_st_time)+" s")
+            print("\nMaze "+str(n_maze+1)+" Execution Time = "+str(maze_end_time-maze_st_time)+" s")
                 # print("Dead at ",node_reached)
                 # print("Ghost Position : ",ghost_position)
                 # print("Player Position >",play_pos_r,",",play_pos_c)
