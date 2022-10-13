@@ -13,7 +13,7 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
     # n_ghost = 50
     n_row = 51
     n_col = 51
-    no_of_mazes=10
+    no_of_mazes=50
     # walk = [[0, 1],
     #         [0, -1],
     #         [1, 0],
@@ -200,7 +200,7 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
     
     #  fields=['Date Time','Ghost Number','Maze Number','Time Taken','Survived','Hanged','Died','Comments']
         time_now=datetime.now().strftime("%m/%d/%y %H:%M:%S")
-        csv_writer.writerow([time_now,i_ghost,10,str(gh_end_time-gh_st_time),str(n_alive_for_this_ghost),str(n_hanged_for_this_ghost),str(n_dead_for_this_ghost)])
+        csv_writer.writerow([time_now,i_ghost,50,str(gh_end_time-gh_st_time),str(n_alive_for_this_ghost),str(n_hanged_for_this_ghost),str(n_dead_for_this_ghost)])
         # file.write("\nDead Number-> %d"%n_dead_for_this_ghost)
         # print("Node Reached -> %d"%node_reached)
         # print("Dead = ",n_dead_for_this_ghost)

@@ -67,3 +67,11 @@ Player Dead = 1
 Ghost 32 Execution Time = 1850.0476450920105 s
 
 Execution Time = 3596.6399750709534 s
+
+
+======  Start Time for Process 21 to 31  =========->  10/12/22 23:43:02
+No. of mazes for each ghost = 10
+
+Maze 10 Execution Time = 184.2239830493927 s
+
+Maze 9 Execution Time = 330.8584189414978 s
