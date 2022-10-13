@@ -174,3 +174,10 @@ Execution Time = 4534.559557199478 s
 Ghost 12 Execution Time = 3961.9299523830414 s
 
 Execution Time = 6082.506408929825 s
+
+
+
+======  Start Time for Process 1 to 11  =========->  10/13/22 02:02:37
+No. of mazes for each ghost = 50
+
+Maze 50 Execution Time = 130.3065390586853 s
