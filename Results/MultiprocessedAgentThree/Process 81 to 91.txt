@@ -1,0 +1,57 @@
+
+
+
+======  Start Time for Process 81 to 91  =========->  10/12/22 23:42:09
+No. of mazes for each ghost = 10
+
+Maze 10 Execution Time = 41.37258839607239 s
+
+Maze 9 Execution Time = 206.49944305419922 s
+
+Maze 8 Execution Time = 93.83480882644653 s
+
+Maze 7 Execution Time = 160.89705538749695 s
+
+Maze 6 Execution Time = 38.60108041763306 s
+
+Maze 5 Execution Time = 45.851205348968506 s
+
+Maze 4 Execution Time = 70.43920850753784 s
+
+Maze 3 Execution Time = 33.71207141876221 s
+
+Maze 2 Execution Time = 359.85267782211304 s
+
+Maze 1 Execution Time = 108.86272382736206 s
+Report for 81 Number of Ghosts
+Player Survived = 0 
+Player Hanged = 2 
+Player Dead = 8 
+Ghost 82 Execution Time = 1159.9231781959534 s
+
+Maze 10 Execution Time = 146.13463377952576 s
+
+Maze 9 Execution Time = 93.6966860294342 s
+
+Maze 8 Execution Time = 461.9547824859619 s
+
+Maze 7 Execution Time = 215.65931868553162 s
+
+Maze 6 Execution Time = 579.1340589523315 s
+
+Maze 5 Execution Time = 15.455337762832642 s
+
+Maze 4 Execution Time = 10.387246131896973 s
+
+Maze 3 Execution Time = 270.76365661621094 s
+
+Maze 2 Execution Time = 33.118274450302124 s
+
+Maze 1 Execution Time = 154.3671760559082 s
+Report for 91 Number of Ghosts
+Player Survived = 0 
+Player Hanged = 2 
+Player Dead = 8 
+Ghost 92 Execution Time = 1980.6714007854462 s
+
+Execution Time = 3140.615534067154 s
