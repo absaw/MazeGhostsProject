@@ -1,8 +1,17 @@
-import collections
 import numpy as np
+import matplotlib as plt
+import random
+import matplotlib.pyplot as plt
+import collections
+# from collections import deque
 
-def get_traversal_table(maze,n_row,n_col,start,ghost_present):
-       
+# 0 = Unblocked
+# 1 = Blocked
+# 100 = Ghost in Unblocked Cell
+# 200 = Ghost in Blocked cell
+
+def get_bfs_path(maze,n_row,n_col,start,ghost_present):
+   
     walk = [[0, 1],
             [0,-1],
             [1, 0],
@@ -12,15 +21,10 @@ def get_traversal_table(maze,n_row,n_col,start,ghost_present):
     
     fringe_q=collections.deque([[start]])
     path_found=False
-
-    visited_maze=np.zeros((n_row,n_col))
-    # for i,j in visited_set:
-    #     zero_maze[i][j]=1
-
     while(len(fringe_q)>0):
         path=fringe_q.popleft()
         curr_row,curr_col=path[-1]
-        if ((curr_row,curr_col)==(0,0)):
+        if ((curr_row,curr_col)==(n_row-1,n_col-1)):
             # Path found
             path_found=True
             break
@@ -37,39 +41,41 @@ def get_traversal_table(maze,n_row,n_col,start,ghost_present):
                 elif ghost_present and maze[row][col]<100:#ghost present and we need to avoid ghosts
                     fringe_q.append(path+[(row,col)])
                     visited_set.add((row,col))
-                    visited_maze[row][col]=len(path)
+                    
 
         # print("Fringe - >",fringe_q)
 
     # print("Exited the While loop")
-    # print(maze)
+
     # zero_maze=np.zeros((n_row,n_col))
     # for i,j in visited_set:
     #     zero_maze[i][j]=1
     
-    # print(visited_maze)
+    # print(zero_maze)
 
     if path_found:
-        return [path_found,visited_maze]
+        # print("Path found")
+        # print("\n Path ->",path)
+        return [path_found,path]
     else:
+        # print("Path not found")
         return [path_found,None]
 
-a=np.array([[0,1,0,1,1],
-            [0,0,0,0,1],
-            [0,0,0,0,0],
-            [1,0,1,0,0],
-            [0,0,0,0,0]])
-
-# a2=[[0,0,1,0,0],
-#     [102,0,200,0,0],
+# a=np.array([ [0,1,1,1,1],
+#     [0,1,0,1,1],
 #     [0,0,1,0,0],
-#     [100,100,1,1,0],
-#     [0,0,0,0,0]]
-# Result ==[[8., 0., 6., 0., 0.],
-#        [7., 6., 5., 4., 0.],
-#        [6., 5., 4., 3., 2.],
-#        [0., 4., 0., 2., 1.],
-#        [4., 3., 2., 1., 0.]])]
-result=get_traversal_table(a,5,5,(4,4),True)
-print(result)
+#     [1,1,100,1,0],
+#     [0,0,0,0,0]])
+
+# # a2=[[0,0,1,0,0],
+# #     [102,0,200,0,0],
+# #     [0,0,1,0,0],
+# #     [100,100,1,1,0],
+# #     [0,0,0,0,0]]
+
+# result=get_traversal_table(a,5,5,(4,4),True)
+# print(result)
+        
+
+
         

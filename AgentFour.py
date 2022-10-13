@@ -7,13 +7,13 @@ from datetime import datetime
 import csv
 import multiprocessing as mp
 
-def agent_three(n_gh_lb, n_gh_ub, ProcessName):
+def agent_four(n_gh_lb, n_gh_ub, ProcessName):
     start = time()
     print("Started...")
     # n_ghost = 50
-    n_row = 51
-    n_col = 51
-    no_of_mazes=10
+    n_row = 5
+    n_col = 5
+    no_of_mazes=1
     # walk = [[0, 1],
     #         [0, -1],
     #         [1, 0],
@@ -24,8 +24,8 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
             [0, -1],
             [-1, 0],
             [0, 0]]
-    filename_txt="Results/MultiprocessedAgentThree/"+ProcessName+".txt"
-    filename_csv="Results/MultiprocessedAgentThree/"+ProcessName+".csv"
+    filename_txt="Results/MultiprocessedAgentThreeM/"+ProcessName+".txt"
+    filename_csv="Results/MultiprocessedAgentThreeM/"+ProcessName+".csv"
     file=open(filename_txt,"a")
     csvfile = open(filename_csv, "a")
     csv_writer=csv.writer(csvfile)
@@ -35,11 +35,11 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
     text = "\n\n\n======  Start Time for "+ProcessName+"  =========->  " +time_now
     csv_writer.writerow(["Execution Started "+ProcessName])
     file.write(text)
+    # file.write("\nNo. of Ghosts = %d" % n_ghost)
     file.write("\nNo. of mazes for each ghost = "+str(no_of_mazes))
     # file.write("\nNo. of simulations of agent 2 at each step = 5")
 
     for i_ghost in range(n_gh_lb, n_gh_ub+1,10):
-        file.write("\nNo. of Ghosts = %d" % i_ghost)
         n_maze = no_of_mazes
         n_alive_for_this_ghost = 0
         n_dead_for_this_ghost = 0
@@ -62,6 +62,10 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
             if is_init_path_valid:
                 path.append(get_init_path[1].pop(1))
             else:
+
+                ##calculate ghost on path distance
+
+                
                 ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost(
                     walk, ghost_position, n_row, n_col, maze, 0, 0)
                 path.append((play_next_r, play_next_c))
@@ -215,40 +219,45 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
 
 # agent_three()
 
-if __name__=="__main__":
+if __name__=="don't call this func":
     
-    p_1_11 = mp.Process(target=agent_three,args=(1,11,"Process 1 to 11"))
-    p_21_31 = mp.Process(target=agent_three,args=(21,31,"Process 21 to 31"))
-    p_41_51 = mp.Process(target=agent_three,args=(41,51,"Process 41 to 51"))
-    #p_61_71 = mp.Process(target=agent_three,args=(61,71,"Process 61 to 71"))
-    #p_81_91 = mp.Process(target=agent_three,args=(81,91,"Process 81 to 91"))
+    #p_1_11 = mp.Process(target=agent_three,args=(1,11,"Process 1 to 11"))
+    #p_21_31 = mp.Process(target=agent_three,args=(21,31,"Process 21 to 31"))
+    #p_41_51 = mp.Process(target=agent_three,args=(41,51,"Process 41 to 51"))
+    p_61_71 = mp.Process(target=agent_three,args=(61,71,"Process 61 to 71"))
+    p_81_91 = mp.Process(target=agent_three,args=(81,91,"Process 81 to 91"))
+    p_101_111 = mp.Process(target=agent_three,args=(101,111,"Process 101 to 111"))
     
     # p_1_21 = mp.Process(target=agent_three,args=(1,21,"Process 1 to 21"))
     # p_31_51 = mp.Process(target=agent_three,args=(31,51,"Process 31 to 51"))
     # p_61_81 = mp.Process(target=agent_three,args=(61,81,"Process 61 to 81"))
     # p_91_111 = mp.Process(target=agent_three,args=(91,111,"Process 91 to 111"))
     
-    p_1_11.start()
-    p_21_31.start()
-    p_41_51.start()
-    #p_61_71.start()
-    #p_81_91.start()
+    #p_1_11.start()
+    #p_21_31.start()
+    #p_41_51.start()
+    p_61_71.start()
+    p_81_91.start()
+    p_101_111.start()
     
     
-    p_1_11.join()
-    print("Process 1 to 11 Joined")
+    #p_1_11.join()
+    # print("Process 1 to 11 Joined")
 
-    p_21_31.join()
-    print("Process 21 to 31 Joined")
+    #p_21_31.join()
+    # print("Process 21 to 31 Joined")
 
-    p_41_51.join()
-    print("Process 41 to 51 Joined")
+    #p_41_51.join()
+    # print("Process 41 to 51 Joined")
 
-    #p_61_71.join()
-    # print("Process 61 to 71 Joined")
+    p_61_71.join()
+    print("Process 61 to 71 Joined")
 
-    #p_81_91.join()
-    # print("Process 81 to 91 Joined")
+    p_81_91.join()
+    print("Process 81 to 91 Joined")
+    
+    p_101_111.join()
+    print("Process 101 to 111 Joined")
 
     # p_1_21.start()
     # p_31_51.start()

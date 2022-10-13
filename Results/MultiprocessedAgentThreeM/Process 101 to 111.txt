@@ -1,0 +1,69 @@
+
+
+
+======  Start Time for Process 101 to 111  =========->  10/13/22 11:34:29
+No. of mazes for each ghost = 50
+
+Maze 50 Execution Time = 4.501652002334595 s
+
+Maze 49 Execution Time = 22.467120885849 s
+
+Maze 48 Execution Time = 67.7178168296814 s
+
+Maze 47 Execution Time = 135.9411551952362 s
+
+Maze 46 Execution Time = 145.32898211479187 s
+
+Maze 45 Execution Time = 30.876523971557617 s
+
+Maze 44 Execution Time = 4.622148752212524 s
+
+Maze 43 Execution Time = 31.399094820022583 s
+
+Maze 42 Execution Time = 3.375333070755005 s
+
+Maze 41 Execution Time = 13.650872707366943 s
+
+Maze 40 Execution Time = 69.22469305992126 s
+
+Maze 39 Execution Time = 118.27880382537842 s
+
+Maze 38 Execution Time = 45.069973945617676 s
+
+Maze 37 Execution Time = 50.55181384086609 s
+
+Maze 36 Execution Time = 4.32158088684082 s
+
+Maze 35 Execution Time = 54.88268280029297 s
+
+Maze 34 Execution Time = 240.63301920890808 s
+
+Maze 33 Execution Time = 53.80790686607361 s
+
+Maze 32 Execution Time = 121.31625699996948 s
+
+Maze 31 Execution Time = 10.944253206253052 s
+
+Maze 30 Execution Time = 0.020267009735107422 s
+
+Maze 29 Execution Time = 541.9265260696411 s
+
+Maze 28 Execution Time = 39.50987410545349 s
+
+Maze 27 Execution Time = 18.062952041625977 s
+
+Maze 26 Execution Time = 417.8440201282501 s
+
+Maze 25 Execution Time = 290.96934723854065 s
+
+Maze 24 Execution Time = 0.0796060562133789 s
+
+Maze 23 Execution Time = 117.79424786567688 s
+
+Maze 22 Execution Time = 15.492106199264526 s
+
+Maze 21 Execution Time = 94.10485792160034 s
+
+Maze 20 Execution Time = 25.706248998641968 s
+
+Maze 19 Execution Time = 199.74907302856445 s

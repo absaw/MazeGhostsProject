@@ -14,16 +14,17 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
     n_row = 51
     n_col = 51
     no_of_mazes=10
-    # walk = [[0, 1],
-    #         [0, -1],
-    #         [1, 0],
-    #         [-1, 0],
-    #         [0, 0]]
     walk = [[0, 1],
             [1, 0],
             [0, -1],
             [-1, 0],
             [0, 0]]
+
+    # walk = [[0, 1],
+    #         [0, -1],
+    #         [1, 0],
+    #         [-1, 0],
+    #         [0, 0]]
     filename_txt="Results/MultiprocessedAgentThree/"+ProcessName+".txt"
     filename_csv="Results/MultiprocessedAgentThree/"+ProcessName+".csv"
     file=open(filename_txt,"a")
@@ -35,11 +36,11 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
     text = "\n\n\n======  Start Time for "+ProcessName+"  =========->  " +time_now
     csv_writer.writerow(["Execution Started "+ProcessName])
     file.write(text)
+    # file.write("\nNo. of Ghosts = %d" % n_ghost)
     file.write("\nNo. of mazes for each ghost = "+str(no_of_mazes))
     # file.write("\nNo. of simulations of agent 2 at each step = 5")
 
-    for i_ghost in range(n_gh_lb, n_gh_ub+1,10):
-        file.write("\nNo. of Ghosts = %d" % i_ghost)
+    for i_ghost in range(n_gh_lb, n_gh_ub+1):
         n_maze = no_of_mazes
         n_alive_for_this_ghost = 0
         n_dead_for_this_ghost = 0
@@ -66,7 +67,6 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
                     walk, ghost_position, n_row, n_col, maze, 0, 0)
                 path.append((play_next_r, play_next_c))
 
-            # now short list all the options for agent 3 and move to the best one
             surv_dict = {}
             path_length_dict={}
             goal_reached=False
@@ -134,8 +134,8 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
                             surv_dict[(poss_r, poss_c)] = agent_two_result[0]
                             path_length_dict[(poss_r, poss_c)]=agent_two_result[1]
                     if goal_reached:
-                        # print("goal reached. Path -> ",path)
-                        # print("Length = ", len(path)-1)
+                        print("goal reached. Path -> ",path)
+                        print("Length = ", len(path)-1)
                         continue
                     # print("\n\nSurv Dict->", surv_dict)
                     # print("Player Position ->",play_pos_r,", ",play_pos_c)
@@ -160,8 +160,8 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
                     else:
                         next_pos = max_surv_list[0]
                         
-                    path.append(next_pos)
                     # print("Next Player Pos ->", next_pos)
+                    path.append(next_pos)
                     
                 # Defaulting to Agent 2's behaviour when there is no path from current position to goal
                 elif latest_path[0] == False:
@@ -171,17 +171,28 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
                         walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c)
                     path.append((play_next_r, play_next_c))
                     # print("Next Player Pos ->", (play_next_r, play_next_c))
+                
+            # print("Path -> ",path)
+                # print("Past player position ->",play_pos_r,play_pos_c)
+                # print("ghost position ->",ghost_position)
+                # print("maze -> \n",maze)
 
             if is_player_alive and not is_player_hanged:
                 n_alive_for_this_ghost += 1
                 
-                # print("Alive=",n_alive_for_this_ghost)
+                print("Alive=",n_alive_for_this_ghost)
+                # print("Maze - \n",maze)
+                # print("path -> ",path)
             if is_player_alive and is_player_hanged:
                 n_hanged_for_this_ghost+=1
-                # print("Hanged=", n_hanged_for_this_ghost)
+                print("Hanged=", n_hanged_for_this_ghost)
+                # print("Maze - \n",maze)
+                # print("path -> ",path)
             if not is_player_alive:
                 n_dead_for_this_ghost += 1
-                # print("Dead = ", n_dead_for_this_ghost)
+                print("Dead = ", n_dead_for_this_ghost)
+                # print("Maze - \n",maze)
+                # print("path -> ",path)
             maze_end_time=time()
             file.write("\n\nMaze "+str(n_maze+1)+" Execution Time = "+str(maze_end_time-maze_st_time)+" s")
             # print("\nMaze "+str(n_maze+1)+" Execution Time = "+str(maze_end_time-maze_st_time)+" s")
@@ -192,11 +203,11 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
         file.write("\nPlayer Hanged = %d" % n_hanged_for_this_ghost+" ")
         file.write("\nPlayer Dead = %d" % n_dead_for_this_ghost+" ")
         file.write("\nGhost "+str(i_ghost+1)+" Execution Time = "+str(gh_end_time-gh_st_time)+" s")
-        # print("\n\nReport for %d Number of Ghosts" % i_ghost)
-        # print("\nGhost "+str(i_ghost+1)+" Execution Time = "+str(gh_end_time-gh_st_time)+" s")
-        # print("\nPlayer Survivability = %d" % n_alive_for_this_ghost+" ")
-        # print("\nPlayer Hanged = %d" % n_hanged_for_this_ghost+" ")
-        # print("\nPlayer Dead = %d" % n_dead_for_this_ghost+" ")
+        print("\n\nReport for %d Number of Ghosts" % i_ghost)
+        print("\nGhost "+str(i_ghost)+" Execution Time = "+str(gh_end_time-gh_st_time)+" s")
+        print("\nPlayer Survivability = %d" % n_alive_for_this_ghost+" ")
+        print("\nPlayer Hanged = %d" % n_hanged_for_this_ghost+" ")
+        print("\nPlayer Dead = %d" % n_dead_for_this_ghost+" ")
     
     #  fields=['Date Time','Ghost Number','Maze Number','Time Taken','Survived','Hanged','Died','Comments']
         time_now=datetime.now().strftime("%m/%d/%y %H:%M:%S")
@@ -217,11 +228,10 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
 
 if __name__=="__main__":
     
-    p_1_11 = mp.Process(target=agent_three,args=(1,11,"Process 1 to 11"))
-    p_21_31 = mp.Process(target=agent_three,args=(21,31,"Process 21 to 31"))
-    p_41_51 = mp.Process(target=agent_three,args=(41,51,"Process 41 to 51"))
-    #p_61_71 = mp.Process(target=agent_three,args=(61,71,"Process 61 to 71"))
-    #p_81_91 = mp.Process(target=agent_three,args=(81,91,"Process 81 to 91"))
+    p_1_11 = mp.Process(target=agent_three,args=(11,11,"Process Test"))
+    # p_21_31 = mp.Process(target=agent_three,args=(21,31,"Process 21 to 31"))
+    # p_41_51 = mp.Process(target=agent_three,args=(41,51,"Process 41 to 51"))
+    # p_61_71 = mp.Process(target=agent_three,args=(61,71,"Process 61 to 71"))
     
     # p_1_21 = mp.Process(target=agent_three,args=(1,21,"Process 1 to 21"))
     # p_31_51 = mp.Process(target=agent_three,args=(31,51,"Process 31 to 51"))
@@ -229,27 +239,15 @@ if __name__=="__main__":
     # p_91_111 = mp.Process(target=agent_three,args=(91,111,"Process 91 to 111"))
     
     p_1_11.start()
-    p_21_31.start()
-    p_41_51.start()
-    #p_61_71.start()
-    #p_81_91.start()
+    # p_21_31.start()
+    # p_41_51.start()
+    # p_61_71.start()
     
     
     p_1_11.join()
-    print("Process 1 to 11 Joined")
-
-    p_21_31.join()
-    print("Process 21 to 31 Joined")
-
-    p_41_51.join()
-    print("Process 41 to 51 Joined")
-
-    #p_61_71.join()
-    # print("Process 61 to 71 Joined")
-
-    #p_81_91.join()
-    # print("Process 81 to 91 Joined")
-
+    # p_21_31.join()
+    # p_41_51.join()
+    # p_61_71.join()
     # p_1_21.start()
     # p_31_51.start()
     # p_61_81.start()
