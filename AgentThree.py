@@ -232,13 +232,24 @@ if __name__=="__main__":
     p_21_31.start()
     p_41_51.start()
     p_61_71.start()
+    p_81_91.start()
     
     
     p_1_11.join()
+    print("Process 1 to 11 Joined")
+
     p_21_31.join()
+    print("Process 21 to 31 Joined")
+
     p_41_51.join()
+    print("Process 41 to 51 Joined")
+
     p_61_71.join()
+    print("Process 61 to 71 Joined")
+
     p_81_91.join()
+    print("Process 81 to 91 Joined")
+
     # p_1_21.start()
     # p_31_51.start()
     # p_61_81.start()
