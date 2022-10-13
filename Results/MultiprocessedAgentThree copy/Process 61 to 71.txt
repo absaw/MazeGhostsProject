@@ -75,6 +75,7 @@ Ghost 72 Execution Time = 921.3842027187347 s
 Execution Time = 2003.7140760421753 s
 
 
+<<<<<<< HEAD
 ======  Start Time for Process 61 to 71  =========->  10/12/22 23:43:02
 No. of mazes for each ghost = 10
 
@@ -129,6 +130,7 @@ Player Dead = 7
 Ghost 72 Execution Time = 1748.0068740844727 s
 
 Execution Time = 3782.0912630558014 s
+=======
 ======  Start Time for Process 61 to 71  =========->  10/12/22 23:38:11
 No. of mazes for each ghost = 10
 
@@ -187,3 +189,4 @@ Player Dead = 9
 Ghost 72 Execution Time = 812.2856879234314 s
 
 Execution Time = 2697.797348022461 s
+>>>>>>> c2c9d198dfa2c9f644e16146dcd3ead0ffc757c7

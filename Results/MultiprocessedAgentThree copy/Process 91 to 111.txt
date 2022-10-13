@@ -1,0 +1,166 @@
+
+
+
+======  Start Time for Process 91 to 111  =========->  10/12/22 18:14:05
+
+
+======  Start Time for Process 91 to 111  =========->  10/12/22 18:14:38
+No. of mazes for each ghost = 10
+
+Maze 10 Execution Time = 19.04153823852539 s
+
+Maze 9 Execution Time = 40.05794596672058 s
+
+Maze 8 Execution Time = 12.457287073135376 s
+
+Maze 7 Execution Time = 32.65733575820923 s
+
+Maze 6 Execution Time = 11.267324924468994 s
+
+Maze 5 Execution Time = 35.92632603645325 s
+
+Maze 4 Execution Time = 33.19016695022583 s
+
+Maze 3 Execution Time = 12.434905290603638 s
+
+Maze 2 Execution Time = 23.008574962615967 s
+
+Maze 1 Execution Time = 0.024609088897705078 s
+Report for 91 Number of Ghosts
+Player Survived = 0 
+Player Hanged = 7 
+Player Dead = 3 
+Ghost 92 Execution Time = 220.0661301612854 s
+
+Maze 10 Execution Time = 15.737754106521606 s
+
+Maze 9 Execution Time = 13.904129981994629 s
+
+Maze 8 Execution Time = 15.81550908088684 s
+
+Maze 7 Execution Time = 15.577720880508423 s
+
+Maze 6 Execution Time = 27.270254135131836 s
+
+Maze 5 Execution Time = 33.29173040390015 s
+
+Maze 4 Execution Time = 20.932933807373047 s
+
+Maze 3 Execution Time = 25.89192295074463 s
+
+Maze 2 Execution Time = 9.944962978363037 s
+
+Maze 1 Execution Time = 20.619057178497314 s
+Report for 101 Number of Ghosts
+Player Survived = 0 
+Player Hanged = 9 
+Player Dead = 1 
+Ghost 102 Execution Time = 198.98615217208862 s
+
+Maze 10 Execution Time = 35.264094829559326 s
+
+Maze 9 Execution Time = 19.943438053131104 s
+
+Maze 8 Execution Time = 29.360620975494385 s
+
+Maze 7 Execution Time = 23.983372688293457 s
+
+Maze 6 Execution Time = 21.909852266311646 s
+
+Maze 5 Execution Time = 19.09084987640381 s
+
+Maze 4 Execution Time = 8.781288862228394 s
+
+Maze 3 Execution Time = 64.09602212905884 s
+
+Maze 2 Execution Time = 22.405463933944702 s
+
+Maze 1 Execution Time = 3.63456392288208 s
+Report for 111 Number of Ghosts
+Player Survived = 0 
+Player Hanged = 8 
+Player Dead = 2 
+Ghost 112 Execution Time = 248.4697515964508 s
+
+Execution Time = 667.5225467681885 s
+
+
+======  Start Time for Process 91 to 111  =========->  10/12/22 18:49:25
+No. of mazes for each ghost = 10
+
+Maze 10 Execution Time = 0.9314839839935303 s
+
+Maze 9 Execution Time = 30.26251220703125 s
+
+Maze 8 Execution Time = 28.244991302490234 s
+
+Maze 7 Execution Time = 32.057950019836426 s
+
+Maze 6 Execution Time = 68.06995987892151 s
+
+Maze 5 Execution Time = 0.019392013549804688 s
+
+Maze 4 Execution Time = 18.7843656539917 s
+
+Maze 3 Execution Time = 41.75556993484497 s
+
+Maze 2 Execution Time = 31.28011989593506 s
+
+Maze 1 Execution Time = 18.82845902442932 s
+Report for 91 Number of Ghosts
+Player Survived = 0 
+Player Hanged = 8 
+Player Dead = 2 
+Ghost 92 Execution Time = 270.23500514030457 s
+
+Maze 10 Execution Time = 27.603919982910156 s
+
+Maze 9 Execution Time = 15.859537839889526 s
+
+Maze 8 Execution Time = 10.857939004898071 s
+
+Maze 7 Execution Time = 28.168988704681396 s
+
+Maze 6 Execution Time = 32.17895483970642 s
+
+Maze 5 Execution Time = 5.418709993362427 s
+
+Maze 4 Execution Time = 49.43251991271973 s
+
+Maze 3 Execution Time = 22.766408920288086 s
+
+Maze 2 Execution Time = 11.454884052276611 s
+
+Maze 1 Execution Time = 118.31911301612854 s
+Report for 101 Number of Ghosts
+Player Survived = 0 
+Player Hanged = 9 
+Player Dead = 1 
+Ghost 102 Execution Time = 322.06121301651 s
+
+Maze 10 Execution Time = 4.724877119064331 s
+
+Maze 9 Execution Time = 30.237987995147705 s
+
+Maze 8 Execution Time = 7.537985801696777 s
+
+Maze 7 Execution Time = 32.208250999450684 s
+
+Maze 6 Execution Time = 25.853258848190308 s
+
+Maze 5 Execution Time = 14.738785743713379 s
+
+Maze 4 Execution Time = 10.679265022277832 s
+
+Maze 3 Execution Time = 34.08223295211792 s
+
+Maze 2 Execution Time = 35.876115798950195 s
+
+Maze 1 Execution Time = 16.009041786193848 s
+Report for 111 Number of Ghosts
+Player Survived = 0 
+Player Hanged = 8 
+Player Dead = 2 
+Ghost 112 Execution Time = 211.94803833961487 s
+
+Execution Time = 804.2448260784149 s

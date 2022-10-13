@@ -69,6 +69,7 @@ Ghost 52 Execution Time = 960.2716090679169 s
 Execution Time = 2774.7068707942963 s
 
 
+<<<<<<< HEAD
 ======  Start Time for Process 41 to 51  =========->  10/12/22 23:43:02
 No. of mazes for each ghost = 10
 
@@ -123,6 +124,7 @@ Player Dead = 9
 Ghost 52 Execution Time = 696.4291489124298 s
 
 Execution Time = 1417.3209969997406 s
+=======
 ======  Start Time for Process 41 to 51  =========->  10/12/22 23:38:11
 No. of mazes for each ghost = 10
 
@@ -181,3 +183,4 @@ Player Dead = 7
 Ghost 52 Execution Time = 2518.6367728710175 s
 
 Execution Time = 5195.502680301666 s
+>>>>>>> c2c9d198dfa2c9f644e16146dcd3ead0ffc757c7
