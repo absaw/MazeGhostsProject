@@ -1,0 +1,151 @@
+Execution Started Test,,,,,,
+10/13/22 19:08,1,1,2.238017082,94,0,6
+10/13/22 19:09,11,1,3.794028044,55,0,45
+10/13/22 19:09,21,1,5.005045891,38,0,62
+10/13/22 19:09,31,1,5.343461275,20,0,80
+10/13/22 19:09,41,1,5.559262991,9,0,91
+10/13/22 19:09,51,1,5.905565023,5,0,95
+10/13/22 19:09,61,1,6.389946699,1,0,99
+10/13/22 19:09,71,1,6.176046133,2,0,98
+10/13/22 19:09,81,1,6.287127018,0,0,100
+10/13/22 19:09,91,1,6.739357948,1,0,99
+10/13/22 19:09,101,1,6.595050812,0,0,100
+10/13/22 19:10,111,1,6.674782038,1,0,99
+10/13/22 19:10,121,1,6.126523018,0,0,100
+10/13/22 19:10,131,1,6.23230505,0,0,100
+10/13/22 19:10,141,1,6.076621056,0,0,100
+10/13/22 19:10,151,1,6.120362997,0,0,100
+10/13/22 19:10,161,1,5.94590497,0,0,100
+10/13/22 19:10,171,1,6.446398973,0,0,100
+10/13/22 19:10,181,1,6.447060108,1,0,99
+10/13/22 19:10,191,1,5.811276197,0,0,100Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/13/22 22:29:01,10,1,2.6450376510620117,70,0,30
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/13/22 22:29:19,100,1,4.2430419921875,1,0,99
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/13/22 22:30:01,150,1,4.223753929138184,0,0,100
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/13/22 22:30:36,1,1,2.152085065841675,98,0,2
+10/13/22 22:30:38,6,1,2.372083902359009,76,0,24
+10/13/22 22:30:40,11,1,2.534777879714966,64,0,36
+10/13/22 22:30:43,16,1,2.8142929077148438,56,0,44
+10/13/22 22:30:46,21,1,3.145573854446411,47,0,53
+10/13/22 22:30:50,26,1,3.2056360244750977,40,0,60
+10/13/22 22:30:53,31,1,3.385456085205078,33,0,67
+10/13/22 22:30:57,36,1,3.5167019367218018,26,0,74
+10/13/22 22:31:00,41,1,3.586390972137451,19,0,81
+10/13/22 22:31:04,46,1,3.4863178730010986,13,0,87
+10/13/22 22:31:08,51,1,4.003237962722778,18,0,82
+10/13/22 22:31:11,56,1,3.527631998062134,5,0,95
+10/13/22 22:31:15,61,1,3.6644370555877686,9,0,91
+10/13/22 22:31:19,66,1,4.001028060913086,9,0,91
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/13/22 22:32:35,1,1,2.263505220413208,100,0,0
+10/13/22 22:32:39,6,1,3.685112953186035,92,0,8
+10/13/22 22:32:44,11,1,4.9924938678741455,82,0,18
+10/13/22 22:32:50,16,1,6.300926208496094,73,0,27
+10/13/22 22:32:58,21,1,8.031190872192383,71,0,29
+10/13/22 22:33:08,26,1,10.251635074615479,52,0,48
+10/13/22 22:33:20,31,1,12.090337991714478,54,1,45
+10/13/22 22:33:34,36,1,13.432429075241089,41,1,58
+10/13/22 22:33:48,41,1,14.354467153549194,32,1,67
+10/13/22 22:34:02,46,1,14.213727951049805,23,0,77
+10/13/22 22:34:21,51,1,18.241309881210327,22,0,78
+10/13/22 22:34:39,56,1,18.653373956680298,15,1,84
+10/13/22 22:34:58,61,1,19.074687957763672,10,0,90
+10/13/22 22:35:21,66,1,22.45973801612854,7,2,91
+10/13/22 22:35:37,71,1,15.773828029632568,1,2,97
+10/13/22 22:35:55,76,1,18.29434585571289,9,4,87
+10/13/22 22:36:13,81,1,18.28155541419983,0,1,99
+10/13/22 22:36:31,86,1,17.79773783683777,2,7,91
+10/13/22 22:36:52,91,1,21.275226831436157,0,1,99
+10/13/22 22:37:10,96,1,17.46949791908264,0,7,93
+10/13/22 22:37:32,101,1,22.36571979522705,0,4,96
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/13/22 23:25:40,100,1,31.96697688102722,12,0,88
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:32:40,10,1,3.3686351776123047,52,0,48
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:33:01,10,1,3.181485891342163,51,0,49
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:33:31,100,1,4.841613054275513,0,0,100
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:34:04,1,1,2.3225317001342773,97,0,3
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:35:59,2,1,2.4723241329193115,88,0,12
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:42:40,2,1,2.517882823944092,95,0,5
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:43:09,2,1,2.5447990894317627,95,0,5
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:44:56,6,1,3.5390560626983643,83,0,17
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:48:11,100,1,3.676666259765625,1,0,99
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:48:30,100,1,3.0965256690979004,0,0,100
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:49:05,100,1,14.182301998138428,13,0,87
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:49:42,100,1,22.013582706451416,12,0,88
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:51:19,100,1,25.919231176376343,11,0,89
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:51:37,100,1,3.7949838638305664,1,0,99
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:51:59,100,1,14.457373142242432,11,0,89
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 00:52:30,100,1,9.120049715042114,0,47,53
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Test
+10/14/22 01:25:38,100,1,8.672136783599854,0,0,100
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Test
+10/14/22 01:26:05,100,1,5.470361232757568,0,0,100
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Test
+10/14/22 01:34:37,2,1,0.0013897418975830078,1,0,0
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Test
+10/14/22 01:34:42,2,1,0.0006430149078369141,0,0,1
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Test
+10/14/22 01:34:45,2,1,0.0004169940948486328,0,0,1
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Test
+10/14/22 01:34:46,2,1,0.0007090568542480469,0,0,1
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Test
+10/14/22 01:34:48,2,1,0.0003390312194824219,0,0,1
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Test
+10/14/22 01:34:49,2,1,0.0005998611450195312,1,0,0
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Test
+10/14/22 01:34:51,2,1,0.0005860328674316406,0,0,1
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Test
+10/14/22 01:35:27,100,1,12.304461240768433,1,0,99

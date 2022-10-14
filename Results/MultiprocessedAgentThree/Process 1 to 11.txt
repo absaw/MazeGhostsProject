@@ -243,3 +243,61 @@ Maze 24 Execution Time = 134.3449249267578 s
 Maze 23 Execution Time = 136.31342124938965 s
 
 Maze 22 Execution Time = 121.2006778717041 s
+
+
+======  Start Time for Process 1 to 11  =========->  10/13/22 12:32:39
+No. of mazes for each ghost = 10
+No. of Ghosts = 1
+
+Maze 10 Execution Time = 136.32970690727234 s
+
+Maze 9 Execution Time = 135.84083700180054 s
+
+Maze 8 Execution Time = 129.28387188911438 s
+
+Maze 7 Execution Time = 131.90320110321045 s
+
+Maze 6 Execution Time = 204.88856673240662 s
+
+Maze 5 Execution Time = 122.46629905700684 s
+
+Maze 4 Execution Time = 124.2920069694519 s
+
+Maze 3 Execution Time = 127.87622904777527 s
+
+Maze 2 Execution Time = 126.34296607971191 s
+
+Maze 1 Execution Time = 128.5243000984192 s
+Report for 1 Number of Ghosts
+Player Survived = 9 
+Player Hanged = 0 
+Player Dead = 1 
+Ghost 2 Execution Time = 1367.7480890750885 s
+No. of Ghosts = 11
+
+Maze 10 Execution Time = 400.74451303482056 s
+
+Maze 9 Execution Time = 267.3519229888916 s
+
+Maze 8 Execution Time = 157.66907596588135 s
+
+Maze 7 Execution Time = 324.25743317604065 s
+
+Maze 6 Execution Time = 596.7295558452606 s
+
+Maze 5 Execution Time = 306.9261407852173 s
+
+Maze 4 Execution Time = 223.3704912662506 s
+
+Maze 3 Execution Time = 137.4950132369995 s
+
+Maze 2 Execution Time = 189.21318984031677 s
+
+Maze 1 Execution Time = 34.34403920173645 s
+Report for 11 Number of Ghosts
+Player Survived = 4 
+Player Hanged = 2 
+Player Dead = 4 
+Ghost 12 Execution Time = 2638.10148024559 s
+
+Execution Time = 4005.8498690128326 s

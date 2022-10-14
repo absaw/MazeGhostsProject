@@ -76,9 +76,8 @@ def a_star(maze, lookup_table, n_row, n_col, start, end):
             if not len([k for k in visited_set if k == successor]) > 0:
 
                 successor.actual_cost = c_n.actual_cost + 1
-                print(successor.pos[0],",",successor.pos[1])
-                successor.heuristic_cost = lookup_table[successor.pos[0]
-                                                        ][successor.pos[1]]
+                # print(successor.pos[0],",",successor.pos[1])
+                successor.heuristic_cost = lookup_table[successor.pos[0]][successor.pos[1]]
                 successor.total_cost = successor.actual_cost + successor.heuristic_cost
 
                 if not len([l for l in visited_set if successor.pos == l.pos and successor.actual_cost > l.actual_cost]) > 0:
@@ -88,10 +87,14 @@ def a_star(maze, lookup_table, n_row, n_col, start, end):
 
 
 a = np.array([[0, 1, 0, 1, 1],
-              [0, 0, 0, 0, 1],
+              [0, 0, 1, 0, 1],
               [0, 0, 0, 0, 0],
-              [1, 0, 1, 0, 0],
+              [1, 1, 1, 1, 0],
               [0, 0, 0, 0, 0]])
 
-lookup_table = get_traversal_table(a,5,5,(4,4),True)
+lookup_table = get_traversal_table(a,5,5,(4,4),True)[1]
 path = a_star(a,lookup_table,5,5,(0,0),(4,4))
+for i,j in path:
+    a[i][j]=55
+print(a)
+print(path)

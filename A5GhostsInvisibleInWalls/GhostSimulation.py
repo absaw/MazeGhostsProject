@@ -103,23 +103,24 @@ def reset_prev_cell(maze, row, col):
         maze[row][col] = 1
 
 
-def find_nearest_ghost(play_pos_r, play_pos_c, ghost_position):
-    min_dist = 1000  # Some initial high value
+def find_nearest_ghost(maze,play_pos_r, play_pos_c, ghost_position):
+    #this returns the nearest ghost(distance and position) from the ghost positon list to the current player's position
+    min_dist = 1000000  # Some initial high value
     # play_pos_r=play_pos_c=0
     # ghost_position=[(3,4),(2,3),(6,8),(1,1)]
-    min_gh_r = ghost_position[0][0]
-    min_gh_c = ghost_position[0][1]
+    min_gh_r = 0
+    min_gh_c = 0
     for gh_r, gh_c in ghost_position:
-        curr_dist = euclidean_distance(play_pos_r, play_pos_c, gh_r, gh_c)
-        # curr_dist = np.sqrt((gh_r-play_pos_r)**2+(gh_c-play_pos_c)**2)
-        if curr_dist < min_dist:
-            min_dist = curr_dist
-            min_gh_r = gh_r
-            min_gh_c = gh_c
+        if maze[gh_r][gh_c]<200:
+            curr_dist = euclidean_distance(play_pos_r, play_pos_c, gh_r, gh_c)
+            # curr_dist = np.sqrt((gh_r-play_pos_r)**2+(gh_c-play_pos_c)**2)
+            if curr_dist < min_dist:
+                min_dist = curr_dist
+                min_gh_r = gh_r
+                min_gh_c = gh_c
     # print("Min Dist = ",min_dist)
     # print("Co-Ordinates = ",min_gh_r,", ", min_gh_c)
     return min_dist, (min_gh_r, min_gh_c)
-
 
 def euclidean_distance(x1, y1, x2, y2):
     return np.sqrt((x1-x2)**2+(y1-y2)**2)
@@ -141,7 +142,7 @@ def count_ghosts(maze, n_row, n_col):
 
 
 def run_away_from_ghost(walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c):
-    nearest_ghost = find_nearest_ghost(play_pos_r, play_pos_c, ghost_position)[1]
+    nearest_ghost = find_nearest_ghost(maze,play_pos_r, play_pos_c, ghost_position)[1]
     max = -1  # some low value
     # play_next_r=-1
     # play_next_c=-1

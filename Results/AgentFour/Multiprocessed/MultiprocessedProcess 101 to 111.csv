@@ -1,0 +1,5 @@
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Process 101 to 111
+10/13/22 19:33:14,101,1,8.384130001068115,2,0,98
+10/13/22 19:33:20,106,1,6.598237991333008,0,0,100
+10/13/22 19:33:27,111,1,6.85103178024292,0,0,100

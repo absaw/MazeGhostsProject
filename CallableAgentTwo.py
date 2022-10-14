@@ -105,9 +105,11 @@ def callable_agent_two(maze,n_row,n_col,n_ghost,ghost_position,play_pos):
         if is_player_alive:
             n_alive_simulation += 1
             # if len(path)==1:
-            #     sum_path_length=0
+            #     sum_path_length+=0
+            # Since the path returned has the starting node in itself, we need to count the sum only when the length of
+            # the path is >=2. When the path length is 1, that means the agent is on the goal, so we don't add that length
             if len(path)>=2:
-                sum_path_length+=len(path) 
+                sum_path_length+=len(path)
                 # sum_path_length+=len(path)-1 #works
             # print("Alive -- path Length = ",sum_path_length)
             

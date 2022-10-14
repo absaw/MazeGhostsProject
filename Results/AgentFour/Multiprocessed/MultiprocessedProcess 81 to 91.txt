@@ -1,0 +1,622 @@
+
+
+
+======  Start Time for Process 81 to 91  =========->  10/13/22 19:33:05
+No. of mazes for each ghost = 100
+
+Maze 100 Execution Time = 0.15649986267089844 s
+
+Maze 99 Execution Time = 0.08476805686950684 s
+
+Maze 98 Execution Time = 0.046781063079833984 s
+
+Maze 97 Execution Time = 0.11302614212036133 s
+
+Maze 96 Execution Time = 0.08974623680114746 s
+
+Maze 95 Execution Time = 0.053633928298950195 s
+
+Maze 94 Execution Time = 0.1274700164794922 s
+
+Maze 93 Execution Time = 0.04441499710083008 s
+
+Maze 92 Execution Time = 0.15039491653442383 s
+
+Maze 91 Execution Time = 0.04166603088378906 s
+
+Maze 90 Execution Time = 0.03729581832885742 s
+
+Maze 89 Execution Time = 0.06293678283691406 s
+
+Maze 88 Execution Time = 0.1131749153137207 s
+
+Maze 87 Execution Time = 0.14684009552001953 s
+
+Maze 86 Execution Time = 0.07763791084289551 s
+
+Maze 85 Execution Time = 0.0326228141784668 s
+
+Maze 84 Execution Time = 0.1187741756439209 s
+
+Maze 83 Execution Time = 0.09526515007019043 s
+
+Maze 82 Execution Time = 0.2002580165863037 s
+
+Maze 81 Execution Time = 0.08849692344665527 s
+
+Maze 80 Execution Time = 0.03027510643005371 s
+
+Maze 79 Execution Time = 0.13539910316467285 s
+
+Maze 78 Execution Time = 0.09395718574523926 s
+
+Maze 77 Execution Time = 0.16190385818481445 s
+
+Maze 76 Execution Time = 0.04790782928466797 s
+
+Maze 75 Execution Time = 0.02551412582397461 s
+
+Maze 74 Execution Time = 0.08643317222595215 s
+
+Maze 73 Execution Time = 0.07388710975646973 s
+
+Maze 72 Execution Time = 0.05830812454223633 s
+
+Maze 71 Execution Time = 0.07471108436584473 s
+
+Maze 70 Execution Time = 0.03331398963928223 s
+
+Maze 69 Execution Time = 0.05037283897399902 s
+
+Maze 68 Execution Time = 0.07248783111572266 s
+
+Maze 67 Execution Time = 0.06493806838989258 s
+
+Maze 66 Execution Time = 0.025645017623901367 s
+
+Maze 65 Execution Time = 0.10674095153808594 s
+
+Maze 64 Execution Time = 0.07211685180664062 s
+
+Maze 63 Execution Time = 0.03576374053955078 s
+
+Maze 62 Execution Time = 0.048983097076416016 s
+
+Maze 61 Execution Time = 0.08701801300048828 s
+
+Maze 60 Execution Time = 0.09540486335754395 s
+
+Maze 59 Execution Time = 0.09006404876708984 s
+
+Maze 58 Execution Time = 0.026488065719604492 s
+
+Maze 57 Execution Time = 0.1091620922088623 s
+
+Maze 56 Execution Time = 0.07125020027160645 s
+
+Maze 55 Execution Time = 0.02690887451171875 s
+
+Maze 54 Execution Time = 0.23967695236206055 s
+
+Maze 53 Execution Time = 0.06662106513977051 s
+
+Maze 52 Execution Time = 0.034071922302246094 s
+
+Maze 51 Execution Time = 0.12290811538696289 s
+
+Maze 50 Execution Time = 0.09957408905029297 s
+
+Maze 49 Execution Time = 0.028437137603759766 s
+
+Maze 48 Execution Time = 0.13433027267456055 s
+
+Maze 47 Execution Time = 0.13076305389404297 s
+
+Maze 46 Execution Time = 0.06963419914245605 s
+
+Maze 45 Execution Time = 0.07689595222473145 s
+
+Maze 44 Execution Time = 0.04136800765991211 s
+
+Maze 43 Execution Time = 0.027467012405395508 s
+
+Maze 42 Execution Time = 0.04004383087158203 s
+
+Maze 41 Execution Time = 0.11704611778259277 s
+
+Maze 40 Execution Time = 0.06428909301757812 s
+
+Maze 39 Execution Time = 0.03190183639526367 s
+
+Maze 38 Execution Time = 0.0589299201965332 s
+
+Maze 37 Execution Time = 0.09012889862060547 s
+
+Maze 36 Execution Time = 0.04541182518005371 s
+
+Maze 35 Execution Time = 0.07879018783569336 s
+
+Maze 34 Execution Time = 0.0314791202545166 s
+
+Maze 33 Execution Time = 0.04337000846862793 s
+
+Maze 32 Execution Time = 0.07623887062072754 s
+
+Maze 31 Execution Time = 0.0634310245513916 s
+
+Maze 30 Execution Time = 0.07897424697875977 s
+
+Maze 29 Execution Time = 0.09472107887268066 s
+
+Maze 28 Execution Time = 0.1054680347442627 s
+
+Maze 27 Execution Time = 0.03670930862426758 s
+
+Maze 26 Execution Time = 0.11107826232910156 s
+
+Maze 25 Execution Time = 0.10091209411621094 s
+
+Maze 24 Execution Time = 0.1127171516418457 s
+
+Maze 23 Execution Time = 0.045488834381103516 s
+
+Maze 22 Execution Time = 0.04987788200378418 s
+
+Maze 21 Execution Time = 0.07675504684448242 s
+
+Maze 20 Execution Time = 0.13039088249206543 s
+
+Maze 19 Execution Time = 0.10969400405883789 s
+
+Maze 18 Execution Time = 0.12884092330932617 s
+
+Maze 17 Execution Time = 0.06133890151977539 s
+
+Maze 16 Execution Time = 0.04790616035461426 s
+
+Maze 15 Execution Time = 0.034111976623535156 s
+
+Maze 14 Execution Time = 0.040364980697631836 s
+
+Maze 13 Execution Time = 0.038381099700927734 s
+
+Maze 12 Execution Time = 0.07439732551574707 s
+
+Maze 11 Execution Time = 0.027560949325561523 s
+
+Maze 10 Execution Time = 0.05698418617248535 s
+
+Maze 9 Execution Time = 0.027370929718017578 s
+
+Maze 8 Execution Time = 0.04988217353820801 s
+
+Maze 7 Execution Time = 0.02629399299621582 s
+
+Maze 6 Execution Time = 0.10651278495788574 s
+
+Maze 5 Execution Time = 0.08869814872741699 s
+
+Maze 4 Execution Time = 0.03274106979370117 s
+
+Maze 3 Execution Time = 0.0455169677734375 s
+
+Maze 2 Execution Time = 0.04074907302856445 s
+
+Maze 1 Execution Time = 0.056848764419555664 s
+Report for 81 Number of Ghosts
+Player Survived = 1 
+Player Hanged = 0 
+Player Dead = 99 
+Ghost 82 Execution Time = 7.5372631549835205 s
+
+Maze 100 Execution Time = 0.07998371124267578 s
+
+Maze 99 Execution Time = 0.056697845458984375 s
+
+Maze 98 Execution Time = 0.053314924240112305 s
+
+Maze 97 Execution Time = 0.07523298263549805 s
+
+Maze 96 Execution Time = 0.06572699546813965 s
+
+Maze 95 Execution Time = 0.06411004066467285 s
+
+Maze 94 Execution Time = 0.06527328491210938 s
+
+Maze 93 Execution Time = 0.04914999008178711 s
+
+Maze 92 Execution Time = 0.07558989524841309 s
+
+Maze 91 Execution Time = 0.08066678047180176 s
+
+Maze 90 Execution Time = 0.1325240135192871 s
+
+Maze 89 Execution Time = 0.042654991149902344 s
+
+Maze 88 Execution Time = 0.047415971755981445 s
+
+Maze 87 Execution Time = 0.12993836402893066 s
+
+Maze 86 Execution Time = 0.0417478084564209 s
+
+Maze 85 Execution Time = 0.06162309646606445 s
+
+Maze 84 Execution Time = 0.049307823181152344 s
+
+Maze 83 Execution Time = 0.12749624252319336 s
+
+Maze 82 Execution Time = 0.03188896179199219 s
+
+Maze 81 Execution Time = 0.07552909851074219 s
+
+Maze 80 Execution Time = 0.08068609237670898 s
+
+Maze 79 Execution Time = 0.18795299530029297 s
+
+Maze 78 Execution Time = 0.030855894088745117 s
+
+Maze 77 Execution Time = 0.05666208267211914 s
+
+Maze 76 Execution Time = 0.17843890190124512 s
+
+Maze 75 Execution Time = 0.045317888259887695 s
+
+Maze 74 Execution Time = 0.08539295196533203 s
+
+Maze 73 Execution Time = 0.09921574592590332 s
+
+Maze 72 Execution Time = 0.040718793869018555 s
+
+Maze 71 Execution Time = 0.03215312957763672 s
+
+Maze 70 Execution Time = 0.052590131759643555 s
+
+Maze 69 Execution Time = 0.09366703033447266 s
+
+Maze 68 Execution Time = 0.029464244842529297 s
+
+Maze 67 Execution Time = 0.10912108421325684 s
+
+Maze 66 Execution Time = 0.05261802673339844 s
+
+Maze 65 Execution Time = 0.04770183563232422 s
+
+Maze 64 Execution Time = 0.0446169376373291 s
+
+Maze 63 Execution Time = 0.07213020324707031 s
+
+Maze 62 Execution Time = 0.05972886085510254 s
+
+Maze 61 Execution Time = 0.08926701545715332 s
+
+Maze 60 Execution Time = 0.10337710380554199 s
+
+Maze 59 Execution Time = 0.10979008674621582 s
+
+Maze 58 Execution Time = 0.21502113342285156 s
+
+Maze 57 Execution Time = 0.05336713790893555 s
+
+Maze 56 Execution Time = 0.036416053771972656 s
+
+Maze 55 Execution Time = 0.08862709999084473 s
+
+Maze 54 Execution Time = 0.12590384483337402 s
+
+Maze 53 Execution Time = 0.1119542121887207 s
+
+Maze 52 Execution Time = 0.01896500587463379 s
+
+Maze 51 Execution Time = 0.08224701881408691 s
+
+Maze 50 Execution Time = 0.060846805572509766 s
+
+Maze 49 Execution Time = 0.05864095687866211 s
+
+Maze 48 Execution Time = 0.03119206428527832 s
+
+Maze 47 Execution Time = 0.046073198318481445 s
+
+Maze 46 Execution Time = 0.0405731201171875 s
+
+Maze 45 Execution Time = 0.04684185981750488 s
+
+Maze 44 Execution Time = 0.09222078323364258 s
+
+Maze 43 Execution Time = 0.09134078025817871 s
+
+Maze 42 Execution Time = 0.055364131927490234 s
+
+Maze 41 Execution Time = 0.053527116775512695 s
+
+Maze 40 Execution Time = 0.11581015586853027 s
+
+Maze 39 Execution Time = 0.07632088661193848 s
+
+Maze 38 Execution Time = 0.1043999195098877 s
+
+Maze 37 Execution Time = 0.06104230880737305 s
+
+Maze 36 Execution Time = 0.1165308952331543 s
+
+Maze 35 Execution Time = 0.06585502624511719 s
+
+Maze 34 Execution Time = 0.01929497718811035 s
+
+Maze 33 Execution Time = 0.09151506423950195 s
+
+Maze 32 Execution Time = 0.06480693817138672 s
+
+Maze 31 Execution Time = 0.1601860523223877 s
+
+Maze 30 Execution Time = 0.08368301391601562 s
+
+Maze 29 Execution Time = 0.1193232536315918 s
+
+Maze 28 Execution Time = 0.03357815742492676 s
+
+Maze 27 Execution Time = 0.0358431339263916 s
+
+Maze 26 Execution Time = 0.02664017677307129 s
+
+Maze 25 Execution Time = 0.03975081443786621 s
+
+Maze 24 Execution Time = 0.04041004180908203 s
+
+Maze 23 Execution Time = 0.06983113288879395 s
+
+Maze 22 Execution Time = 0.044770240783691406 s
+
+Maze 21 Execution Time = 0.05274391174316406 s
+
+Maze 20 Execution Time = 0.026790142059326172 s
+
+Maze 19 Execution Time = 0.03920626640319824 s
+
+Maze 18 Execution Time = 0.07278203964233398 s
+
+Maze 17 Execution Time = 0.03652310371398926 s
+
+Maze 16 Execution Time = 0.059171199798583984 s
+
+Maze 15 Execution Time = 0.03411102294921875 s
+
+Maze 14 Execution Time = 0.04315376281738281 s
+
+Maze 13 Execution Time = 0.039193153381347656 s
+
+Maze 12 Execution Time = 0.03889203071594238 s
+
+Maze 11 Execution Time = 0.15520811080932617 s
+
+Maze 10 Execution Time = 0.05195498466491699 s
+
+Maze 9 Execution Time = 0.061209917068481445 s
+
+Maze 8 Execution Time = 0.05306196212768555 s
+
+Maze 7 Execution Time = 0.04941678047180176 s
+
+Maze 6 Execution Time = 0.1262209415435791 s
+
+Maze 5 Execution Time = 0.06599116325378418 s
+
+Maze 4 Execution Time = 0.02770686149597168 s
+
+Maze 3 Execution Time = 0.11331605911254883 s
+
+Maze 2 Execution Time = 0.03540611267089844 s
+
+Maze 1 Execution Time = 0.06973505020141602 s
+Report for 86 Number of Ghosts
+Player Survived = 0 
+Player Hanged = 0 
+Player Dead = 100 
+Ghost 87 Execution Time = 7.038456916809082 s
+
+Maze 100 Execution Time = 0.0787198543548584 s
+
+Maze 99 Execution Time = 0.0947420597076416 s
+
+Maze 98 Execution Time = 0.14222097396850586 s
+
+Maze 97 Execution Time = 0.11962175369262695 s
+
+Maze 96 Execution Time = 0.04244089126586914 s
+
+Maze 95 Execution Time = 0.05923891067504883 s
+
+Maze 94 Execution Time = 0.11635708808898926 s
+
+Maze 93 Execution Time = 0.04077577590942383 s
+
+Maze 92 Execution Time = 0.039788007736206055 s
+
+Maze 91 Execution Time = 0.06428098678588867 s
+
+Maze 90 Execution Time = 0.15333008766174316 s
+
+Maze 89 Execution Time = 0.05079007148742676 s
+
+Maze 88 Execution Time = 0.07200193405151367 s
+
+Maze 87 Execution Time = 0.033969879150390625 s
+
+Maze 86 Execution Time = 0.055522918701171875 s
+
+Maze 85 Execution Time = 0.046674251556396484 s
+
+Maze 84 Execution Time = 0.07139801979064941 s
+
+Maze 83 Execution Time = 0.0839388370513916 s
+
+Maze 82 Execution Time = 0.1244659423828125 s
+
+Maze 81 Execution Time = 0.05438375473022461 s
+
+Maze 80 Execution Time = 0.04399514198303223 s
+
+Maze 79 Execution Time = 0.10036516189575195 s
+
+Maze 78 Execution Time = 0.038381099700927734 s
+
+Maze 77 Execution Time = 0.041116952896118164 s
+
+Maze 76 Execution Time = 0.05936694145202637 s
+
+Maze 75 Execution Time = 0.05739307403564453 s
+
+Maze 74 Execution Time = 0.05233597755432129 s
+
+Maze 73 Execution Time = 0.0445561408996582 s
+
+Maze 72 Execution Time = 0.1053152084350586 s
+
+Maze 71 Execution Time = 0.032813072204589844 s
+
+Maze 70 Execution Time = 0.05803799629211426 s
+
+Maze 69 Execution Time = 0.04455709457397461 s
+
+Maze 68 Execution Time = 0.053472042083740234 s
+
+Maze 67 Execution Time = 0.03568696975708008 s
+
+Maze 66 Execution Time = 0.05203890800476074 s
+
+Maze 65 Execution Time = 0.05697488784790039 s
+
+Maze 64 Execution Time = 0.07177090644836426 s
+
+Maze 63 Execution Time = 0.07343721389770508 s
+
+Maze 62 Execution Time = 0.04538989067077637 s
+
+Maze 61 Execution Time = 0.09078812599182129 s
+
+Maze 60 Execution Time = 0.05464601516723633 s
+
+Maze 59 Execution Time = 0.07421994209289551 s
+
+Maze 58 Execution Time = 0.07184600830078125 s
+
+Maze 57 Execution Time = 0.10118913650512695 s
+
+Maze 56 Execution Time = 0.09181785583496094 s
+
+Maze 55 Execution Time = 0.07801198959350586 s
+
+Maze 54 Execution Time = 0.06414103507995605 s
+
+Maze 53 Execution Time = 0.10318183898925781 s
+
+Maze 52 Execution Time = 0.23928403854370117 s
+
+Maze 51 Execution Time = 0.05997800827026367 s
+
+Maze 50 Execution Time = 0.02613210678100586 s
+
+Maze 49 Execution Time = 0.12762093544006348 s
+
+Maze 48 Execution Time = 0.04934573173522949 s
+
+Maze 47 Execution Time = 0.07283210754394531 s
+
+Maze 46 Execution Time = 0.045752763748168945 s
+
+Maze 45 Execution Time = 0.03171205520629883 s
+
+Maze 44 Execution Time = 0.04847407341003418 s
+
+Maze 43 Execution Time = 0.05841398239135742 s
+
+Maze 42 Execution Time = 0.053804874420166016 s
+
+Maze 41 Execution Time = 0.028174161911010742 s
+
+Maze 40 Execution Time = 0.05440020561218262 s
+
+Maze 39 Execution Time = 0.04859280586242676 s
+
+Maze 38 Execution Time = 0.032509803771972656 s
+
+Maze 37 Execution Time = 0.06583714485168457 s
+
+Maze 36 Execution Time = 0.06793689727783203 s
+
+Maze 35 Execution Time = 0.04092288017272949 s
+
+Maze 34 Execution Time = 0.027974843978881836 s
+
+Maze 33 Execution Time = 0.05887007713317871 s
+
+Maze 32 Execution Time = 0.08663392066955566 s
+
+Maze 31 Execution Time = 0.028296947479248047 s
+
+Maze 30 Execution Time = 0.03936266899108887 s
+
+Maze 29 Execution Time = 0.04498410224914551 s
+
+Maze 28 Execution Time = 0.03428506851196289 s
+
+Maze 27 Execution Time = 0.11178398132324219 s
+
+Maze 26 Execution Time = 0.04953503608703613 s
+
+Maze 25 Execution Time = 0.10756373405456543 s
+
+Maze 24 Execution Time = 0.03735089302062988 s
+
+Maze 23 Execution Time = 0.03554677963256836 s
+
+Maze 22 Execution Time = 0.041693925857543945 s
+
+Maze 21 Execution Time = 0.06556224822998047 s
+
+Maze 20 Execution Time = 0.08290624618530273 s
+
+Maze 19 Execution Time = 0.037132978439331055 s
+
+Maze 18 Execution Time = 0.048899173736572266 s
+
+Maze 17 Execution Time = 0.039391279220581055 s
+
+Maze 16 Execution Time = 0.030219078063964844 s
+
+Maze 15 Execution Time = 0.14728307723999023 s
+
+Maze 14 Execution Time = 0.06038093566894531 s
+
+Maze 13 Execution Time = 0.045678138732910156 s
+
+Maze 12 Execution Time = 0.14317607879638672 s
+
+Maze 11 Execution Time = 0.04850292205810547 s
+
+Maze 10 Execution Time = 0.12466263771057129 s
+
+Maze 9 Execution Time = 0.07131600379943848 s
+
+Maze 8 Execution Time = 0.15755891799926758 s
+
+Maze 7 Execution Time = 0.08775210380554199 s
+
+Maze 6 Execution Time = 0.05679893493652344 s
+
+Maze 5 Execution Time = 0.03751111030578613 s
+
+Maze 4 Execution Time = 0.05158185958862305 s
+
+Maze 3 Execution Time = 0.04412221908569336 s
+
+Maze 2 Execution Time = 0.1419072151184082 s
+
+Maze 1 Execution Time = 0.13094401359558105 s
+Report for 91 Number of Ghosts
+Player Survived = 0 
+Player Hanged = 0 
+Player Dead = 100 
+Ghost 92 Execution Time = 6.851029872894287 s
+
+Execution Time = 21.427202224731445 s

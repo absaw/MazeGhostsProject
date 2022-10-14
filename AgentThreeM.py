@@ -13,7 +13,7 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
     # n_ghost = 50
     n_row = 51
     n_col = 51
-    no_of_mazes=10
+    no_of_mazes=50
     # walk = [[0, 1],
     #         [0, -1],
     #         [1, 0],
@@ -200,7 +200,7 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
     
     #  fields=['Date Time','Ghost Number','Maze Number','Time Taken','Survived','Hanged','Died','Comments']
         time_now=datetime.now().strftime("%m/%d/%y %H:%M:%S")
-        csv_writer.writerow([time_now,i_ghost,10,str(gh_end_time-gh_st_time),str(n_alive_for_this_ghost),str(n_hanged_for_this_ghost),str(n_dead_for_this_ghost)])
+        csv_writer.writerow([time_now,i_ghost,50,str(gh_end_time-gh_st_time),str(n_alive_for_this_ghost),str(n_hanged_for_this_ghost),str(n_dead_for_this_ghost)])
         # file.write("\nDead Number-> %d"%n_dead_for_this_ghost)
         # print("Node Reached -> %d"%node_reached)
         # print("Dead = ",n_dead_for_this_ghost)
@@ -216,25 +216,36 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
 # agent_three()
 
 if __name__=="__main__":
-    
+
+    p_21 = mp.Process(target=agent_three,args=(21,21,"Process 21 "))
+    p_31 = mp.Process(target=agent_three,args=(31,31,"Process 31"))
     #p_1_11 = mp.Process(target=agent_three,args=(1,11,"Process 1 to 11"))
     #p_21_31 = mp.Process(target=agent_three,args=(21,31,"Process 21 to 31"))
     #p_41_51 = mp.Process(target=agent_three,args=(41,51,"Process 41 to 51"))
-    p_61_71 = mp.Process(target=agent_three,args=(61,71,"Process 61 to 71"))
-    p_81_91 = mp.Process(target=agent_three,args=(81,91,"Process 81 to 91"))
-    p_101_111 = mp.Process(target=agent_three,args=(101,111,"Process 101 to 111"))
+    # p_61_71 = mp.Process(target=agent_three,args=(61,71,"Process 61 to 71"))
+    # p_81_91 = mp.Process(target=agent_three,args=(81,91,"Process 81 to 91"))
+    # p_101_111 = mp.Process(target=agent_three,args=(101,111,"Process 101 to 111"))
     
     # p_1_21 = mp.Process(target=agent_three,args=(1,21,"Process 1 to 21"))
     # p_31_51 = mp.Process(target=agent_three,args=(31,51,"Process 31 to 51"))
     # p_61_81 = mp.Process(target=agent_three,args=(61,81,"Process 61 to 81"))
     # p_91_111 = mp.Process(target=agent_three,args=(91,111,"Process 91 to 111"))
     
+    p_21.start()
+    p_31.start()
+
+    p_21.join()
+    print("Process 21 Joined")
+
+    p_31.join()
+    print("Process 31 Joined")
+
     #p_1_11.start()
     #p_21_31.start()
     #p_41_51.start()
-    p_61_71.start()
-    p_81_91.start()
-    p_101_111.start()
+    # p_61_71.start()
+    # p_81_91.start()
+    # p_101_111.start()
     
     
     #p_1_11.join()
@@ -246,14 +257,14 @@ if __name__=="__main__":
     #p_41_51.join()
     # print("Process 41 to 51 Joined")
 
-    p_61_71.join()
-    print("Process 61 to 71 Joined")
+    # p_61_71.join()
+    # print("Process 61 to 71 Joined")
 
-    p_81_91.join()
-    print("Process 81 to 91 Joined")
+    # p_81_91.join()
+    # print("Process 81 to 91 Joined")
     
-    p_101_111.join()
-    print("Process 101 to 111 Joined")
+    # p_101_111.join()
+    # print("Process 101 to 111 Joined")
 
     # p_1_21.start()
     # p_31_51.start()

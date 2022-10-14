@@ -8,7 +8,7 @@ from BFS import *
 from Maze import *
 from time import time
 from datetime import datetime
-
+import csv
 # 0   = Empty Space
 # 1   = Blocked Wall
 # 100 = Empty Space with ghost
@@ -18,7 +18,7 @@ from datetime import datetime
 def agent_two():
     start = time()
     print("Started...")
-    n_ghost = 300
+    n_ghost = 200
     n_row = 51
     n_col = 51
     walk = [[0, 1],
@@ -26,15 +26,25 @@ def agent_two():
             [1, 0],
             [-1, 0]]
 
-    file = open("Results/AgentTwo.txt", "a")
+    filename_txt="Results/AgentTwo/Run 1.txt"
+    filename_csv="Results/AgentTwo/Run 1.csv"
+    file=open(filename_txt,"a")
+    csvfile = open(filename_csv, "a")
+    csv_writer=csv.writer(csvfile)
+    fields=['Date Time','Ghost Number','Number of Mazes','Time Taken','Survived','Hanged','Died','Comments']
+    csv_writer.writerow(fields)
+    time_now=datetime.now().strftime("%m/%d/%y %H:%M:%S")
+    file = open("Results/AgentTwo/Run 1.txt", "a")
     text = "\n\n\n======  Start Time  =========->  " + \
         datetime.now().strftime("%m/%d/%y %H:%M:%S")
+    csv_writer.writerow(["Execution Started "+text])
     file.write(text)
     file.write("\nNo. of Ghosts = %d" % n_ghost)
     file.write("\nNo. of mazes for each ghost = 100")
 
-    for i_ghost in range(1, n_ghost+5, 5):
-        n_maze = 100
+    for i_ghost in range(1, n_ghost+1, 5):
+        gh_st_time=time()
+        n_maze = 1
         n_alive_for_this_ghost = 0
         n_dead_for_this_ghost = 0
         node_reached = []
@@ -138,6 +148,12 @@ def agent_two():
         print("Time taken for this ghost : "+str(now-gh_time)+" s")
         print("Total Time till now: "+str(now-start)+" s")
         print("Ghost Number ", i_ghost, " Done\n")
+        gh_end_time=time()
+
+        #  fields=['Date Time','Ghost Number','Maze Number','Time Taken','Survived','Hanged','Died','Comments']
+        time_now=datetime.now().strftime("%m/%d/%y %H:%M:%S")
+        csv_writer.writerow([time_now,i_ghost,100,str(gh_end_time-gh_st_time),str(n_alive_for_this_ghost),0,str(n_dead_for_this_ghost)])
+        
     end = time()
     file.write("\n\nExecution Time = "+str(end-start)+" s")
     print("Execution time : "+str(end-start)+" s")

@@ -54,13 +54,13 @@ def get_traversal_table(maze,n_row,n_col,start,ghost_present):
     else:
         return [path_found,None]
 
-a=np.array([[0,1,0,1,1],
-            [0,0,0,0,1],
-            [0,0,0,0,0],
-            [1,0,1,0,0],
-            [0,0,0,0,0]])
+# a=np.array([[0,1,0,1,1],
+#             [0,0,0,0,1],
+#             [0,0,0,0,0],
+#             [1,0,1,0,0],
+#             [0,0,0,0,0]])
 
-# a2=[[0,0,1,0,0],
+# # a2=[[0,0,1,0,0],
 #     [102,0,200,0,0],
 #     [0,0,1,0,0],
 #     [100,100,1,1,0],
@@ -70,6 +70,6 @@ a=np.array([[0,1,0,1,1],
 #        [6., 5., 4., 3., 2.],
 #        [0., 4., 0., 2., 1.],
 #        [4., 3., 2., 1., 0.]])]
-result=get_traversal_table(a,5,5,(4,4),True)
-print(result)
+# result=get_traversal_table(a,5,5,(4,4),True)
+# print(result)
         
