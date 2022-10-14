@@ -1,3 +1,15 @@
+# ===========================================================================
+# Agent Two when ghosts are invisible in the walls
+# While planning and running away the agent, only considers ghosts which are 
+# visible to them and hence thhe performance would be the same as normal agent
+# two
+# ===========================================================================
+# 0   = Empty Space
+# 1   = Blocked Wall
+# 100 = Empty Space with ghost
+# 200 = Blocked Wall with ghost
+# ===========================================================================
+
 import numpy as np
 import matplotlib as plt
 import random
@@ -8,17 +20,12 @@ from BFS import *
 from Maze import *
 from time import time
 from datetime import datetime
-
-# 0   = Empty Space
-# 1   = Blocked Wall
-# 100 = Empty Space with ghost
-# 200 = Blocked Wall with ghost
-
+import csv
 
 def agent_two():
     start = time()
     print("Started...")
-    n_ghost = 300
+    n_ghost = 200
     n_row = 51
     n_col = 51
     walk = [[0, 1],
@@ -26,15 +33,25 @@ def agent_two():
             [1, 0],
             [-1, 0]]
 
-    file = open("Results/AgentTwo.txt", "a")
+    filename_txt="Results/AgentTwo/Run 1.txt"
+    filename_csv="Results/AgentTwo/Run 1.csv"
+    file=open(filename_txt,"a")
+    csvfile = open(filename_csv, "a")
+    csv_writer=csv.writer(csvfile)
+    fields=['Date Time','Ghost Number','Number of Mazes','Time Taken','Survived','Hanged','Died','Comments']
+    csv_writer.writerow(fields)
+    time_now=datetime.now().strftime("%m/%d/%y %H:%M:%S")
+    file = open("Results/AgentTwo/Run 1.txt", "a")
     text = "\n\n\n======  Start Time  =========->  " + \
         datetime.now().strftime("%m/%d/%y %H:%M:%S")
+    csv_writer.writerow(["Execution Started "+text])
     file.write(text)
     file.write("\nNo. of Ghosts = %d" % n_ghost)
     file.write("\nNo. of mazes for each ghost = 100")
 
-    for i_ghost in range(1, n_ghost+5, 5):
-        n_maze = 100
+    for i_ghost in range(1, n_ghost+1, 5):
+        gh_st_time=time()
+        n_maze = 1
         n_alive_for_this_ghost = 0
         n_dead_for_this_ghost = 0
         node_reached = []
@@ -55,11 +72,6 @@ def agent_two():
                 ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost(
                     walk, ghost_position, n_row, n_col, maze, 0, 0)
                 path.append((play_next_r, play_next_c))
-                # print("\n\nRunning Away Initially : ")
-                # print("Player Position >",0,",",0)
-                # print("Nearest Ghost -> ",nearest_ghost)
-                # print("Next Position -> ",play_next_r,",",play_next_c)
-                # print("Ghost Position List ->",ghost_position)
 
             # ========================================================================================================================================
             # ===============================       Player Starts Moving       =========================================================================
@@ -104,45 +116,31 @@ def agent_two():
                         walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c)
                     path.append((play_next_r, play_next_c))
 
-                    # print("\n\nRunning Away : ")
-                    # print("Player Position >",play_pos_r,",",play_pos_c)
-                    # print("Nearest Ghost -> ",nearest_ghost)
-                    # print("Next Position -> ",play_next_r,",",play_next_c)
-                    # print("Ghost Position List ->",ghost_position)
-
-                # print("\n\nPlayer Position >",play_pos_r,",",play_pos_c)
-                # print("Ghost Position ->",ghost_position)
-                # print("Curent maze  \n",maze)
-                # print("Path - > ",path)
-                # print("Latest Path ->",latest_path)
 
             if is_player_alive:
                 n_alive_for_this_ghost += 1
                 # print("Alive")
             else:
                 n_dead_for_this_ghost += 1
-                # print("Dead = ",n_dead_for_this_ghost)
-                # print("Dead at ",node_reached)
-                # print("Ghost Position : ",ghost_position)
-                # print("Player Position >",play_pos_r,",",play_pos_c)
-                # print("Death maze  \n",maze)
+
 
         now=time()
         file.write("\nReport for %d Number of Ghosts" % i_ghost)
         file.write("\nPlayer Survivability =           %d" % n_alive_for_this_ghost+" %")
         file.write("\nTime taken for this ghost : "+str(now-gh_time)+" s")
-        # file.write("\nDead Number-> %d"%n_dead_for_this_ghost)
-        # print("Node Reached -> %d"%node_reached)
-        # print("Dead = ",n_dead_for_this_ghost)
-        # print("Dead at ",node_reached)
         print("Time taken for this ghost : "+str(now-gh_time)+" s")
         print("Total Time till now: "+str(now-start)+" s")
         print("Ghost Number ", i_ghost, " Done\n")
+        gh_end_time=time()
+
+        #  fields=['Date Time','Ghost Number','Maze Number','Time Taken','Survived','Hanged','Died','Comments']
+        time_now=datetime.now().strftime("%m/%d/%y %H:%M:%S")
+        csv_writer.writerow([time_now,i_ghost,100,str(gh_end_time-gh_st_time),str(n_alive_for_this_ghost),0,str(n_dead_for_this_ghost)])
+        
     end = time()
     file.write("\n\nExecution Time = "+str(end-start)+" s")
     print("Execution time : "+str(end-start)+" s")
     file.close()
     print("Done!")
-
 
 agent_two()

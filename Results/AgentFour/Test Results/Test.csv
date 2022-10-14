@@ -149,3 +149,9 @@ Execution Started Test
 Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
 Execution Started Test
 10/14/22 01:35:27,100,1,12.304461240768433,1,0,99
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 07:31:19,1,1,0.0009829998016357422,1,0,0
+Date Time,Ghost Number,Maze Number,Time Taken,Survived,Hanged,Died,Comments
+Execution Started Run
+10/14/22 07:32:29,1,1,0.0008690357208251953,1,0,0

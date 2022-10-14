@@ -1,11 +1,3 @@
-# ===========================================================================
-# Agent Two 
-# ===========================================================================
-# 0   = Empty Space
-# 1   = Blocked Wall
-# 100 = Empty Space with ghost
-# 200 = Blocked Wall with ghost
-# ===========================================================================
 import numpy as np
 import matplotlib as plt
 import random
@@ -17,6 +9,11 @@ from Maze import *
 from time import time
 from datetime import datetime
 import csv
+# 0   = Empty Space
+# 1   = Blocked Wall
+# 100 = Empty Space with ghost
+# 200 = Blocked Wall with ghost
+
 
 def agent_two():
     start = time()
@@ -68,7 +65,12 @@ def agent_two():
                 ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost(
                     walk, ghost_position, n_row, n_col, maze, 0, 0)
                 path.append((play_next_r, play_next_c))
-              
+                # print("\n\nRunning Away Initially : ")
+                # print("Player Position >",0,",",0)
+                # print("Nearest Ghost -> ",nearest_ghost)
+                # print("Next Position -> ",play_next_r,",",play_next_c)
+                # print("Ghost Position List ->",ghost_position)
+
             # ========================================================================================================================================
             # ===============================       Player Starts Moving       =========================================================================
             # ========================================================================================================================================
@@ -112,17 +114,37 @@ def agent_two():
                         walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c)
                     path.append((play_next_r, play_next_c))
 
-                   
+                    # print("\n\nRunning Away : ")
+                    # print("Player Position >",play_pos_r,",",play_pos_c)
+                    # print("Nearest Ghost -> ",nearest_ghost)
+                    # print("Next Position -> ",play_next_r,",",play_next_c)
+                    # print("Ghost Position List ->",ghost_position)
+
+                # print("\n\nPlayer Position >",play_pos_r,",",play_pos_c)
+                # print("Ghost Position ->",ghost_position)
+                # print("Curent maze  \n",maze)
+                # print("Path - > ",path)
+                # print("Latest Path ->",latest_path)
+
             if is_player_alive:
                 n_alive_for_this_ghost += 1
                 # print("Alive")
             else:
                 n_dead_for_this_ghost += 1
-              
+                # print("Dead = ",n_dead_for_this_ghost)
+                # print("Dead at ",node_reached)
+                # print("Ghost Position : ",ghost_position)
+                # print("Player Position >",play_pos_r,",",play_pos_c)
+                # print("Death maze  \n",maze)
+
         now=time()
         file.write("\nReport for %d Number of Ghosts" % i_ghost)
         file.write("\nPlayer Survivability =           %d" % n_alive_for_this_ghost+" %")
         file.write("\nTime taken for this ghost : "+str(now-gh_time)+" s")
+        # file.write("\nDead Number-> %d"%n_dead_for_this_ghost)
+        # print("Node Reached -> %d"%node_reached)
+        # print("Dead = ",n_dead_for_this_ghost)
+        # print("Dead at ",node_reached)
         print("Time taken for this ghost : "+str(now-gh_time)+" s")
         print("Total Time till now: "+str(now-start)+" s")
         print("Ghost Number ", i_ghost, " Done\n")

@@ -65,7 +65,7 @@ def agent_four(n_gh_lb, n_gh_ub, ProcessName):
             # Spawning Ghosts at random location
             spawn_ghosts(maze, i_ghost, n_row, n_col, ghost_position)
 
-            get_init_path = get_bfs_path(maze, n_row, n_col, (0, 0), False) #getting bfs path, while ignoring the ghosts--"False" parameter ensures that
+            get_init_path = get_bfs_path(maze, n_row, n_col, (0, 0), False)
             is_init_path_valid = get_init_path[0]
             path = list()
             init_path=get_init_path[1][1:] #excluding the first element i.e. 0,0 from the list
@@ -73,15 +73,17 @@ def agent_four(n_gh_lb, n_gh_ub, ProcessName):
                 path.append(init_path.pop(0))
             else:
     
+                ##calculate ghost on path distance
                 # We have the ghost_position and path. This condition entails that path has some ghost
                 # We calc the distance of the nearest ghost on the path. See if this exceeds the run away limit
 
+                #def calc ghostinpath():
                 #finding intersection between ghost position and path
                 ghosts_in_path_list=intersection_list(init_path,ghost_position)
 
                 nearest_gh_in_path=find_nearest_ghost_in_maze(0,0,ghosts_in_path_list)[0] #Distance to the nearest ghost(even in wall) returned
-                #If ghost is farther than 3, we still continue on the same initial path
-                if nearest_gh_in_path>=3:
+
+                if nearest_gh_in_path>5:
                     path.append(init_path.pop(0))
                 else:
                     ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost_in_maze(

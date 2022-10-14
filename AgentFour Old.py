@@ -30,11 +30,8 @@ def agent_four(n_gh_lb, n_gh_ub, ProcessName):
             [0, 0]]
     # filename_txt="Results/AgentFour/Test.txt"
     # filename_csv="Results/AgentFour/Test.csv"
-    filename_txt="/Users/abhishek.sawalkar/Library/Mobile Documents/com~apple~CloudDocs/AI Project/MazeGhostsProject/Results/AgentFour/Test.txt"
-    filename_csv="/Users/abhishek.sawalkar/Library/Mobile Documents/com~apple~CloudDocs/AI Project/MazeGhostsProject/Results/AgentFour/Test.csv"
-    
-    # filename_txt="Results/AgentFour/"+ProcessName+".txt"
-    # filename_csv="Results/AgentFour/"+ProcessName+".csv"
+    filename_txt="Results/AgentFour/"+ProcessName+".txt"
+    filename_csv="Results/AgentFour/"+ProcessName+".csv"
     file=open(filename_txt,"a")
     csvfile = open(filename_csv, "a")
     csv_writer=csv.writer(csvfile)
@@ -65,7 +62,7 @@ def agent_four(n_gh_lb, n_gh_ub, ProcessName):
             # Spawning Ghosts at random location
             spawn_ghosts(maze, i_ghost, n_row, n_col, ghost_position)
 
-            get_init_path = get_bfs_path(maze, n_row, n_col, (0, 0), False) #getting bfs path, while ignoring the ghosts--"False" parameter ensures that
+            get_init_path = get_bfs_path(maze, n_row, n_col, (0, 0), False)
             is_init_path_valid = get_init_path[0]
             path = list()
             init_path=get_init_path[1][1:] #excluding the first element i.e. 0,0 from the list
@@ -73,15 +70,17 @@ def agent_four(n_gh_lb, n_gh_ub, ProcessName):
                 path.append(init_path.pop(0))
             else:
     
+                ##calculate ghost on path distance
                 # We have the ghost_position and path. This condition entails that path has some ghost
                 # We calc the distance of the nearest ghost on the path. See if this exceeds the run away limit
 
+                #def calc ghostinpath():
                 #finding intersection between ghost position and path
                 ghosts_in_path_list=intersection_list(init_path,ghost_position)
 
                 nearest_gh_in_path=find_nearest_ghost_in_maze(0,0,ghosts_in_path_list)[0] #Distance to the nearest ghost(even in wall) returned
-                #If ghost is farther than 3, we still continue on the same initial path
-                if nearest_gh_in_path>=3:
+
+                if nearest_gh_in_path>5:
                     path.append(init_path.pop(0))
                 else:
                     ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost_in_maze(
@@ -91,7 +90,6 @@ def agent_four(n_gh_lb, n_gh_ub, ProcessName):
 
             latest_path=init_path.copy()
             goal_reached=False
-            path_recalc=False
             for play_pos_r, play_pos_c in path:
                 
                 is_player_alive = True
@@ -149,49 +147,40 @@ def agent_four(n_gh_lb, n_gh_ub, ProcessName):
                 # we start running away from this ghost(TBD---towards a nearer path?)
                    #10,2 -13
                    #15,2 -12
-                # if path_recalc:
-                #     latest_path_result=get_bfs_path(maze,n_row,n_col,(play_pos_r,play_pos_c),True)
-                #     if latest_path_result[0]:
-                #             latest_path=latest_path_result[1][1:]
-                #             path.append(latest_path.pop(0))
-                #     else:
 
-                        
-
-                gh_path_limit=2
+                gh_path_limit=10
                 gh_maze_limit=2
                 nearest_gh_maze_result=find_nearest_ghost_in_maze(play_pos_r,play_pos_c,ghost_position)
                 nearest_gh_maze_dist=nearest_gh_maze_result[0]
 
                 if nearest_gh_maze_dist<=gh_maze_limit:
+                    #Recalculate the new path
+                    # latest_path_result=get_bfs_path(maze,n_row,n_col,(play_pos_r,play_pos_c),False)
+                    # if latest_path_result[0]:
+                    #     latest_path=latest_path_result[1][1:]
+                    #     path.append(latest_path.pop(0))
+                    # else:
                         #start running away
                     ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost_in_maze(
                             walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c)
                     path.append((play_next_r, play_next_c))
-                    # Recalculate the new path
-                    latest_path_result=get_bfs_path(maze,n_row,n_col,(play_pos_r,play_pos_c),False)
-                    if latest_path_result[0]:
-                        latest_path=latest_path_result[1][1:]
-                        # path.append(latest_path.pop(0))
                 else:
-                    path.append(latest_path.pop(0))
-                    
-                    # ghosts_in_path_list=intersection_list(latest_path,ghost_position)
-                    # nearest_gh_in_path=find_nearest_ghost_in_maze(play_pos_r,play_pos_c,ghosts_in_path_list)[0]
+                    ghosts_in_path_list=intersection_list(latest_path,ghost_position)
+                    nearest_gh_in_path=find_nearest_ghost_in_maze(play_pos_r,play_pos_c,ghosts_in_path_list)[0]
 
-                    # if nearest_gh_in_path>gh_path_limit:
-                    #     path.append(latest_path.pop(0))
-                    # else:
-                    #     #Recalculate the new path
-                    #     latest_path_result=get_bfs_path(maze,n_row,n_col,(play_pos_r,play_pos_c),False)
-                    #     if latest_path_result[0]:
-                    #         latest_path=latest_path_result[1][1:]
-                    #         path.append(latest_path.pop(0))
-                    #     else:
-                    #         #start running away
-                    #         ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost_in_maze(
-                    #                 walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c)
-                    #         path.append((play_next_r, play_next_c))
+                    if nearest_gh_in_path>gh_path_limit:
+                        path.append(latest_path.pop(0))
+                    else:
+                        #Recalculate the new path
+                        latest_path_result=get_bfs_path(maze,n_row,n_col,(play_pos_r,play_pos_c),True)
+                        if latest_path_result[0]:
+                            latest_path=latest_path_result[1][1:]
+                            path.append(latest_path.pop(0))
+                        else:
+                            #start running away
+                            ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost_in_maze(
+                                    walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c)
+                            path.append((play_next_r, play_next_c))
               
             if is_player_alive and not is_player_hanged:
                 n_alive_for_this_ghost += 1
@@ -235,7 +224,7 @@ def agent_four(n_gh_lb, n_gh_ub, ProcessName):
     file.close()
     print("Done!")
 
-agent_four(100,100,"Test")
+agent_four(1,200,"Run - 2--10,2")
 
 if __name__=="mai_":
     

@@ -1,4 +1,6 @@
  #=======Strategy of Agent 4========
+ # INVISIBLE GHOSTS IN WALLS
+ # ================================
 # Calculate initial shortest path
 # If path not valid i.e. there are ghosts in the path
 #       If the nearest ghost is farther than a limit in the path
@@ -55,8 +57,8 @@ def agent_four(n_gh_lb, n_gh_ub, ProcessName):
             [-1,-1],
             [1,-1],
             [-1,1]]
-    filename_txt="Results/AgentFour/Test.txt"
-    filename_csv="Results/AgentFour/Test.csv"
+    filename_txt="./Results/AgentFourInvisibleInWalls/Test.txt"
+    filename_csv="./Results/AgentFourInvisibleInWalls/Test.csv"
     file=open(filename_txt,"a")
     csvfile = open(filename_csv, "a")
     csv_writer=csv.writer(csvfile)
@@ -94,7 +96,7 @@ def agent_four(n_gh_lb, n_gh_ub, ProcessName):
                 else:
 
                     #find nearest ghost and run away
-                    ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost_in_maze(
+                    ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost(
                             walk, ghost_position, n_row, n_col, maze, 0, 0)
                     path.append((play_next_r, play_next_c))
 
@@ -136,7 +138,7 @@ def agent_four(n_gh_lb, n_gh_ub, ProcessName):
                     # ===================================================================================================
 
                     gh_maze_limit=2
-                    nearest_gh_maze_result=find_nearest_ghost_in_maze(play_pos_r,play_pos_c,ghost_position)
+                    nearest_gh_maze_result=find_nearest_ghost(maze,play_pos_r,play_pos_c,ghost_position)
                     nearest_gh_maze_dist=nearest_gh_maze_result[0]
                     nearest_gh=nearest_gh_maze_result[1]
 
@@ -156,7 +158,7 @@ def agent_four(n_gh_lb, n_gh_ub, ProcessName):
                             path.append(latest_path.pop(0))
                         else:
                             # start running away
-                            ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost_in_maze(
+                            ghost_position, maze, play_next_r, play_next_c, nearest_ghost = run_away_from_ghost(
                                     walk, ghost_position, n_row, n_col, maze, play_pos_r, play_pos_c)
                             path.append((play_next_r, play_next_c))
                             latest_path_result=get_bfs_path(maze,n_row,n_col,(play_next_r,play_next_c),False)
@@ -201,6 +203,6 @@ def agent_four(n_gh_lb, n_gh_ub, ProcessName):
     file.close()
     print("Done!")
 
-agent_four(200,250,"Run")
+agent_four(1,201,"Run")
 
 

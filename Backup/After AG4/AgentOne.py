@@ -1,12 +1,3 @@
-# ===========================================================================
-# Agent One 
-# ===========================================================================
-# 0   = Empty Space
-# 1   = Blocked Wall
-# 100 = Empty Space with ghost
-# 200 = Blocked Wall with ghost
-# ===========================================================================
-
 import numpy as np
 import matplotlib as plt
 import random
@@ -16,10 +7,16 @@ import collections
 from GhostSimulation import *
 from BFS import *
 from Maze import *
+# from BFS import get_bfs_path
 from Maze import generate_maze
 from time import time
 from datetime import datetime
 import csv
+# 0   = Empty Space
+# 1   = Blocked Wall
+# 100 = Empty Space with ghost
+# 200 = Blocked Wall with ghost
+
 
 def agent_one():
     start = time()
@@ -60,7 +57,7 @@ def agent_one():
             maze = maze_generator_result[0]
             path = maze_generator_result[1]
             ghost_position = list()
-            # Spawning Ghosts at random location which are reachable
+            # Spawning Ghosts at random location
             spawn_ghosts(maze, i_ghost, n_row, n_col, ghost_position)
             # ghosts now present in maze. Now start walking
 

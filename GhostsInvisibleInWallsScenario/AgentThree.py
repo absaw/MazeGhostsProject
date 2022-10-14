@@ -1,3 +1,18 @@
+# ===========================================================================
+# Agent Three when ghosts are invisible in the walls
+# While planning, agent three invokes callable agent two at all steps. Callable
+# agent two only considers ghosts which are visible for planning and running 
+# away.
+# While running away also agent three defaults to agent two's behaviour.
+# Hence thhe performance would be the same as normal agent agent three
+# ===========================================================================
+# 0   = Empty Space
+# 1   = Blocked Wall
+# 100 = Empty Space with ghost
+# 200 = Blocked Wall with ghost
+# ===========================================================================
+
+
 import numpy as np
 from CallableAgentTwo import *
 from BFS import *
@@ -6,14 +21,14 @@ from time import time
 from datetime import datetime
 import csv
 import multiprocessing as mp
-
+from GhostSimulation import *
 def agent_three(n_gh_lb, n_gh_ub, ProcessName):
     start = time()
     print("Started...")
     # n_ghost = 50
     n_row = 51
     n_col = 51
-    no_of_mazes=10
+    no_of_mazes=50
     # walk = [[0, 1],
     #         [0, -1],
     #         [1, 0],
@@ -163,7 +178,7 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
                     path.append(next_pos)
                     # print("Next Player Pos ->", next_pos)
                     
-                # Defaulting to Agent 2's behaviour when there is no path from current position to goal
+                # Defaulting to Agent 2's behaviour when there is no path from current position to goal==runaway
                 elif latest_path[0] == False:
                     # Path is blocked by ghost. Run away..We find the nearest ghost to current player position.
                     # Then select the next direction which is the farthest from this particular ghost
@@ -200,7 +215,7 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
     
     #  fields=['Date Time','Ghost Number','Maze Number','Time Taken','Survived','Hanged','Died','Comments']
         time_now=datetime.now().strftime("%m/%d/%y %H:%M:%S")
-        csv_writer.writerow([time_now,i_ghost,10,str(gh_end_time-gh_st_time),str(n_alive_for_this_ghost),str(n_hanged_for_this_ghost),str(n_dead_for_this_ghost)])
+        csv_writer.writerow([time_now,i_ghost,50,str(gh_end_time-gh_st_time),str(n_alive_for_this_ghost),str(n_hanged_for_this_ghost),str(n_dead_for_this_ghost)])
         # file.write("\nDead Number-> %d"%n_dead_for_this_ghost)
         # print("Node Reached -> %d"%node_reached)
         # print("Dead = ",n_dead_for_this_ghost)
@@ -217,9 +232,13 @@ def agent_three(n_gh_lb, n_gh_ub, ProcessName):
 
 if __name__=="__main__":
     
-    p_1_11 = mp.Process(target=agent_three,args=(1,11,"Process 1 to 11"))
-    p_21_31 = mp.Process(target=agent_three,args=(21,31,"Process 21 to 31"))
-    p_41_51 = mp.Process(target=agent_three,args=(41,51,"Process 41 to 51"))
+    p_1 = mp.Process(target=agent_three,args=(1,1,"Process 1 -- 50 mazes "))
+    p_11 = mp.Process(target=agent_three,args=(11,11,"Process 11--50 mazes"))
+    # p_21 = mp.Process(target=agent_three,args=(21,21,"Process 21"))
+    # p_31 = mp.Process(target=agent_three,args=(31,31,"Process 31"))
+    # p_1_11 = mp.Process(target=agent_three,args=(1,11,"Process 1 to 11"))
+    # p_21_31 = mp.Process(target=agent_three,args=(21,31,"Process 21 to 31"))
+    # p_41_51 = mp.Process(target=agent_three,args=(41,51,"Process 41 to 51"))
     #p_61_71 = mp.Process(target=agent_three,args=(61,71,"Process 61 to 71"))
     #p_81_91 = mp.Process(target=agent_three,args=(81,91,"Process 81 to 91"))
     
@@ -228,21 +247,30 @@ if __name__=="__main__":
     # p_61_81 = mp.Process(target=agent_three,args=(61,81,"Process 61 to 81"))
     # p_91_111 = mp.Process(target=agent_three,args=(91,111,"Process 91 to 111"))
     
-    p_1_11.start()
-    p_21_31.start()
-    p_41_51.start()
+    p_1.start()
+    p_11.start()
+
+    p_1.join()
+    print("Process 1 Joined")
+
+    p_11.join()
+    print("Process 11 Joined")
+
+    # p_1_11.start()
+    # p_21_31.start()
+    # p_41_51.start()
     #p_61_71.start()
     #p_81_91.start()
     
     
-    p_1_11.join()
-    print("Process 1 to 11 Joined")
+    # p_1_11.join()
+    # print("Process 1 to 11 Joined")
 
-    p_21_31.join()
-    print("Process 21 to 31 Joined")
+    # p_21_31.join()
+    # print("Process 21 to 31 Joined")
 
-    p_41_51.join()
-    print("Process 41 to 51 Joined")
+    # p_41_51.join()
+    # print("Process 41 to 51 Joined")
 
     #p_61_71.join()
     # print("Process 61 to 71 Joined")

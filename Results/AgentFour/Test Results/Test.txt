@@ -16672,3 +16672,29 @@ Player Dead = 99
 Ghost 101 Execution Time = 12.304461240768433 s
 
 Execution Time = 12.30473279953003 s
+
+
+======  Start Time for Run  =========->  10/14/22 07:31:19
+No. of mazes for each ghost = 1
+
+Maze 1 Execution Time = 0.0009770393371582031 s
+Report for 1 Number of Ghosts
+Player Survived = 1 
+Player Hanged = 0 
+Player Dead = 0 
+Ghost 2 Execution Time = 0.0009829998016357422 s
+
+Execution Time = 0.001190185546875 s
+
+
+======  Start Time for Run  =========->  10/14/22 07:32:29
+No. of mazes for each ghost = 1
+
+Maze 1 Execution Time = 0.0008552074432373047 s
+Report for 1 Number of Ghosts
+Player Survived = 1 
+Player Hanged = 0 
+Player Dead = 0 
+Ghost 2 Execution Time = 0.0008690357208251953 s
+
+Execution Time = 0.0011987686157226562 s
