@@ -120,6 +120,22 @@ def find_nearest_ghost(maze,play_pos_r, play_pos_c, ghost_position):
                 min_gh_c = gh_c
     return min_dist, (min_gh_r, min_gh_c)
 
+def find_nearest_wall(maze,play_pos_r, play_pos_c, wall_position):
+    #This returns the nearest VISIBLE(not in walls) ghost(distance and position) from the ghost positon list to the current player's position
+    min_dist = 1000000  # Some initial high value
+    # play_pos_r=play_pos_c=0
+    # ghost_position=[(3,4),(2,3),(6,8),(1,1)]
+    min_wall_r = 0
+    min_wall_c = 0
+    for wall_r, wall_c in wall_position:
+        # if maze[wall_r][wall_c]==1 or maze[wall_r][wall_c]>200:
+        curr_dist = euclidean_distance(play_pos_r, play_pos_c, wall_r, wall_c)
+        # curr_dist = np.sqrt((wall_r-play_pos_r)**2+(wall_c-play_pos_c)**2)
+        if curr_dist < min_dist:
+            min_dist = curr_dist
+            min_wall_r = wall_r
+            min_wall_c = wall_c
+    return min_dist, (min_wall_r, min_wall_c)
 
 def find_nearest_ghost_in_maze(play_pos_r, play_pos_c, ghost_position):
     #This returns the nearest ghost(EVEN IN WALLS)(distance and position) from the ghost positon list to the current player's position

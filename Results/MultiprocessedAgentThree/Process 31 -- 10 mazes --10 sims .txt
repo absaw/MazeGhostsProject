@@ -1,0 +1,65 @@
+
+
+
+======  Start Time for Process 31 -- 10 mazes --10 sims   =========->  10/14/22 11:12:59
+No. of mazes for each ghost = 10
+No. of Ghosts = 31
+
+Maze 10 Execution Time = 142.19507098197937 s
+
+Maze 9 Execution Time = 1285.6858441829681 s
+
+Maze 8 Execution Time = 325.21890091896057 s
+
+Maze 7 Execution Time = 178.3233199119568 s
+
+Maze 6 Execution Time = 460.45383501052856 s
+
+Maze 5 Execution Time = 481.73666286468506 s
+
+Maze 4 Execution Time = 228.7509469985962 s
+
+Maze 3 Execution Time = 440.7494378089905 s
+
+Maze 2 Execution Time = 74.08711409568787 s
+
+Maze 1 Execution Time = 566.960104227066 s
+Report for 31 Number of Ghosts
+Player Survived = 0 
+Player Hanged = 6 
+Player Dead = 4 
+Ghost 32 Execution Time = 4184.161452770233 s
+
+Execution Time = 4184.161993026733 s
+
+
+======  Start Time for Process 31 -- 10 mazes --10 sims   =========->  10/14/22 12:58:39
+No. of mazes for each ghost = 10
+No. of Ghosts = 31
+
+Maze 10 Execution Time = 731.801518201828 s
+
+Maze 9 Execution Time = 55.08216118812561 s
+
+Maze 8 Execution Time = 289.5949559211731 s
+
+Maze 7 Execution Time = 222.03240585327148 s
+
+Maze 6 Execution Time = 29.715033054351807 s
+
+Maze 5 Execution Time = 224.49304509162903 s
+
+Maze 4 Execution Time = 359.33947014808655 s
+
+Maze 3 Execution Time = 70.767657995224 s
+
+Maze 2 Execution Time = 450.82313299179077 s
+
+Maze 1 Execution Time = 302.7146751880646 s
+Report for 31 Number of Ghosts
+Player Survived = 0 
+Player Hanged = 6 
+Player Dead = 4 
+Ghost 32 Execution Time = 2736.364231109619 s
+
+Execution Time = 2736.364424943924 s

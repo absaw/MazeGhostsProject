@@ -6,6 +6,7 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 from BFS import get_bfs_path
+# from MazeGhostsProject.GhostsInvisibleInWallsScenario.GhostSimulation import spawn_ghosts
 
 # 0 = Unblocked
 # 1 = Blocked
@@ -47,7 +48,7 @@ def check_maze_validity(maze, n_row, n_col, start):
 
 def plot_maze(maze):
     # print(maze)
-    plt.imshow(maze, "Dark2")
+    plt.imshow(maze, "ocean")
     plt.show()
 
 def flood_fill(maze, n_row, n_col, x, y):
@@ -77,3 +78,8 @@ def flood_fill(maze, n_row, n_col, x, y):
 
 
 # plot_maze(generate_maze(5,5,True)[0])
+# gh=[]
+# a=generate_maze(51,51,True)[0]
+# spawn_ghost_diff(a,100,51,51,gh)
+# plot_maze(a)
+

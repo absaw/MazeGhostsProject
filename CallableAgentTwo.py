@@ -25,7 +25,7 @@ def callable_agent_two(maze,n_row,n_col,n_ghost,ghost_position,play_pos):
     play_pos_r=play_pos[0]
     play_pos_c=play_pos[1]
     n_alive_simulation=0
-    n_simulations=3
+    n_simulations=10
     sum_path_length=0
     
     for i_sim in range(1, n_simulations+1):

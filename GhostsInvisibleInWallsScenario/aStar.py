@@ -86,11 +86,11 @@ def a_star(maze, lookup_table, n_row, n_col, start, end):
     return None
 
 
-# a = np.array([[0, 1, 0, 1, 1],
-#               [0, 0, 1, 0, 1],
-#               [0, 0, 0, 0, 0],
-#               [1, 1, 1, 1, 0],
-#               [0, 0, 0, 0, 0]])
+a = np.array([[0, 1, 0, 1, 1],
+              [0, 0, 1, 0, 1],
+              [0, 0, 1, 0, 0],
+              [1, 1, 1, 1, 1],
+              [0, 0, 0, 0, 0]])
 
 lookup_table = get_traversal_table(a,5,5,(4,4),True)[1]
 path = a_star(a,lookup_table,5,5,(0,0),(4,4))
